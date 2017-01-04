@@ -9,7 +9,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Users
  *
- * @ORM\Table(name="users", uniqueConstraints={@ORM\UniqueConstraint(name="UNIQ_1483A5E992FC23A8", columns={"username_canonical"}), @ORM\UniqueConstraint(name="UNIQ_1483A5E9A0D96FBF", columns={"email_canonical"})})
+ * @ORM\Table(name="users")
  * @ORM\Entity
  * @ORM\HasLifecycleCallbacks
  */
@@ -84,4 +84,3 @@ class Users extends BaseUser
         }
     }
 }
-
