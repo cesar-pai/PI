@@ -14,10 +14,13 @@ class RegistrationController extends BaseController
             // redirect authenticated admin to homepage
             return $this->redirectToRoute('AdminBundle_homepage');
         }
-        else if ($this->container->get('security.authorization_checker')->isGranted('ROLE_USER')) {
+        else if ($this->container->get('security.authorization_checker')->isGranted('ROLE_USER'))
+        {
             // redirect authenticated users to homepage
             return $this->redirectToRoute('AssociationBundle_homepage');
-        } else {
+        }
+        else
+        {
             $response = parent::registerAction();
             return $response;
         }

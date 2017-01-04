@@ -61,6 +61,58 @@ released under the MIT or BSD license.
 
 Enjoy!
 
+How to get set up ?
+-------------------
+
+In order to get this repository, type the commands in a terminal (in the folder of your choice):
+
+$ git clone https://github.com/cesar-pai/PI.git
+
+$ cd PI
+
+Then get composer.phar and install the bundles :
+
+$ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+
+$ php -r "if (hash_file('SHA384', 'composer-setup.php') === '61069fe8c6436a4468d0371454cf38a812e451a14ab1691543f25a9627b97ff96d8753d92a00654c21e2212a5ae1ff36') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+
+$ php composer-setup.php
+
+$ php -r "unlink('composer-setup.php');"
+
+$ php composer.phar install
+
+$ php composer.phar update
+
+Then initialize the database :
+
+$ php app/console help doctrine:database:create
+
+$ php app/console doctrine:generate:entities AssociationBundle
+
+$ php app/console doctrine:generate:entities DemandeSubventionBundle
+
+$ php app/console doctrine:generate:entities DocumentBundle
+
+$ php app/console doctrine:generate:entities UserBundle
+
+$ php app/console doctrine:schema:update --dump-sql
+
+$ php app/console doctrine:schema:update --force
+
+Make sure the database is OK :
+
+$ php app/console doctrine:ensure-production-settings --env=prod
+
+Finally, you can launch the server with the following command :
+
+$ php app/console server:run
+
+You can access the web site at the URL : localhost:8000/app_dev.php.
+
+
+
+
 [1]:  https://symfony.com/doc/2.7/book/installation.html
 [6]:  https://symfony.com/doc/current/bundles/SensioFrameworkExtraBundle/index.html
 [7]:  https://symfony.com/doc/2.7/book/doctrine.html
