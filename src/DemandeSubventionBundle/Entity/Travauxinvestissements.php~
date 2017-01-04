@@ -1,0 +1,152 @@
+<?php
+
+namespace DemandeSubventionBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Travauxinvestissements
+ *
+ * @ORM\Table(name="travauxinvestissements", indexes={@ORM\Index(name="fk_travauxinvestissements_demandes_subvention1_idx", columns={"demandessubvention_id"})})
+ * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
+ */
+class Travauxinvestissements
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nature", type="text", length=16777215, nullable=true)
+     */
+    private $nature;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="datetime", nullable=false)
+     */
+    private $createdAt;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_at", type="datetime", nullable=false)
+     */
+    private $updatedAt;
+
+    /**
+     * @var \DemandeSubventionBundle\Entity\Demandessubvention
+     *
+     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\OneToOne(targetEntity="Demandessubvention")
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="demandessubvention_id", referencedColumnName="id")
+     * })
+     */
+    private $demandessubvention;
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNature()
+    {
+        return $this->nature;
+    }
+
+    /**
+     * @param string $nature
+     */
+    public function setNature($nature)
+    {
+        $this->nature = $nature;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param \DateTime $createdAt
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param \DateTime $updatedAt
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+    }
+
+    /**
+     * @return \Demandessubvention
+     */
+    public function getDemandessubvention()
+    {
+        return $this->demandessubvention;
+    }
+
+    /**
+     * @param \Demandessubvention $demandessubvention
+     */
+    public function setDemandessubvention($demandessubvention)
+    {
+        $this->demandessubvention = $demandessubvention;
+    }
+
+    /**
+     *
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function updatedTimestamps()
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+
+        if ($this->getCreatedAt() == null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
+
+}
+

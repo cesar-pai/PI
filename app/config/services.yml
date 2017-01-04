@@ -1,0 +1,11 @@
+parameters:
+    fuz_tools.twig.asset_exists_extension.class: AppBundle\Twig\Extension\AssetExistsExtension
+
+services:
+    fuz_tools.twig.asset_exists_extension:
+            class: '%fuz_tools.twig.asset_exists_extension.class%'
+            arguments: ['@kernel']
+            tags:
+              - { name: twig.extension }
+    fos_user.doctrine_registry:
+        alias: doctrine

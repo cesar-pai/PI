@@ -1,0 +1,267 @@
+<?php
+
+namespace AssociationBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Categoriesadherents
+ *
+ * @ORM\Table(name="categoriesadherents", indexes={@ORM\Index(name="fk_categories_licencies_associations1_idx", columns={"associations_numassoc"})})
+ * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
+ */
+class Categoriesadherents
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="categorie", type="string", length=45,nullable=true)
+     */
+    private $categorie;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="tranche_age", type="string", length=45,nullable=true)
+     */
+    private $trancheAge;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=45,nullable=true)
+     */
+    private $nombre;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="niveau", type="string", length=45,nullable=true)
+     */
+    private $niveau;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="residence", type="string", length=45,nullable=true)
+     */
+    private $residence;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="montantcotisation", type="string", length=45,nullable=true)
+     */
+    private $montantcotisation;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="datetime", nullable=false)
+     */
+    private $createdAt;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_at", type="datetime", nullable=false)
+     */
+    private $updatedAt;
+
+    /**
+     * @var \AssociationBundle\Entity\Associations
+     *
+     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\ManyToOne(targetEntity="Associations", cascade={"all"})
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="associations_numassoc", referencedColumnName="numassoc")
+     * })
+     */
+    private $associationsNumassoc;
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCategorie()
+    {
+        return $this->categorie;
+    }
+
+    /**
+     * @param string $categorie
+     */
+    public function setCategorie($categorie)
+    {
+        $this->categorie = $categorie;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTrancheAge()
+    {
+        return $this->trancheAge;
+    }
+
+    /**
+     * @param string $trancheAge
+     */
+    public function setTrancheAge($trancheAge)
+    {
+        $this->trancheAge = $trancheAge;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+
+    /**
+     * @param string $nombre
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+    }
+
+    /**
+     * @return string
+     */
+    public function getNiveau()
+    {
+        return $this->niveau;
+    }
+
+    /**
+     * @param string $niveau
+     */
+    public function setNiveau($niveau)
+    {
+        $this->niveau = $niveau;
+    }
+
+    /**
+     * @return string
+     */
+    public function getMontantcotisation()
+    {
+        return $this->montantcotisation;
+    }
+
+    /**
+     * @param string $montantcotisation
+     */
+    public function setMontantcotisation($montantcotisation)
+    {
+        $this->montantcotisation = $montantcotisation;
+    }
+
+    /**
+     * @return string
+     */
+    public function getResidence()
+    {
+        return $this->residence;
+    }
+
+    /**
+     * @param string $residence
+     */
+    public function setResidence($residence)
+    {
+        $this->residence = $residence;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param \DateTime $createdAt
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param \DateTime $updatedAt
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+    }
+
+    /**
+     * @return \Associations
+     */
+    public function getAssociationsNumassoc()
+    {
+        return $this->associationsNumassoc;
+    }
+
+    /**
+     * @param \Associations $associationsNumassoc
+     */
+    public function setAssociationsNumassoc($associationsNumassoc)
+    {
+        $this->associationsNumassoc = $associationsNumassoc;
+    }
+
+    /**
+     *
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function updatedTimestamps()
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+
+        if ($this->getCreatedAt() == null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
+
+}
+

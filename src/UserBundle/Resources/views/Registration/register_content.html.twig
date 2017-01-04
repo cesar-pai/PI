@@ -1,0 +1,51 @@
+    {#Identifiants#}
+    <fieldset>
+
+        <legend class="text-center">
+            <h3>
+                <small>
+                    <b>Identifiants de connexion qui seront utilis&eacute;s pour vous identifier sur le portail de demande de subvention :</b>
+                </small>
+            </h3>
+        </legend>
+
+        {#Identifiants#}
+        <div class="outer-div col-md-6 centered">
+            <div class="inner-div">
+                <span style="color:red;">Les champs munis d'un * sont requis</span>
+
+                <br>
+                <br>
+                {{ form_start(form, {'method': 'post', 'action': path('fos_user_registration_register'), 'attr': {'class': 'fos_user_registration_register'}}) }}
+                <div class="form-group">
+                    {{ form_label(form.username, "Nom d'utilisateur :") }}
+                    {{ form_errors(form.username, {'attr': {'class': 'alert alert-warning'}}) }}
+                    {{ form_widget(form.username, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.email, "Adresse e-mail :") }}
+                    {{ form_errors(form.email, {'attr': {'class': 'alert alert-warning'}}) }}
+                    {{ form_widget(form.email, {'attr': {'class': 'form-control'}}) }}
+                </div>
+                <div class="form-group">
+                    {{ form_label(form.plainPassword.first) }}
+                    {{ form_errors(form.plainPassword.first, {'attr': {'class': 'alert alert-warning'}}) }}
+                    {{ form_widget(form.plainPassword.first, {'attr': {'class': 'form-control'}}) }}
+                    <br>
+                    {{ form_label(form.plainPassword.second) }}
+                    {{ form_errors(form.plainPassword.second, {'attr': {'class': 'alert alert-warning'}}) }}
+                    {{ form_widget(form.plainPassword.second, {'attr': {'class': 'form-control'}}) }}
+                </div>
+
+                {{ form_rest(form) }}
+                {#Valider#}
+                <div class="col-md-6 text-right">
+                    <input type="submit" class="btn btn-success" value="Valider" />
+                </div>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+
+    </fieldset>
+

@@ -1,0 +1,971 @@
+{% extends 'AppBundle:Default:index.html.twig' %}
+
+{% block title %}Dossier de demande de subvention{% endblock %}
+
+{#Pour DateTimePicker#}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ form_stylesheet(form) }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ form_javascript(form) }}
+{% endblock %}
+
+{% block content %}
+    <div class="col-md-9 col-sm-9 centered container main-div" xmlns="http://www.w3.org/1999/html"
+         xmlns="http://www.w3.org/1999/html">
+        <h3 class="sub-header">{% block section %}{% endblock %}</h3>
+        <div class="content">
+
+            {% block progressbar %}
+                <!-- progressbar -->
+                <div class="centered col-md-12 text-left">
+                    <ul id="progressbar">
+                        <li class="active four" style="font-size: smaller;">Renseignement sur la demande de subvention</li>
+                        <li class="inactive four" style="font-size: smaller;">Activit&eacutes</li>
+                        <li class="inactive four" style="font-size: smaller;">Mise &agrave; disposition de biens/personnels communaux et personne en charge du dossier</li>
+                        <li class="inactive four" style="font-size: smaller;">Bilan financier et budget prévisionnel</li>
+                    </ul>
+                </div>
+            {% endblock %}
+
+            <span style="color:red;">Les champs munis d'un * sont requis</span>
+
+            </br>
+            </br>
+
+            {#Begin form#}
+
+            {{ form_start(form, {'method': 'post', 'action': path('DemandesubventionBundle_demande')}) }}
+
+            {{ form_errors(form) }}
+
+                <div class="page">
+
+                    <h3 class="sub-header">Renseignement sur la demande de subvention</h3>
+
+                    {#Subvention#}
+                    <fieldset>
+
+                        <legend>
+                            <h3>
+                                <small>
+                                    <a data-toggle="collapse" data-target="#montant" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Montant de la subvention :</b>
+                                </small>
+                            </h3>
+                        </legend>
+
+                        {#Montant de la demande de subvention#}
+                        <div class="col-md-12 collapse in" id="montant">
+                            {#Montant#}
+                            <div class="form-group">
+                                {{ form_label(form.demandesubvention.montantSubvention, "Montant de la subvention (en €)") }}
+                                {{ form_errors(form.demandesubvention.montantSubvention) }}
+                                {{ form_widget(form.demandesubvention.montantSubvention, {'attr': {'class': 'form-control'}}) }}
+                                </br>
+                                <div class="col-md-1 text-center">
+                                    <h3><i class="fa fa-info"></i></h3>
+                                </div>
+                                <div class="col-md-11">
+                                    <h4>Si votre demande de subvention est supérieure à 23 000 €, il vous faut transmettre les derniers bilans et comptes de résultat approuvés par l'assemblée et signés du Président et du Trésorier, ainsi le dernier rapport d'activité.</h4></h4>
+                                </div>
+                            </div>
+
+                            </br>
+                            </br>
+
+                            {#Fichiers#}
+                            <div class="form-group">
+                                {{ form_label(form.documents[0].nom, "Bilans") }}
+                                {#Upload button#}
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <span class="btn btn-primary btn-file">
+                                            {{ form_label(form.documents[0].file,"Bilans",{'label_attr':{'style':'display:none;'}}) }}
+                                            Télécharger vers le site : {{ form_widget(form.documents[0].file) }}
+                                        </span>
+                                    </span>
+                                    <div class="row col-md-9">
+                                        {{ form_widget(form.documents[0].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                    </div>
+                                    <div class="row col-md-3">
+                                        <input type="button" class="btn btn-success form-control upload" value="Envoyer" />
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                    <progress id="progress" value="0" max="100"></progress>
+                                </div>
+                                <span class="help-block">
+                                   Veuillez sélectionner un fichier (de préference en PDF)
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.documents[1].nom, "Comptes de résultat") }}
+                                {#Upload button#}
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <span class="btn btn-primary btn-file">
+                                            {{ form_label(form.documents[1].file,"Comptes de résultat",{'label_attr':{'style':'display:none;'}}) }}
+                                            Télécharger vers le site : {{ form_widget(form.documents[1].file) }}
+                                        </span>
+                                    </span>
+                                    <div class="row col-md-9">
+                                        {{ form_widget(form.documents[1].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                    </div>
+                                    <div class="row col-md-3">
+                                        <input type="button" class="btn btn-success form-control upload" value="Envoyer" />
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                    <progress id="progress" value="0" max="100"></progress>
+                                </div>
+                                <span class="help-block">
+                                   Veuillez sélectionner un fichier (de préference en PDF)
+                                </span>
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.documents[2].nom, "Rapport d'activité") }}
+                                {#Upload button#}
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <span class="btn btn-primary btn-file">
+                                            {{ form_label(form.documents[2].file,"Rapport d'activité",{'label_attr':{'style':'display:none;'}}) }}
+                                            Télécharger vers le site : {{ form_widget(form.documents[2].file) }}
+                                        </span>
+                                    </span>
+                                    <div class="row col-md-9">
+                                        {{ form_widget(form.documents[2].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                    </div>
+                                    <div class="row col-md-3">
+                                        <input type="button" class="btn btn-success form-control upload" value="Envoyer" />
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                    <progress id="progress" value="0" max="100"></progress>
+                                </div>
+                                <span class="help-block">
+                                   Veuillez sélectionner un fichier (de préference en PDF)
+                                </span>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    </br>
+
+                    {#Renseignements financiers divers#}
+                    <fieldset>
+
+                        <legend>
+                            <h3>
+                                <small>
+                                    <a data-toggle="collapse" data-target="#renseignementssubvention" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Renseignements financiers divers :</b>
+                                </small>
+                            </h3>
+                        </legend>
+
+                        {#Subvention#}
+                        <div class="col-md-12 collapse" id="renseignementssubvention">
+                            <h4>Subventions reçues les années précédentes et demandées en 2016</h4>
+                            <div class="form-group">
+                                <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
+                                <div class="table-responsive">
+                                    <div class="row clearfix col-md-12">
+                                        <div class="column">
+                                            <table class="table table-bordered table-hover table-condensed" id="tab_subventions">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center">
+                                                        Organisme
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Année
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Demandée
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Reçue
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Montant (en €)
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="subventions" data-prototype="{{ _self.subventions_prototype(form.subventions.vars.prototype)|e }}">
+                                                {% for subventions in form.subventions %}
+                                                    {{ _self.subventions_prototype(subventions) }}
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    </br>
+
+                    {#Travaux investissement#}
+                    <fieldset>
+
+                        <legend>
+                            <h3>
+                                <small>
+                                    <a data-toggle="collapse" data-target="#travauxinvestissement" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Nature de la demande :</b>
+                                </small>
+                            </h3>
+                        </legend>
+
+                        {#Travaux investissement#}
+                        <div class="col-md-12 collapse" id="travauxinvestissement">
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    {{ form_label(form.travauxinvestissement,"La subvention est-elle demandée afin de réaliser des travaux ou des acquisitions d'investissements ?") }}
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="checkbox" class="bs"  id="chkTravauxinvestissement" name="chkTravauxinvestissement" data-on-text="Oui" data-off-text="Non" unchecked>
+                                </div>
+                                {{ form_errors(form.travauxinvestissement) }}
+                                <div class="col-md-12 form-group" id="divTravauxinvestissement">
+                                    <div class="form-group col-md-12">
+                                        {{ form_label(form.travauxinvestissement.nature,"Décrivez la nature des investissements/travaux projetées") }}
+                                        {{ form_errors(form.travauxinvestissement.nature) }}
+                                        {{ form_widget(form.travauxinvestissement.nature, {'attr':{'class':'form-control'}}) }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form_label(form.documents[3].nom, "Plan de financement") }}
+                                        {#Upload button#}
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-primary btn-file">
+                                                    {{ form_label(form.documents[3].file,"Plan de financement",{'label_attr':{'style':'display:none;'}}) }}
+                                                    Télécharger vers le site : {{ form_widget(form.documents[3].file) }}
+                                                </span>
+                                            </span>
+                                            <div class="row col-md-9">
+                                                {{ form_widget(form.documents[3].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                            </div>
+                                            <div class="row col-md-3">
+                                                <button class="btn btn-success form-control upload">Envoyer</button>
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12">
+                                            <progress id="progress" value="0" max="100"></progress>
+                                        </div>
+                                        <span class="help-block">
+                                           Veuillez sélectionner un fichier (de préference en PDF/Excel)
+                                        </span>
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form_label(form.documents[4].nom, "Devis détaillé") }}
+                                        {#Upload button#}
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-primary btn-file">
+                                                    {{ form_label(form.documents[4].file,"Devis détaillé",{'label_attr':{'style':'display:none;'}}) }}
+                                                    Télécharger vers le site : {{ form_widget(form.documents[4].file) }}
+                                                </span>
+                                            </span>
+                                            <div class="row col-md-9">
+                                                {{ form_widget(form.documents[4].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                            </div>
+                                            <div class="row col-md-3">
+                                                <button class="btn btn-success form-control upload">Envoyer</button>
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12">
+                                            <progress id="progress" value="0" max="100"></progress>
+                                        </div>
+                                        <span class="help-block">
+                                           Veuillez sélectionner un fichier (de préference en PDF/Excel)
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    </br>
+
+                    <div class="col-md-12 text-right">
+                        <input type="button" class="btn btn-info next action-button" value="Suivant" />
+                    </div>
+
+                </div>
+
+                <div class="page">
+
+                    <h3 class="sub-header">Activités</h3>
+
+                    {#Bilan d'activite#}
+                    <fieldset>
+
+                        <legend>
+                            <h3>
+                                <small>
+                                    <a data-toggle="collapse" data-target="#bilanact" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Bilan d'activité :</b>
+                                </small>
+                            </h3>
+                        </legend>
+                        <div class="col-md-12 collapse in" id="bilanact">
+                            <div class="form-group">
+                                <h4>Faits et événements marquants intervenus au cours de l'année écoulée :</h4>
+                                <div class="table-responsive">
+                                    <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
+                                    <div class="row clearfix col-md-12">
+                                        <div class="column">
+                                            <table class="table table-bordered table-hover table-condensed" id="tab_faitsmarquants">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center">
+                                                        Description
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="faitsmarquants" data-prototype="{{ _self.faitsmarquants_prototype(form.faitsmarquants.vars.prototype)|e }}">
+                                                {% for faitsmarquants in form.faitsmarquants %}
+                                                    {{ _self.faitsmarquants_prototype(faitsmarquants) }}
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <h4> Manifestations réalisées au cours de l'année {{ 'now'|date('Y') }} (y compris les participations aux manifestions de la ville) :</h4>
+                                <div class="table-responsive">
+                                    <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
+                                    <div class="row clearfix col-md-12">
+                                        <div class="column">
+                                            <table class="table table-bordered table-hover table-condensed" id="tab_manifestations">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center">
+                                                        Nom
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Date
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Thème
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Public
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="manifestations" data-prototype="{{ _self.manifestations_prototype(form.manifestations.vars.prototype)|e }}">
+                                                {% for manifestations in form.manifestations %}
+                                                    {{ _self.manifestations_prototype(manifestations) }}
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                {{ form_label(form.bilanactivite.autres,"Autres informations relatives au bilan d'activité") }}
+                                {{ form_errors(form.bilanactivite.autres) }}
+                                {{ form_widget(form.bilanactivite.autres,{'attr':{'class':'form-control', 'row': '5'}}) }}
+                            </div>
+                            {#Téléchargement de fichiers liés au bilan d'activite#}
+                            <div class="form-group">
+                                {{ form_label(form.documents[5].nom, "Informations complémentaires au bilan d'activité") }}
+                                {#Upload button#}
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <span class="btn btn-primary btn-file">
+                                            {{ form_label(form.documents[5].file,"Informations complémentaires au bilan d'activité",{'label_attr':{'style':'display:none;'}}) }}
+                                            Télécharger vers le site : {{ form_widget(form.documents[5].file) }}
+                                        </span>
+                                    </span>
+                                    <div class="row col-md-9">
+                                        {{ form_widget(form.documents[5].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                    </div>
+                                    <div class="row col-md-3">
+                                        <input type="button" class="btn btn-success form-control upload" value="Envoyer" />
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                    <progress id="progress" value="0" max="100"></progress>
+                                </div>
+                                <span class="help-block">
+                                   Veuillez sélectionner un fichier (de préference en PDF)
+                                </span>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    </br>
+
+                    {#Programme d'action#}
+                    <fieldset>
+                        <legend>
+                            <h3>
+                                <small>
+                                    <a data-toggle="collapse" data-target="#actions" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Programme d'actions :</b>
+                                </small>
+                            </h3>
+                        </legend>
+                        <div class="col-md-12 collapse" id="actions">
+                            <div class="col-md-12">
+                                <h4>Liste des actions projetées qui ont été prévues financièrement au niveau du Budget Prévisionnel et pour laquelle l'association sollicite une subvention.</h4>
+                            </div>
+                            </br>
+                            </br>
+                            <div class="form-group">
+                                <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
+                                <div class="table-responsive">
+                                    <div class="row clearfix col-md-12">
+                                        <div class="column">
+                                            <table class="table table-bordered table-hover table-condensed" id="tab_actions">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center">
+                                                        Nom
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Est une nouvelle action
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Objectif(s)
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="actions" data-prototype="{{ _self.actions_prototype(form.actions.vars.prototype)|e }}">
+                                                {% for actions in form.actions %}
+                                                    {{ _self.actions_prototype(actions) }}
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    </br>
+
+                    {#Activites#}
+                    <fieldset>
+
+                        <legend>
+                            <h3>
+                                <small>
+                                    <a data-toggle="collapse" data-target="#activites" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Activités :</b>
+                                </small>
+                            </h3>
+                        </legend>
+
+                        {#Activités#}
+                        <div class="col-md-12 collapse" id="activites">
+                            <div class="form-group">
+                                {{ form_label(form.bilanactivite.objectifs,"Décrivez succintement les objectifs et le contenu des activités de l'association pour l'année "~'now'|date('Y')) }}
+                                {{ form_errors(form.bilanactivite.objectifs) }}
+                                {{ form_widget(form.bilanactivite.objectifs,{'attr':{'class':'form-control', 'row': '5'}}) }}
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    {{ form_label(form.demandesubvention.activitespayantes,"Outre ses activités bénévoles, l'association aura-t-elle en "~'now'|date('Y')~" des activités payantes ?") }}
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="checkbox" class="bs" id="chkActivitespayantes" name="chkActivitespayantes" data-on-text="Oui" data-off-text="Non" unchecked>
+                                </div>
+                                {{ form_errors(form.demandesubvention.activitespayantes) }}
+                                <div class="col-md-12 form-group" id="divActivitespayantes">
+                                    <div class="form-group col-md-12">
+                                        {{ form_label(form.demandesubvention.activitespayantes,"Sélectionner toutes les activités payantes pour l'année "~'now'|date('Y')~" :") }}
+                                        {{ form_errors(form.demandesubvention.activitespayantes) }}
+                                        {{ form_widget(form.demandesubvention.activitespayantes, {'attr':{'class':'form-control','style':'font-size:83%;'}}) }}
+                                    </div>
+                                    <div class="form-group">
+                                        {{ form_label(form.documents[6].nom, "Tarifs (si billeterie)") }}
+                                        {#Upload button#}
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-primary btn-file">
+                                                    {{ form_label(form.documents[6].file,"Tarifs (si billeterie)",{'label_attr':{'style':'display:none;'}}) }}
+                                                    Télécharger vers le site : {{ form_widget(form.documents[6].file) }}
+                                                </span>
+                                            </span>
+                                            <div class="row col-md-9">
+                                                {{ form_widget(form.documents[6].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                            </div>
+                                            <div class="row col-md-3">
+                                                <button class="btn btn-success form-control upload">Envoyer</button>
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12">
+                                            <progress id="progress" value="0" max="100"></progress>
+                                        </div>
+                                        <span class="help-block">
+                                           Veuillez sélectionner un fichier (de préference en PDF)
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            </br>
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    {{ form_label(form.demandesubvention.commVill,"Prestations de communication prise en charge par la ville (conception, élaboration)") }}
+                                    {{ form_errors(form.demandesubvention.commVill) }}
+                                </div>
+                                <div class="col-md-2">
+                                    {{ form_widget(form.demandesubvention.commVill, {'attr':{'class':'form-control bs','data-on-text':'Oui', 'data-off-text':'Non'}}) }}
+                                </div>
+                            </div>
+                            </br>
+                            <div class="from-group">
+                                <div class="col-md-10">
+                                    {{ form_label(form.demandesubvention.photocopieVille,"Photocopies prises en charge par la ville :") }}
+                                    {{ form_errors(form.demandesubvention.photocopieVille) }}
+                                </div>
+                                <div class="col-md-2">
+                                    {{ form_widget(form.demandesubvention.photocopieVille, {'attr':{'class':'form-control bs','data-on-text':'Oui', 'data-off-text':'Non'}}) }}
+                                </div>
+                            </div>
+                            </br>
+                            <div class="form-group">
+                                <div class="col-md-10">
+                                    {{ form_label(form.demandesubvention.tachesSecretariat,"Tâches de secrétariat ou autres assurées par la ville : ") }}
+                                </div>
+                                <div class="col-md-2">
+                                    <input type="checkbox" class="bs"  id="chktachesSecretariat" name="chktachesSecretariat" data-on-text="Oui" data-off-text="Non" unchecked>
+                                </div>
+                                {{ form_errors(form.demandesubvention.tachesSecretariat) }}
+                                </br>
+                                </br>
+                                <div class="form-group" id="divtachesSecretariat">
+                                    {{ form_widget(form.demandesubvention.tachesSecretariat, {'attr':{'class':'form-control', 'row': '5'}}) }}
+                                    <span>Veuillez préciser</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    </br>
+
+                    <div class="col-md-6 text-left">
+                        <input type="button" class="btn btn-default previous action-button" value="Précédent"/>
+                    </div>
+
+                    <div class="col-md-6 text-right">
+                        <input type="button" class="btn btn-info next action-button" value="Suivant"/>
+                    </div>
+
+                </div>
+
+                <div class="page">
+                    <h3 class="sub-header">Mise à disposition de biens/personnels communaux et personne en charge du dossier</h3>
+
+                    {#Mise à disposition#}
+                    <fieldset>
+                        <legend>
+                            <h3>
+                                <small>
+                                    <a data-toggle="collapse" data-target="#miseadispo" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Mise à disposition de biens/personnels communaux :</b>
+                                </small>
+                            </h3>
+                        </legend>
+                        <div class="col-md-12 collapse in" id="miseadispo">
+
+                            <div class="form-group">
+                                <h4>Liste des locaux communaux qui vous sont mis à disposition de façon permanente (salles, vestiaires, garages, bureaux, etc.):</h4>
+                                </br>
+                                <div class="table-responsive">
+                                    <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
+                                    <div class="row clearfix col-md-12">
+                                        <div class="column">
+                                            <table class="table table-bordered table-hover table-condensed" id="tab_miseadispo">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center">
+                                                        Nom
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Adresse
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Fréquence d'utilisation
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Horaires d'utilisation
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Type de ressources
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Propriété de la ville
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="miseadispo" data-prototype="{{ _self.miseadispo_prototype(form.miseadispo.vars.prototype)|e }}">
+                                                {% for miseadispo in form.miseadispo %}
+                                                    {{ _self.miseadispo_prototype(miseadispo) }}
+                                                {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    </br>
+
+                    {#Personne en charge du dossier#}
+                    <fieldset>
+
+                        <legend>
+                            <h3>
+                                <small>
+                                    <a data-toggle="collapse" data-target="#persencharge" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Personne en charge du dossier de demande de subvention :</b>
+                                </small>
+                            </h3>
+                        </legend>
+
+                        {#Responsable de l'association#}
+                        <div class="col-md-12 collapse" id="persencharge">
+                            <div class="row">
+                                <div class="form-group col-md-6">
+                                    {{ form_label(form.persencharge.nom, "Nom de la personne en charge:") }}
+                                    {{ form_errors(form.persencharge.nom) }}
+                                    {{ form_widget(form.persencharge.nom, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    {{ form_label(form.persencharge.prenom, "Prénom :") }}
+                                    {{ form_errors(form.persencharge.prenom) }}
+                                    {{ form_widget(form.persencharge.prenom, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    {{ form_label(form.persencharge.qualite, "Qualité (rôle) de la personne au sein de l'association :") }}
+                                    {{ form_errors(form.persencharge.qualite) }}
+                                    {{ form_widget(form.persencharge.qualite, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    {{ form_label(form.persencharge.telephone, "Téléphone :") }}
+                                    {{ form_errors(form.persencharge.telephone) }}
+                                    {{ form_widget(form.persencharge.telephone, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    {{ form_label(form.persencharge.mail, "Adresse mail :") }}
+                                    {{ form_errors(form.persencharge.mail) }}
+                                    {{ form_widget(form.persencharge.mail, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                                <div class="form-group col-md-6">
+                                    {{ form_label(form.persencharge.adresse, "Adresse postal :") }}
+                                    {{ form_errors(form.persencharge.adresse) }}
+                                    {{ form_widget(form.persencharge.adresse, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    </br>
+
+                    <div class="col-md-6 text-left">
+                        <input type="button" class="btn btn-default previous action-button" value="Précédent"/>
+                    </div>
+
+                    <div class="col-md-6 text-right">
+                        <input type="button" class="btn btn-info next action-button" value="Suivant"/>
+                    </div>
+
+                </div>
+
+                <div class="page">
+
+                    <h3 class="sub-header">Bilan financier et budget prévisionnel</h3>
+
+                    {#Bilan financier#}
+                    <fieldset>
+
+                        <legend>
+                            <h3>
+                                <small>
+                                    <a data-toggle="collapse" data-target="#bilanfin" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Bilan financier :</b>
+                                </small>
+                            </h3>
+                        </legend>
+
+                        {#Bilan financier#}
+                        <div class="col-md-12 collapse in" id="bilanfin">
+                            <div class="col-md-12">
+                                <h4>Veuillez télécharger vers le site le bilan financier {{ 'now'|date('Y') - 1 }} de votre association</h4></h4>
+                            </div>
+                            </br>
+                            </br>
+                            </br>
+                            <div class="form-group">
+                                <span style="color:red;">*</span> {{ form_label(form.documents[7].nom, "Bilan financier") }} (Vous pouvez obtenir un exemple de bilan financier en <a href="{{ asset('uploads/documents/examples/exemple_bilanfinancier.xls')}}">cliquant ici</a> afin de le télécharger vers le site)
+                                {#Upload button#}
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <span class="btn btn-primary btn-file">
+                                            {{ form_label(form.documents[7].file,"Bilan financier",{'label_attr':{'style':'display:none;'}}) }}
+                                            Télécharger vers le site : {{ form_widget(form.documents[7].file, {'attr':{'required':'true'}}) }}
+                                        </span>
+                                    </span>
+                                    <div class="row col-md-9">
+                                        {{ form_widget(form.documents[7].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                    </div>
+                                    <div class="row col-md-3">
+                                        <button class="btn btn-success form-control upload">Envoyer</button>
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                    <progress id="progress" value="0" max="100"></progress>
+                                </div>
+                                <span class="help-block">
+                                   Veuillez sélectionner un fichier (de préference en PDF/Excel)
+                                </span>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    </br>
+
+                    {#Budget prévisonnel#}
+                    <fieldset>
+
+                        <legend>
+                            <h3>
+                                <small>
+                                    <a data-toggle="collapse" data-target="#budgetprev" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Budget prévisionnel :</b>
+                                </small>
+                            </h3>
+                        </legend>
+                        {#Budget previsionnel#}
+                        <div class="col-md-12 collapse" id="budgetprev">
+                            <div class="col-md-12">
+                                <h4>Veuillez télécharger vers le site le budget prévisionnel {{ 'now'|date('Y') }} de votre association</h4></h4>
+                            </div>
+                            </br>
+                            </br>
+                            </br>
+                            <div class="form-group">
+                                <span style="color:red;">*</span> {{ form_label(form.documents[8].nom, "Budget prévisionnel") }} (Vous pouvez obtenir un exemple de budget prévisionnel en <a href="{{ asset('uploads/documents/examples/exemple_budgetprevisionnel.xls')}}">cliquant ici</a> afin de le télécharger vers le site)
+                                {#Upload button#}
+                                <div class="input-group">
+                                    <span class="input-group-btn">
+                                        <span class="btn btn-primary btn-file">
+                                            {{ form_label(form.documents[8].file,"Budget prévisionnel",{'label_attr':{'style':'display:none;'}}) }}
+                                            Télécharger vers le site : {{ form_widget(form.documents[8].file,{'attr':{'required':'true'}}) }}
+                                        </span>
+                                    </span>
+                                    <div class="row col-md-9">
+                                        {{ form_widget(form.documents[8].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                    </div>
+                                    <div class="row col-md-3">
+                                        <button class="btn btn-success form-control upload">Envoyer</button>
+                                    </div>
+                                </div>
+                                <div class="row col-md-12">
+                                    <progress id="progress" value="0" max="100"></progress>
+                                </div>
+                                <span class="help-block">
+                                   Veuillez sélectionner un fichier (de préference en PDF/Excel)
+                                </span>
+                            </div>
+                        </div>
+
+                    </fieldset>
+
+                    </br>
+
+                    <div class="col-md-6 text-left">
+                        <input type="button" class="btn btn-default previous action-button" value="Précédent"/>
+                    </div>
+
+                    {#Valider#}
+                    <div class="col-md-6 text-right">
+                        <button type="submit" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#traitement">Enregistrer les informations</button>
+                    </div>
+
+                    {{ form_widget(form._token) }}
+                </div>
+
+            {{ form_end(form) }}
+
+            {#end form#}
+
+        </div>
+    </div>
+{% endblock %}
+
+{% block modal %}
+    {#Fenetre modal présentation#}
+    <div id="infos" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Demande de subvention</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="alert-modal" class="first current">
+                        <h4>
+                            <span>
+                                DOSSIER DE DEMANDE DE SUBVENTION POUR L'ANNEE 2015
+                                </br>
+                                DOSSIER CONFORME AU MODELE NATIONAL
+                                FORMULAIRE CERFA N°12156*03 (www.associations.gouv.fr)
+                                </br>
+                                Ce dossier a été préparé pour vous aider dans votre demande de subvention auprès de la Ville de Villers-lès-Nancy. Une subvention n'est jamais attribuée spontanément, il vous appartient donc d'en faire la demande.
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="infos-modal" class="next-modal">
+                        <h4>
+                            <span>Vous devez remplir toutes les pages de ce dossier et joindre (ou renseigner) les informations ci-dessous :
+                                <ul class="fa-ul">
+                                    <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Le bilan financier définitif ou prévisionnel de votre association ;</li>
+                                    <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Le budget prévisionnel 2015</li>
+                                </ul>
+                                Si la demande de subvention est supérieure à 23 000 €, il faut par ailleurs transmettre les derniers bilans et comptes de résultat approuvés par l'assemblée et signés du Président et du Trésorier et le dernier rapport d'activité.
+                            </span>
+                        </h4>
+                    </div>
+                    <div id="infos-modal" class="last">
+                        <h3 class="text-center">A SAVOIR</h3>
+                        </br>
+                        <h4>
+                            <span>
+                                <li style="list-style-type: none;">1 - l'attribution d'une subvention ou son refus n’est ni une récompense, ni une sanction</li>
+                                <li style="list-style-type: none;">2 - une subvention n'est pas un cadeau des élus mais une redistribution de l'argent des contribuables villarois donnant un sens à la vie associative locale</li>
+                                <li style="list-style-type: none;">3 - la gestion responsable d'une association n'est jamais facultative</li>
+                                <li style="list-style-type: none;">4 - la subvention doit avoir pour multiple le bénévolat</li>
+                                <li style="list-style-type: none;">5 - l'octroi d'une subvention en 2014 ne saurait présager de la décision en 2015</li>
+                                </br>
+                                <b>"Avant de commencer à remplir ce dossier, je reconnais, en poursuivant ma démarche, avoir pris connaissance des principes prévalant pour l'attribution d'une subvention"</b>
+                            </span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" id="prev-modal" class="btn btn-default previous-modal" value="Précédent" disabled/>
+                    <input type="button" id="next-modal" class="btn btn-info next-modal" value="Suivant"/>
+                    <input type="button" id="finish-modal" class="btn btn-success" data-dismiss="modal" value="Continuer" disabled/>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    {#Fenetre modal loading#}
+    <div id="traitement" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Enregistrement en cours</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h3>
+                            <span class="text-center">
+                                Veuillez patienter quelques instants durant le traitement des données ...
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+{% endblock %}
+
+{% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li>Accueil</li>
+        <li>Demande de subvention</li>
+    </ol>
+{%  endblock %}
+
+{% block sidebar %}
+    {% include 'AppBundle:Default:sidebar.html.twig' %}
+{% endblock %}
+
+{% macro subventions_prototype(subventions) %}
+    <td>
+        {{ form_widget(subventions.organisme,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(subventions.annee,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(subventions.demandee,{'attr': {'class': 'form-control input-md'}}) }}
+    </td>
+    <td>
+        {{ form_widget(subventions.recue,{'attr': {'class': 'form-control input-md'}}) }}
+    </td>
+    <td>
+        {{ form_widget(subventions.montant,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+{% endmacro %}
+
+{% macro faitsmarquants_prototype(faitsmarquants) %}
+    <td style="width: 95%;">
+        {{ form_widget(faitsmarquants.description,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+{% endmacro %}
+
+{% macro manifestations_prototype(manifestations) %}
+    <td>
+        {{ form_widget(manifestations.nom,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(manifestations.date,{'attr': {'class': 'form-control input-md','style':'font-size:83%;', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(manifestations.theme,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(manifestations.public,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+{% endmacro %}
+
+{% macro actions_prototype(actions) %}
+    <td>
+        {{ form_widget(actions.nom,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(actions.isnew,{'attr': {'class': 'form-control input-md'}}) }}
+    </td>
+    <td>
+        {{ form_widget(actions.objectif,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+{% endmacro %}
+
+{% macro miseadispo_prototype(miseadispo) %}
+    <td>
+        {{ form_widget(miseadispo.nom,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(miseadispo.adresse,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(miseadispo.freqUtil,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(miseadispo.horairesUtil,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(miseadispo.typesmiseadisposition,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(miseadispo.appartientVille,{'attr': {'class': 'form-control input-md'}}) }}
+    </td>
+{% endmacro %}

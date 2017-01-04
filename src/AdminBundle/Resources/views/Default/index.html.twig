@@ -1,0 +1,41 @@
+{% extends 'AppBundle:Default:index.html.twig' %}
+
+{% block title %}Administration des demandes de subvention en ligne{% endblock %}
+
+{% block sidebar %}
+    {% include 'AppBundle:Default:sidebar-admin.html.twig' %}
+{% endblock %}
+{% block section %}Liste des associations{% endblock %}
+{% block content %}
+    {{ parent() }}
+    <br>
+    <br>
+    <div class="col-md-9 col-sm-9">
+        <div class="content">
+            <div class="col-md-12 centered">
+                {% for association in associations %}
+                    <li style="list-style: none;">
+                        <h5>
+                            <i class="fa fa-users"></i> {{ association.nom }} - {{ association.sigle }} (N°{{ association.numassoc }}) <i class="fa fa-arrow-right"></i>
+                            <a href="{{ asset('uploads/' ~ association.numassoc ~ '/association/association-' ~ association.numassoc ~ '.zip')}}" class="unstyled-link">
+                                <b>Obtenir le dossier de l'association</b>
+                            </a>
+                            <ul>
+                                {% for demandesubvention in demandessubvention %}
+                                    <li style="list-style: none;">
+                                        <h6>
+                                            <a href="{{ asset('uploads/' ~ association.numassoc ~ '/demandessubvention/demandesubvention-' ~ demandesubvention.updatedAt|date("Y") ~ '/demandesubvention-' ~ demandesubvention.updatedAt|date("Y") ~ '.zip')}}" class="unstyled-link">
+                                                <i class="fa fa-arrow-circle-right"></i> <i>Obtenir le dossier de demande subvention pour l'année {{ demandesubvention.updatedAt|date("Y") }}</i>
+                                            </a>
+                                        </h6>
+                                    </li>
+                                {% endfor %}
+                            </ul>
+                        </h5>
+                    </li>
+                    <br>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,910 @@
+{% extends 'AppBundle:Default:index.html.twig' %}
+
+{% block title %}Enregistrement de l'association{% endblock %}
+
+{#Pour DateTimePicker#}
+{% block stylesheets %}
+    {{ parent() }}
+    {{ form_stylesheet(form) }}
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ form_javascript(form) }}
+{% endblock %}
+
+{% block content %}
+
+        <div class="col-md-9 col-sm-9 centered container main-div" xmlns="http://www.w3.org/1999/html">
+            <h3 class="sub-header">{% block section %}{% endblock %}</h3>
+            <div class="content">
+
+                {% block progressbar %}
+                    <!-- progressbar -->
+                    <div class="centered col-md-10 text-left">
+                        <ul id="progressbar">
+                            <li class="active" style="font-size: smaller;">Pr&eacute;sentation de l'association</li>
+                            <li class="inactive" style="font-size: smaller;">Renseignements administratifs et juridiques</li>
+                            <li class="inactive" style="font-size: smaller;">Composition de l'association</li>
+                        </ul>
+                    </div>
+                {% endblock %}
+
+                <span style="color:red;">Les champs munis d'un * sont requis</span>
+
+                <br>
+                <br>
+
+                {#Begin form#}
+
+                {{ form_start(form, {'method': 'post', 'action': path('AssociationBundle_association')}) }}
+
+                {{ form_errors(form) }}
+
+                    <div class="page">
+
+                        <h3 class="sub-header">Présentation de l'association</h3>
+
+                        {#Présentation de l'association#}
+
+                        <fieldset name="fs">
+
+                            <legend>
+                                <h3>
+                                    <small>
+                                        <a data-toggle="collapse" data-target="#designation" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Désignation :</b>
+                                    </small>
+                                </h3>
+                            </legend>
+
+                            {#Designation#}
+                            <div class="col-md-12 collapse in" id="designation">
+                                {#Nom#}
+                                <div class="form-group">
+                                    {{ form_label(form.association.nom, "Nom de l'association") }}
+                                    {{ form_errors(form.association.nom) }}
+                                    {{ form_widget(form.association.nom, {'attr': {'class': 'form-control'}}) }}
+                                    <span>(Désignation complète de l'organisme sollicitant la subvention, qui doit correspondre à la dénomination statutaire)</span>
+                                </div>
+                                {#Sigle#}
+                                <div class="form-group">
+                                    {{ form_label(form.association.sigle, "Sigle usuel") }}
+                                    {{ form_errors(form.association.sigle) }}
+                                    {{ form_widget(form.association.sigle, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <br>
+
+                        {#Renseignements#}
+                        <fieldset>
+
+                            <legend>
+                                <h3>
+                                    <small>
+                                        <a data-toggle="collapse" data-target="#coordonnees" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Coordonnées :</b>
+                                    </small>
+                                </h3>
+                            </legend>
+
+                            {#Coordonnées#}
+                            <div class="col-md-12 collapse" id="coordonnees">
+                                <div class="form-group">
+                                    {{ form_label(form.association.adresse,"Adresse complète du siège social de l'association") }}
+                                    {{ form_errors(form.association.adresse) }}
+                                    {{ form_widget(form.association.adresse, {'attr': {'class': 'form-control'}}) }}
+                                    <span>(Si siège hors de Villers-Lès-Nancy, préciser l'adresse de l'antenne locale)</span>
+                                </div>
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        {{ form_label(form.association.telephone,"Téléphone") }}
+                                        {{ form_errors(form.association.telephone) }}
+                                        {{ form_widget(form.association.telephone, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        {{ form_label(form.association.website,"Site internet") }}
+                                        {{ form_errors(form.association.website) }}
+                                        {{ form_widget(form.association.website, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.association.horaires,"Horaires de permanence") }}
+                                    {{ form_errors(form.association.horaires) }}
+                                    {{ form_widget(form.association.horaires, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <br>
+
+                        {#Identification#}
+                        <fieldset>
+
+                            <legend>
+                                <h3>
+                                    <small>
+                                        <a data-toggle="collapse" data-target="#identification" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Identification :</b>
+                                    </small>
+                                </h3>
+                            </legend>
+
+                            {#Identification#}
+                            <div class="col-md-12 collapse" id="identification">
+                                <div class="row">
+                                    <div class="form-group">
+                                        <div class="col-md-6">
+                                            {{ form_label(form.association.siren,"SIREN") }}
+                                            {{ form_errors(form.association.siren) }}
+                                            {{ form_widget(form.association.siren, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="col-md-6">
+                                            {{ form_label(form.association.siret,"SIRET") }}
+                                            {{ form_errors(form.association.siret) }}
+                                            {{ form_widget(form.association.siret, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="form-group">
+                                    <span style="color:red;">*</span> {{ form_label(form.documents[0].nom, "Statut de l'association") }}
+                                    {#Upload button#}
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-primary btn-file">
+                                                {{ form_label(form.documents[0].file,"Statut de l'association",{'label_attr':{'style':'display:none;'}}) }}
+                                                Télécharger vers le site : {{ form_widget(form.documents[0].file, {'attr':{'required':'true'}}) }}
+                                            </span>
+                                        </span>
+                                        <div class="row col-md-9">
+                                            {{ form_widget(form.documents[0].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                        </div>
+                                        <div class="row col-md-3">
+                                            <input type="button" class="btn btn-success form-control upload" value="Envoyer" />
+                                        </div>
+                                    </div>
+                                    <div class="row col-md-12">
+                                        <progress id="progress" value="0" max="100"></progress>
+                                    </div>
+                                    <span class="help-block">
+                                       Veuillez sélectionner un fichier (de préference en PDF)
+                                    </span>
+                                </div>
+
+                            </div>
+
+                        </fieldset>
+
+                        <br>
+
+                        {#Responsable#}
+                        <fieldset>
+
+                            <legend>
+                                <h3>
+                                    <small>
+                                        <a data-toggle="collapse" data-target="#responsable" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Responsable de l'association :</b>
+                                    </small>
+                                </h3>
+                            </legend>
+
+                            {#Responsable de l'association#}
+                            <div class="col-md-12 collapse" id="responsable">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        {{ form_label(form.responsable.nom, "Nom du responsable de l'association") }}
+                                        {{ form_errors(form.responsable.nom) }}
+                                        {{ form_widget(form.responsable.nom, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        {{ form_label(form.responsable.prenom, "Prénom du responsable") }}
+                                        {{ form_errors(form.responsable.prenom) }}
+                                        {{ form_widget(form.responsable.prenom, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        {{ form_label(form.responsable.qualite, "Qualité (rôle) du responsable au sein de l'association") }}
+                                        {{ form_errors(form.responsable.qualite) }}
+                                        {{ form_widget(form.responsable.qualite, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        {{ form_label(form.responsable.telephone, "Téléphone du responsable") }}
+                                        {{ form_errors(form.responsable.telephone) }}
+                                        {{ form_widget(form.responsable.telephone, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        {{ form_label(form.responsable.mail, "Adresse mail du responsable") }}
+                                        {{ form_errors(form.responsable.mail) }}
+                                        {{ form_widget(form.responsable.mail, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                    <div class="form-group col-md-6">
+                                        {{ form_label(form.responsable.adresse, "Adresse postal du responsable") }}
+                                        {{ form_errors(form.responsable.adresse) }}
+                                        {{ form_widget(form.responsable.adresse, {'attr': {'class': 'form-control'}}) }}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <div class="col-md-12 text-right">
+                            <input type="button" class="btn btn-info next action-button" value="Suivant" />
+                        </div>
+
+                    </div>
+
+                    <div class="page">
+
+                        <h3 class="sub-header">Renseignements administratifs et juridiques</h3>
+
+                        {#Déclaration en préfecture#}
+                        <fieldset>
+
+                            <legend>
+                                <h3>
+                                    <small>
+                                        <a data-toggle="collapse" data-target="#designation" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Déclaration en préfecture :</b>
+                                    </small>
+                                </h3>
+                            </legend>
+
+                            {#Information sur la dernière déclaration en préfecture de l'association#}
+                            <div class="col-md-12 collapse in" id="declaration">
+                                <div class="form-group">
+                                    {{ form_label(form.association.villedecl, "Déclaration à la préfecture/sous-préfecture de") }}
+                                    <a data-toggle="popover" title="Besoin d'aide ?" data-placement="right" data-content="Veuillez renseigner les informations de la dernière déclaration en préfecture de l'association (la plus récente)"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a>
+                                    {{ form_errors(form.association.villedecl) }}
+                                    {{ form_widget(form.association.villedecl, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.association.datecrea, "Date de création de l'association") }}
+                                    {{ form_errors(form.association.datecrea) }}
+                                    {{ form_widget(form.association.datecrea, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.association.datedecl, "Date de la dernière déclaration en préfecture") }}
+                                    {{ form_errors(form.association.datedecl) }}
+                                    {{ form_widget(form.association.datedecl, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.association.numassoc, "Numéro de l'association (tel qu'il vous a été donné par la préfecture lors de la dernière déclaration)") }}
+                                    {{ form_errors(form.association.numassoc) }}
+                                    {{ form_widget(form.association.numassoc, {'attr': {'class': 'form-control'}}) }}
+                                </div>
+                                <div class="form-group">
+                                    <span style="color:red;">*</span> {{ form_label(form.documents[1].nom, "Récepissé de la déclaration en préfecture") }}
+                                    {#Upload button#}
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-primary btn-file">
+                                                {{ form_label(form.documents[1].file,"Récepissé de la déclaration en préfecture",{'label_attr':{'style':'display:none;'}}) }}
+                                                Télécharger vers le site : {{ form_widget(form.documents[1].file, {'attr':{'required':'true'}}) }}
+                                            </span>
+                                        </span>
+                                        <div class="row col-md-9">
+                                            {{ form_widget(form.documents[1].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                        </div>
+                                        <div class="row col-md-3">
+                                            <input type="button" class="btn btn-success form-control upload" value="Envoyer" />
+                                        </div>
+                                    </div>
+                                    <div class="row col-md-12">
+                                        <progress id="progress" value="0" max="100"></progress>
+                                    </div>
+                                    <span class="help-block">
+                                       Veuillez sélectionner un fichier (de préference en PDF)
+                                    </span>
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.association.datepubjo, "Date  de publication au journal officiel") }}
+                                    {{ form_errors(form.association.datepubjo) }}
+                                    {{ form_widget(form.association.datepubjo, {'attr':{'class' : 'form-control'}}) }}
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <br>
+
+                        {#Le compte rendu de la dernière assemblée générale#}
+                        <fieldset>
+
+                            <legend>
+                                <h3>
+                                    <small>
+                                        <a data-toggle="collapse" data-target="#assembgen" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Dernière assemblée générale :</b>
+                                    </small>
+                                </h3>
+                            </legend>
+                            {#Téléchargement du compte rendu de la dernirèe assemblée générale#}
+                            <div class="col-md-12 collapse" id="assembgen">
+                                <div class="form-group">
+                                    <span style="color:red;">*</span> {{ form_label(form.documents[2].nom, "Compte rendu de la dernière assemblée générale") }}
+                                    {#Upload button#}
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-primary btn-file">
+                                                {{ form_label(form.documents[2].file,"Compte rendu de la dernière assemblée générale",{'label_attr':{'style':'display:none;'}}) }}
+                                                Télécharger vers le site : {{ form_widget(form.documents[2].file, {'attr':{'required':'true'}}) }}
+                                            </span>
+                                        </span>
+                                        <div class="row col-md-9">
+                                            {{ form_widget(form.documents[2].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                        </div>
+                                        <div class="row col-md-3">
+                                            <input type="button" class="btn btn-success form-control upload" value="Envoyer" />
+                                        </div>
+                                    </div>
+                                    <div class="row col-md-12">
+                                        <progress id="progress" value="0" max="100"></progress>
+                                    </div>
+                                    <span class="help-block">
+                                       Veuillez sélectionner un fichier (de préference en PDF)
+                                    </span>
+                                </div>
+
+                                <br>
+
+                                <div class="form-group">
+                                    {{ form_label(form.bureau.dateassemblee, "Date de la dernière assemblée générale") }}
+                                    {{ form_errors(form.bureau.dateassemblee) }}
+                                    {{ form_widget(form.bureau.dateassemblee, {'attr' : {'class' : 'form-control'}}) }}
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <br>
+
+                        {#Renseignement#}
+                        <fieldset>
+
+                            <legend>
+                                <h3>
+                                    <small>
+                                        <a data-toggle="collapse" data-target="#renseignements" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Renseignements :</b>
+                                    </small>
+                                </h3>
+                            </legend>
+
+                            {#Renseigenemnts "administratifs" de l'association#}
+                            <div class="col-md-12 collapse" id="renseignements">
+                                <div class="form-group">
+                                    {{ form_label(form.association.objet, "Décrivez les objectifs de votre association") }}
+                                    {{ form_errors(form.association.objet) }}
+                                    {{ form_widget(form.association.objet, {'attr': {'class': 'form-control', 'row': '5'}}) }}
+                                </div>
+                                <div class="form-group">
+                                    {{ form_label(form.association.dateUtilitepub, "Si reconnue d'utilité public, depuis le (laisser vide sinon)") }}
+                                    {{ form_errors(form.association.dateUtilitepub) }}
+                                    {{ form_widget(form.association.dateUtilitepub, {'attr':{'class':'form-control'}}) }}
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-8">
+                                        <label for="agrement">Votre association dispose t'elle d'un agrément administratif ?</label>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="checkbox" class="bs" name="chkAgrement" id="chkAgrement" data-on-text="Oui" data-off-text="Non" unchecked />
+                                    </div>
+                                    <div class="col-md-10" id="divAgrement">
+                                        <div class="form-group">
+                                            {{ form_label(form.agrementadministratif.typeagrement, "Type d'agrément") }}
+                                            {{ form_errors(form.agrementadministratif.typeagrement) }}
+                                            {{ form_widget(form.agrementadministratif.typeagrement, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            {{ form_label(form.agrementadministratif.attribuepar, "Attribué par") }}
+                                            {{ form_errors(form.agrementadministratif.attribuepar) }}
+                                            {{ form_widget(form.agrementadministratif.attribuepar, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group">
+                                            {{ form_label(form.agrementadministratif.dateattribution, "Date de l'attribution") }}
+                                            {{ form_errors(form.agrementadministratif.dateattribution) }}
+                                            {{ form_widget(form.agrementadministratif.dateattribution, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-8">
+                                        <label for="expertcompt">Votre association dispose t'elle d'un commissaire des comptes / d'un expert comptable ?</label>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="checkbox" class="bs" name="chkExpertCompt" id="chkExpertCompt" data-on-text="Oui" data-off-text="Non" unchecked />
+                                    </div>
+                                    <div class="col-md-10" id="divExpertCompt">
+                                        <div class="form-group col-md-6">
+                                            {{ form_label(form.expertcomptable.nom, "Nom de l'expert") }}
+                                            {{ form_errors(form.expertcomptable.nom) }}
+                                            {{ form_widget(form.expertcomptable.nom, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            {{ form_label(form.expertcomptable.prenom, "Prénom de l'expert") }}
+                                            {{ form_errors(form.expertcomptable.prenom) }}
+                                            {{ form_widget(form.expertcomptable.prenom, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group col-md-12">
+                                            {{ form_label(form.expertcomptable.adresse, "Adresse de l'expert") }}
+                                            {{ form_errors(form.expertcomptable.adresse) }}
+                                            {{ form_widget(form.expertcomptable.adresse, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            {{ form_label(form.expertcomptable.mail, "Adresse email de l'expert") }}
+                                            {{ form_errors(form.expertcomptable.mail) }}
+                                            {{ form_widget(form.expertcomptable.mail, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            {{ form_label(form.expertcomptable.telephone, "Téléphone de l'expert") }}
+                                            {{ form_errors(form.expertcomptable.telephone) }}
+                                            {{ form_widget(form.expertcomptable.telephone, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <div class="col-md-8">
+                                        <label for="affiliation">Votre association est-elle affiliée à un organisme ?</label>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="checkbox" class="bs" name="chkAffiliation" id="chkAffiliation" data-on-text="Oui" data-off-text="Non" unchecked />
+                                    </div>
+                                    <div class="col-md-10" id="divAffiliation">
+                                        <div class="form-group col-md-6">
+                                            {{ form_label(form.affiliation.numeroagrement,"Numéro d'agrément de votre association") }}
+                                            {{ form_errors(form.affiliation.numeroagrement) }}
+                                            {{ form_widget(form.affiliation.numeroagrement, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            {{ form_label(form.affiliation.organisme,"Organisme") }}
+                                            {{ form_errors(form.affiliation.organisme) }}
+                                            {{ form_widget(form.affiliation.organisme, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <br>
+
+                        {#RIB/RIP#}
+                        <fieldset>
+
+                            <legend>
+                                <h3>
+                                    <small>
+                                        <a data-toggle="collapse" data-target="#ribrip" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>RIB / RIP :</b>
+                                    </small>
+                                </h3>
+                            </legend>
+
+                            {#Téléchargement du RIB/RIP#}
+                            <div class="col-md-12 collapse" id="ribrip">
+                                <div class="form-group">
+                                    <span style="color:red;">*</span> {{ form_label(form.documents[3].nom, "RIB/RIP") }}
+                                    {#Upload button#}
+                                    <div class="input-group">
+                                        <span class="input-group-btn">
+                                            <span class="btn btn-primary btn-file">
+                                                {{ form_label(form.documents[3].file,"RIB/RIP",{'label_attr':{'style':'display:none;'}}) }}
+                                                Télécharger vers le site : {{ form_widget(form.documents[3].file, {'attr':{'required':'true'}}) }}
+                                            </span>
+                                        </span>
+                                        <div class="row col-md-9">
+                                            {{ form_widget(form.documents[3].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                        </div>
+                                        <div class="row col-md-3">
+                                            <input type="button" class="btn btn-success form-control upload" value="Envoyer" />
+                                        </div>
+                                    </div>
+                                    <div class="row col-md-12">
+                                        <progress id="progress" value="0" max="100"></progress>
+                                    </div>
+                                    <span class="help-block">
+                                       Veuillez sélectionner un fichier (de préference en PDF)
+                                    </span>
+                                </div>
+                            </div>
+
+                        </fieldset>
+
+                        <br>
+
+                        <div class="col-md-6 text-left">
+                            <input type="button" class="btn btn-default previous action-button" value="Précédent"/>
+                        </div>
+
+                        <div class="col-md-6 text-right">
+                            <input type="button" class="btn btn-info next action-button" value="Suivant"/>
+                        </div>
+
+                    </div>
+
+                    <div class="page">
+
+                        <h3 class="sub-header">Composition de l'association</h3>
+
+                        {#Membres du bureau#}
+                        <fieldset>
+
+                            <legend>
+                                <h3>
+                                    <small>
+                                        <a data-toggle="collapse" data-target="#membresbureau" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Membres du bureau :</b>
+                                    </small>
+                                </h3>
+                            </legend>
+
+                            <div class="col-md-12 collapse in" id="membresbureau">
+
+                                <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
+                                <div class="table-responsive">
+                                    <div class="row clearfix col-md-12">
+                                        <div class="column">
+                                            <table class="table table-bordered table-hover table-condensed">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center">
+                                                        Nom
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Prénom
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Adresse
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Téléphone
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Mail
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Profession
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Rôle
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="membrebureau" data-prototype="{{ _self.membrebureau_prototype(form.membrebureau.vars.prototype)|e }}">
+                                                    {% for membrebureau in form.membrebureau %}
+                                                        {{ _self.membrebureau_prototype(membrebureau) }}
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                {{ form_errors(form.bureau) }}
+
+                            </div>
+
+                        </fieldset>
+
+                        <br>
+
+                        {#Membres du conseil d'administration#}
+
+                        <fieldset>
+
+                            <legend>
+                                <h3>
+                                    <small>
+                                        <a data-toggle="collapse" data-target="#membresconseiladministration" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Membres du conseil d'administration :</b>
+                                    </small>
+                                </h3>
+                            </legend>
+
+                            <div class="col-md-12 collapse" id="membresconseiladministration">
+
+                                <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
+                                <div class="table-responsive">
+                                    <div class="row clearfix col-md-12">
+                                        <div class="column">
+                                            <table class="table table-bordered table-hover table-condensed" id="tab_membreconseil">
+                                                <thead>
+                                                <tr>
+                                                    <th class="text-center">
+                                                        Nom
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Prénom
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Commune de résidence
+                                                    </th>
+                                                    <th class="text-center">
+                                                        Profession
+                                                    </th>
+                                                </tr>
+                                                </thead>
+                                                <tbody class="membreconseiladministration" data-prototype="{{ _self.membreconseil_prototype(form.membreconseiladministration.vars.prototype)|e }}">
+                                                    {% for membreconseil in form.membreconseiladministration %}
+                                                        {{ _self.membreconseil_prototype(membreconseil) }}
+                                                    {% endfor %}
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <br>
+
+                            </div>
+
+                        </fieldset>
+
+                        <br>
+
+                        {#Informations sur les adhérents #}
+
+                        <fieldset>
+                            <legend>
+                                <h3>
+                                    <small>
+                                        <a data-toggle="collapse" data-target="#infosadherents" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Informations sur les adhérents :</b>
+                                    </small>
+                                </h3>
+                            </legend>
+                            <div class="col-md-12 collapse" id="infosadherents">
+                                <div class="form-group">
+                                    <div class="row col-md-8">
+                                        {{ form_label(form.association.isSportive, "Votre association est-elle une association sportive ?") }}
+                                        <small>Cliquer pour modifier</small>
+                                    </div>
+                                    {{ form_errors(form.association.isSportive) }}
+                                    <div class="col-md-2">
+                                        {{ form_widget(form.association.isSportive, {'attr':{'class':'form-control bs','data-on-text':'Oui', 'data-off-text':'Non'}}) }}
+                                    </div>
+                                </div>
+
+                                <br>
+
+                                <div class="form-group">
+                                    <div class="col-md-12">
+                                        {{ form_label(form.documents[4].nom, "Informations sur les adhérents") }}
+                                        {#Upload button#}
+                                        <div class="input-group">
+                                            <span class="input-group-btn">
+                                                <span class="btn btn-primary btn-file">
+                                                    {{ form_label(form.documents[4].file,"Informations sur les adhérents",{'label_attr':{'style':'display:none;'}}) }}
+                                                    Télécharger vers le site : {{ form_widget(form.documents[4].file) }}
+                                                </span>
+                                            </span>
+                                            <div class="row col-md-9">
+                                                {{ form_widget(form.documents[4].nom, {'value' : 'Aucun fichier sélectionné','attr':{'class':'form-control'}}) }}
+                                            </div>
+                                            <div class="row col-md-3">
+                                                <input type="button" class="btn btn-success form-control upload" value="Envoyer" />
+                                            </div>
+                                        </div>
+                                        <div class="row col-md-12">
+                                            <progress id="progress" value="0" max="100"></progress>
+                                        </div>
+                                        <span class="help-block">
+                                           Veuillez sélectionner un fichier (de préference en PDF)
+                                        </span>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <h3>
+                                            <small>
+                                                OU
+                                            </small>
+                                        </h3>
+                                    </div>
+
+                                    <div class="col-md-12">
+                                        <h3>
+                                            <small>
+                                                <a data-toggle="collapse" data-target="#tab-categorieadherents" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Remplir ici :</b>
+                                            </small>
+                                        </h3>
+                                    </div>
+
+                                    <br>
+
+                                    <div class="col-md-12 collapse" id="tab-categorieadherents">
+                                        <div class="form-group col-md-12">
+                                            <h4>Adhérents/Licenciés :</h4>
+                                            <div class="table-responsive">
+                                                <div class="row clearfix col-md-12">
+                                                    <div class="column">
+                                                        <table class="table table-bordered table-hover table-condensed" id="tab_categorieadherents">
+                                                            <thead>
+                                                            <tr id="categorieadherents">
+                                                                <th class="text-center">
+                                                                    Catégorie
+                                                                </th>
+                                                                <th class="text-center">
+                                                                    Tranche d'âge
+                                                                </th>
+                                                                <th class="text-center">
+                                                                    Nombre
+                                                                </th>
+                                                                <th class="text-center">
+                                                                    Niveau
+                                                                </th>
+                                                                <th class="text-center">
+                                                                    Extérieur/Villarois
+                                                                </th>
+                                                                <th class="text-center">
+                                                                    Montant cotisation (€)
+                                                                </th>
+                                                            </tr>
+                                                            </thead>
+                                                            <tbody class="categorieadherent" data-prototype="{{ _self.categorieadherent_prototype(form.categorieadherent.vars.prototype)|e }}">
+                                                                {% for categorieadherent in form.categorieadherent %}
+                                                                    {{ _self.categorieadherent_prototype(categorieadherent) }}
+                                                                {% endfor %}
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </fieldset>
+
+                        <br>
+
+                        <div class="col-md-6 text-left">
+                            <input type="button" class="btn btn-default previous action-button" value="Précédent" />
+                        </div>
+
+                        {#Valider#}
+                        <div class="col-md-6 text-right">
+                            <button type="submit" id="submit" class="btn btn-success btn-lg btn-block" data-toggle="modal" data-target="#traitement">Enregistrer les informations</button>
+                        </div>
+
+                        {{ form_widget(form._token) }}
+
+                    </div>
+
+                {{ form_end(form) }}
+
+                {#end form#}
+
+            </div>
+        </div>
+{% endblock %}
+
+{% block modal %}
+    {#Fenetre modal présentation#}
+    <div id="infos" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Enregistrement de votre association</h4>
+                </div>
+                <div class="modal-body">
+                    <div id="alert-modal" class="first current">
+                        <h4>
+                        <span>
+                            Avant de pouvoir faire votre première demande de subvention en ligne auprès de la commune de Villers-Lès-Nancy,
+                            vous devez donner les renseignements nécessaires de votre association.
+                        </span>
+                        </h4>
+                    </div>
+
+                    <div id="infos-modal" class="last">
+                        <h4>
+                        <span>
+                            Vous devez remplir toutes les pages de ce dossier et joindre (ou renseigner) les informations ci-dessous :<br>
+                            <ul class="fa-ul">
+                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Les statuts en vigueur datés et signés de votre association ;</li>
+                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Le récépissé de déclaration à la Préfecture ;</li>
+                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Un RIB ou RIP récent comportant un intitulé identique à celui de votre organisme ;</li>
+                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Le compte rendu de la dernière assemblée générale;</li>
+                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Un état des licenciés (nombre, âges, niveau, etc.) pour les associations sportives</li>
+                            </ul>
+                        </span>
+                        </h4>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <input type="button" id="prev-modal" class="btn btn-default previous-modal" value="Précédent" disabled/>
+                    <input type="button" id="next-modal" class="btn btn-info next-modal" value="Suivant"/>
+                    <input type="button" id="finish-modal" class="btn btn-success" data-dismiss="modal" value="Continuer" disabled/>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    {#Fenetre modal loading#}
+    <div id="traitement" class="modal fade" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title text-center">Enregistrement en cours</h4>
+                </div>
+                <div class="modal-body">
+                    <div>
+                        <h3>
+                            <span class="text-center">
+                                Veuillez patienter quelques instants durant le traitement des données ...
+                            </span>
+                        </h3>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+{% endblock %}
+
+{% block breadcrumb %}
+    <ol class="breadcrumb">
+        <li>Accueil</li>
+        <li>Enregistrement de l'association</li>
+    </ol>
+{%  endblock %}
+
+{% block sidebar %}
+{% include 'AppBundle:Default:sidebar.html.twig' %}
+{% endblock %}
+
+{% macro membrebureau_prototype(membrebureau) %}
+    <td>
+        {{ form_widget(membrebureau.nom,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(membrebureau.prenom,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(membrebureau.adresse,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(membrebureau.telephone,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(membrebureau.mail,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(membrebureau.profession,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(membrebureau.roles,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+{% endmacro %}
+
+{% macro membreconseil_prototype(membreconseil) %}
+    <td>
+        {{ form_widget(membreconseil.nom,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(membreconseil.prenom,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(membreconseil.communeResidence,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(membreconseil.profession,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+{% endmacro %}
+
+{% macro categorieadherent_prototype(categorieadherent) %}
+    <td>
+        {{ form_widget(categorieadherent.categorie,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(categorieadherent.trancheAge,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(categorieadherent.nombre,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(categorieadherent.niveau,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(categorieadherent.residence,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+    <td>
+        {{ form_widget(categorieadherent.montantcotisation,{'attr': {'class': 'form-control input-md', 'required' : 'required'}}) }}
+    </td>
+{% endmacro %}

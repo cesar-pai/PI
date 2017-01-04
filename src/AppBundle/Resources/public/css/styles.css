@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+}
+
+html {
+    overflow: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+html, body {
+    height: 100%;
+    background: url(../../../bundles/app/images/background.jpg) center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: compact;
+    font: 13px/18px Arial, sans-serif;
+}
+
+.centered {
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 0;
+    float: none;
+}
+
+.content {
+    vertical-align: middle;
+    height:100%;
+}
+
+.main-div {
+    position: relative;
+    min-height: 80%;
+    display:block;
+    overflow:auto;
+    background-color: white;
+    opacity : 0.95;
+}
+
+/*Vertically center div*/
+
+/*Outer div*/
+.outer-div{
+    display: table;
+    height:40em;
+}
+
+/*Inner -div*/
+.inner-div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/*Sticky Footer*/
+
+.sticky-footer {
+    margin-bottom: 0;
+    /* Set the fixed height of the footer here */
+    height: 20%;
+    background-color: whitesmoke;
+}
+
+/*Sidebar*/
+.sidebar-container {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    -webkit-transition:  left 0.4s ease-in-out;
+    -moz-transition:  left 0.4s ease-in-out;
+    -ms-transition:  left 0.4s ease-in-out;
+    -o-transition:  left 0.4s ease-in-out;
+    transition:  left 0.4s ease-in-out;
+}
+
+.sidebar-container .menu .submenu {
+    display: none;
+    padding-left: 15%;
+}
+
+.sidebar-container ul li ul.visible{
+    display: block;
+}
+
+/*Fieldset déroulant formulaires*/
+.fieldset-toggle {
+    font-family: 'FontAwesome';
+    content: "\f078";
+    color: #303030;
+    font-size: 16px;
+}
+
+/*Button upload file*/
+.btn-file {
+    position: relative;
+    overflow: hidden;
+}
+.btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    background: red;
+    cursor: inherit;
+    display: block;
+}
+input[readonly] {
+    background-color: white !important;
+    cursor: text !important;
+}
+
+/*Mutliple div modal*/
+#infos-modal{
+    display:none;
+}
+
+/*Unstyled link*/
+a.unstyled-link:link
+{
+    color: darkgray;
+    text-decoration: none;
+}
+a.unstyled-link:visited
+{
+    color: darkgray;
+    text-decoration: none;
+}
+a.unstyled-link:active
+{
+    color: darkgray;
+    text-decoration: none;
+}
+
+label.required:before {
+    color: red;
+    content: "* ";
+}
+
+progress {
+    display: none;
+    width:79%;
+    height:10px;
+    /*display: block; !* default: inline-block *!*/
+    margin: 1em auto;
+    padding: 4px;
+    background: #fafafa;
+    border-radius: 14px;
+    border : rgba(0, 0, 0, 0.48);
+}
+progress::-webkit-progress-bar {
+    /* style rules */
+}
+progress::-webkit-progress-value {
+    /* style rules */
+}
+progress::-moz-progress-bar {
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    progress {
+        height: 10px; /* légèrement plus fin sur Chrome par défaut */
+    }
+}
+
+/* on applique les mêmes styles que sur ::-moz-progress-bar */
+progress::-webkit-progress-value {
+    background: #2fcc1b;
+    border-radius: 12px;
+}

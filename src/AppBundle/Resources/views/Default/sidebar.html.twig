@@ -1,0 +1,58 @@
+{#Sidebar#}
+<div class="col-sm-3 col-md-3 sidebar">
+    <div class="sidebar-container">
+        <ul class="nav nav-sidebar menu">
+            <li>
+                <a href="{{ path('AssociationBundle_homepage') }}" class="list-group-item">
+                    <h4><b><i class="fa fa-home"></i> Accueil</b></h4>
+                </a>
+            </li>
+            {% if accueil %}
+            <li class="parent">
+                <a href="#" class="list-group-item">
+                    <h4><b><i class="fa fa-users"></i> Association</b></h4>
+                </a>
+                <ul class="nav nav-sidebar submenu">
+                    {% if association is null %}
+                        <li class="parent">
+                            <a data-toggle="popover" data-placement="right" data-content="Vous pourrez obtenir le dossier récapitulatif de votre association une fois que vous l'aurez enregistrée"  class="list-group-item">
+                                <h4><b><i class="fa fa-users"></i> Dossier de l'association</b></h4>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="parent">
+                            <a href="{{ asset('uploads/' ~ association.numassoc ~ '/association/association-' ~ association.numassoc ~ '.zip')}}" class="list-group-item">
+                                <h4><b><i class="fa fa-users"></i> Dossier de l'association</b></h4>
+                            </a>
+                        </li>
+                    {% endif %}
+                    <li class="parent">
+                        <a href="{{ path('AssociationBundle_update') }}"  class="list-group-item"><h4><b><i class="fa fa-users"></i> Modifier l'association</b></h4></a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                {#On vérifie si le dossier de demande de subvention de l'année en cours existe#}
+                {% if demandesubvention is null %}
+                    <a data-toggle="popover" data-placement="right" data-content="Vous pourrez obtenir le dossier de demande subvention pour l'année {{ 'now'|date('Y') }} une fois que vous l'aurez saisi"  class="list-group-item">
+                        <h4><b><i class="fa fa-folder"></i> Dossier de demande de subvention</b></h4>
+                    </a>
+                {% else %}
+                    <a href="{{ asset('uploads/' ~ association.numassoc ~ '/demandessubvention/demandesubvention-' ~ demandesubvention.updatedAt|date("Y") ~ '/demandesubvention-' ~ demandesubvention.updatedAt|date("Y") ~ '.zip')}}" class="list-group-item">
+                        <h4><b><i class="fa fa-folder"></i> Dossier de demande de subvention {{ demandesubvention.updatedAt|date('Y') }}</b></h4>
+                    </a>
+                {% endif %}
+            </li>
+            {% endif %}
+            <li>
+                {#Disconnect#}
+                <form action="{{ path('fos_user_security_logout') }}">
+                    <button class="btn btn-block btn-danger list-group-item">
+                        <h4><b><i class="fa fa-sign-out"></i> Se d&eacuteconnecter</b></h4>
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+{#End Sidebar#}

@@ -1,0 +1,9 @@
+AdminBundle_homepage:
+    path:     /admin
+    defaults: { _controller: AdminBundle:Default:index }
+
+AssociationBundle_homepage:
+   path:  /
+   defaults: { _controller: AssociationBundle:Default:index }
+   requirements:
+       methods:  GET

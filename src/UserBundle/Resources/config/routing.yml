@@ -1,0 +1,27 @@
+UserBundle_login:
+   path:  /login
+   defaults: { _controller: UserBundle:Login:login }
+
+AssociationBundle_homepage:
+   path:  /
+   defaults: { _controller: AssociationBundle:Default:index }
+
+AssociationBundle_association:
+   path:  /association
+   defaults: { _controller: AssociationBundle:Association:association }
+
+AssociationBundle_update:
+    path:  /update
+    defaults: { _controller: AssociationBundle:Association:update }
+
+AdminBundle_homepage:
+    path:     /admin
+    defaults: { _controller: AdminBundle:Default:index }
+
+UserBundle_register:
+   path:  /register
+   defaults: { _controller: UserBundle:Registration:register }
+
+DemandesubventionBundle_demande:
+   path:  /demande
+   defaults: { _controller: DemandeSubventionBundle:Demande:dossier }

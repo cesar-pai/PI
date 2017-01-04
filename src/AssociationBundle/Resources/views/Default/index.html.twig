@@ -1,0 +1,52 @@
+{% extends 'AppBundle:Default:index.html.twig' %}
+
+{% block title %}Demande de subvention pour les associations en ligne{% endblock %}
+
+{% block sidebar %}
+{% include 'AppBundle:Default:sidebar.html.twig' %}
+{% endblock %}
+
+{% block content %}
+    {{ parent() }}
+    {% for flashMessage in app.session.flashbag.get('success') %}
+        <div class="col-md-9 text-center alert-success">{{ flashMessage }}</div>
+    {% endfor %}
+<div class="col-md-9 col-sm-9">
+    <h3 class="sub-header">{% block section %}{% endblock %}</h3>
+    <div class="content">
+        <div class="col-md-6 centered">
+                <div class="text-center">
+                    {% if association is null %}
+                        <h2><b>Enregistrez votre association</b></h2>
+                        </br>
+                        <a href="{{ path('AssociationBundle_association') }}" class="unstyled-link">
+                            <h3>
+                                <b>Cliquer ici <i class="fa fa-arrow-circle-o-right"></i></b>
+                            </h3>
+                        </a>
+                    {% elseif demandesubvention is null%}
+                        <h2><b>Faites votre demande de subvention pour l'année {{ 'now'|date('Y') }}  </b></h2>
+                        </br>
+                        <a href="{{ path('DemandesubventionBundle_demande') }}" class="unstyled-link">
+                            <h3>
+                                <b>Cliquer ici <i class="fa fa-arrow-circle-o-right"></i></b>
+                            </h3>
+                        </a>
+                        </br>
+                        <p>Vous pouvez d'ores et déjà télécharger le dossier de l'association en cliquant sur la barre latéral gauche</p>
+                    {% else %}
+                        <h2><b>Vous avez enregistré votre association et complété votre dossier de demande de subvention pour l'année {{ demandesubvention.updatedAt|date('Y') }}  </b></h2>
+                        <p>Vous pouvez télécharger chacun de ces deux dossiers en cliquant sur la barre latéral gauche</p>
+                    {% endif %}
+
+                </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block breadcrumb %}
+<ol class="breadcrumb">
+    <li>Accueil</li>
+</ol>
+{% endblock %}

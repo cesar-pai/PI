@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+        <meta charset="utf-8">
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link rel="icon" href="{{ asset('bundles/app/images/favicon.ico') }}">
+
+        <title>Demande de subvention - {{ block('title') }}</title>
+
+        <!-- CSS -->
+        {#{% block stylesheets %}#}
+            {#{% stylesheets filter='cssrewrite,uglifycss' output='css/compiled/app.css'#}
+            {#'assets/vendor/bootstrap/dist/css/**'#}
+            {#'assets/vendor/font-awesome/css/**'#}
+            {#'assets/vendor/bootstrap-switch/dist/css/bootstrap3/**'#}
+            {#'@AppBundle/Resources/public/css/**'%}#}
+            {#<link href="{{ asset_url }}" type="text/css" rel="stylesheet"/>#}
+            {#{% endstylesheets %}#}
+        {#{% endblock %}#}
+
+        {% block stylesheets %}
+            <link href="{{ app.request.getSchemeAndHttpHost()}}/css/compiled/app.css" type="text/css" rel="stylesheet"/>
+        {% endblock %}
+
+        {#<!-- Preloader-->#}
+        {#{% block preloaderjs %}#}
+            {#{% javascripts output='js/compiled/preload.js'#}
+            {#'assets/vendor/jquery/dist/jquery.min.js'#}
+            {#'@AppBundle/Resources/public/js/preloader.js'#}
+            {#%}#}
+            {#<script src="{{ asset_url }}"></script>#}
+            {#{% endjavascripts %}#}
+        {#{% endblock %}#}
+
+        {#<script src="preload.js"></script>#}
+
+        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+        <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div class="centered container col-md-10 main-div">
+
+            <div class="col-md-12">
+                <div class="col-sm-3 col-md-3 sidebar">
+
+                    <a href="{{ path('AssociationBundle_homepage') }}">
+                        <img src="{{ asset('bundles/app/images/logo.png') }}" class="img-responsive" alt="Revenir &agrave; l'accueil">
+                    </a>
+
+                </div>
+
+                <div class="col-sm-9 col-md-9 main">
+
+                    <h1 class="page-header">
+                        {% block title %}
+                        {% endblock %}
+                    </h1>
+                    {% block breadcrumb %}
+                    {% endblock %}
+                    <h3 class="sub-header">{% block section %}{% endblock  %}</h3>
+                </div>
+            </div>
+
+            {% block sidebar %}
+            {% endblock %}
+
+            {% block content %}
+            {% endblock %}
+
+        </div>
+
+        <footer class="sticky-footer col-md-10 centered">
+            {#Place sticky footer content here.#}
+        </footer>
+
+        {# Cas où la page utilise un modal #}
+        {% block modal %}
+        {% endblock %}
+
+        <!-- JavaScript -->
+        {#{% block javascripts %}#}
+            {#{% javascripts output='js/compiled/app.js'#}
+            {#'assets/vendor/jquery/dist/**.js'#}
+            {#'assets/vendor/bootstrap/dist/js/bootstrap.js'#}
+            {#'assets/vendor/bootstrap-switch/dist/js/bootstrap-switch.js'#}
+            {#'@AppBundle/Resources/public/js/**'%}#}
+            {#<script src="{{ asset_url }}"></script>#}
+            {#{% endjavascripts %}#}
+        {#{% endblock %}#}
+
+        <!-- Placed at the end of the document so the pages load faster -->
+        {% block javascripts %}
+            <script src="{{ app.request.getSchemeAndHttpHost()}}/js/compiled/app.js"></script>
+        {% endblock %}
+
+    </body>
+
+    <!-- Preloader -->
+    {#<div id="preloader">#}
+        {#<div id="status">&nbsp;</div>#}
+    {#</div>#}
+
+</html>

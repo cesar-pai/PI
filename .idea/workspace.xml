@@ -1,0 +1,1534 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="94a0c34e-c54c-4af8-a6d4-4bbf5166a418" name="Default" comment="">
+<<<<<<< HEAD
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/.htaccess" afterPath="$PROJECT_DIR$/app/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppCache.php" afterPath="$PROJECT_DIR$/app/AppCache.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/AppKernel.php" afterPath="$PROJECT_DIR$/app/AppKernel.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/base.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/base.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" afterPath="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/SymfonyRequirements.php" afterPath="$PROJECT_DIR$/app/SymfonyRequirements.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/autoload.php" afterPath="$PROJECT_DIR$/app/autoload.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/check.php" afterPath="$PROJECT_DIR$/app/check.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config.yml" afterPath="$PROJECT_DIR$/app/config/config.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_dev.yml" afterPath="$PROJECT_DIR$/app/config/config_dev.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_prod.yml" afterPath="$PROJECT_DIR$/app/config/config_prod.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/config_test.yml" afterPath="$PROJECT_DIR$/app/config/config_test.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/parameters.yml.dist" afterPath="$PROJECT_DIR$/app/config/parameters.yml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing.yml" afterPath="$PROJECT_DIR$/app/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/routing_dev.yml" afterPath="$PROJECT_DIR$/app/config/routing_dev.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/config/security.yml" afterPath="$PROJECT_DIR$/app/config/security.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/console" afterPath="$PROJECT_DIR$/app/console" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/phpunit.xml.dist" afterPath="$PROJECT_DIR$/app/phpunit.xml.dist" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/.htaccess" afterPath="$PROJECT_DIR$/src/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/AdminBundle.php" afterPath="$PROJECT_DIR$/src/AdminBundle/AdminBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/DependencyInjection/AdminExtension.php" afterPath="$PROJECT_DIR$/src/AdminBundle/DependencyInjection/AdminExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/AdminBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/AdminBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AdminBundle/Tests/Controller/DefaultControllerTest.php" afterPath="$PROJECT_DIR$/src/AdminBundle/Tests/Controller/DefaultControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/AppBundle.php" afterPath="$PROJECT_DIR$/src/AppBundle/AppBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Controller/ExceptionController.php" afterPath="$PROJECT_DIR$/src/AppBundle/Controller/ExceptionController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Model/HZip.php" afterPath="$PROJECT_DIR$/src/AppBundle/Model/HZip.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/multiple-step-form.css" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/multiple-step-form.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/styles-pdf.css" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/styles-pdf.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/styles.css" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/css/styles.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/js/dynamictables.js" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/js/dynamictables.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/js/multi-step-form.js" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/js/multi-step-form.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/js/toggles.js" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/js/toggles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/public/js/upload-button.js" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/js/upload-button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/sidebar-admin.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/sidebar-admin.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/sidebar.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/sidebar.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/DefaultControllerTest.php" afterPath="$PROJECT_DIR$/src/AppBundle/Tests/Controller/DefaultControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/AssociationBundle.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/AssociationBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Controller/RegistrationController.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Controller/RegistrationController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/DependencyInjection/AssociationExtension.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/DependencyInjection/AssociationExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Entity/Affiliations.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Entity/Affiliations.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Entity/Agrementsadministratifs.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Entity/Agrementsadministratifs.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Entity/Associations.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Entity/Associations.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Entity/Bureaux.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Entity/Bureaux.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Entity/Categoriesadherents.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Entity/Categoriesadherents.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Entity/Expertscomptable.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Entity/Expertscomptable.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Entity/Membresbureau.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Entity/Membresbureau.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Entity/Membresconseiladministration.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Entity/Membresconseiladministration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Entity/Responsables.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Entity/Responsables.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Entity/Roles.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Entity/Roles.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Form/AffiliationsType.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Form/AffiliationsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Form/AgrementsadministratifsType.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Form/AgrementsadministratifsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Form/AssociationsType.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Form/AssociationsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Form/BureauxType.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Form/BureauxType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Form/CategoriesadherentsType.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Form/CategoriesadherentsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Form/ExpertscomptableType.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Form/ExpertscomptableType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Form/MembresbureauType.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Form/MembresbureauType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Form/MembresconseiladministrationType.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Form/MembresconseiladministrationType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Form/RegistrationFormType.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Form/RegistrationFormType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Form/ResponsablesType.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Form/ResponsablesType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/AssociationBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/AssociationBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/PDF/association-pdf.html.twig" afterPath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/PDF/association-pdf.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/checkEmail.html.twig" afterPath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/checkEmail.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/confirmed.html.twig" afterPath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/confirmed.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/email.txt.twig" afterPath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/email.txt.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/register.html.twig" afterPath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/register.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/register_association.html.twig" afterPath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/register_association.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/register_identification.html.twig" afterPath="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/register_identification.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AssociationBundle/Tests/Controller/DefaultControllerTest.php" afterPath="$PROJECT_DIR$/src/AssociationBundle/Tests/Controller/DefaultControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Controller/DemandeController.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Controller/DemandeController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/DemandeSubventionBundle.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/DemandeSubventionBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/DependencyInjection/DemandeSubventionExtension.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/DependencyInjection/DemandeSubventionExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Actions.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Actions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Bilansactivite.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Bilansactivite.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Demandessubvention.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Demandessubvention.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Faitsmarquants.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Faitsmarquants.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Manifestations.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Manifestations.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Miseadisposition.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Miseadisposition.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Personnesencharge.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Personnesencharge.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Subventions.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Subventions.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Travauxinvestissements.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Travauxinvestissements.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/TypesMiseadisposition.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/TypesMiseadisposition.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/ActionsType.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/ActionsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/BilansactiviteType.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/BilansactiviteType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/DemandeFormType.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/DemandeFormType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/DemandessubventionType.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/DemandessubventionType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/FaitsmarquantsType.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/FaitsmarquantsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/ManifestationsType.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/ManifestationsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/MiseadispositionType.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/MiseadispositionType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/PersonnesenchargeType.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/PersonnesenchargeType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/SubventionsType.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/SubventionsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/TravauxinvestissementsType.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/TravauxinvestissementsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/views/Demande/demandesubvention.html.twig" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/views/Demande/demandesubvention.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/views/Demande/demandesubvention_content.html.twig" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/views/Demande/demandesubvention_content.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DemandeSubventionBundle/Tests/Controller/DefaultControllerTest.php" afterPath="$PROJECT_DIR$/src/DemandeSubventionBundle/Tests/Controller/DefaultControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DocumentBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/DocumentBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DocumentBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/DocumentBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DocumentBundle/DependencyInjection/DocumentExtension.php" afterPath="$PROJECT_DIR$/src/DocumentBundle/DependencyInjection/DocumentExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DocumentBundle/DocumentBundle.php" afterPath="$PROJECT_DIR$/src/DocumentBundle/DocumentBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DocumentBundle/Entity/Documents.php" afterPath="$PROJECT_DIR$/src/DocumentBundle/Entity/Documents.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DocumentBundle/Form/DocumentsType.php" afterPath="$PROJECT_DIR$/src/DocumentBundle/Form/DocumentsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DocumentBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/DocumentBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DocumentBundle/Resources/config/services.yml" afterPath="$PROJECT_DIR$/src/DocumentBundle/Resources/config/services.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DocumentBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/DocumentBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DocumentBundle/Tests/Controller/DefaultControllerTest.php" afterPath="$PROJECT_DIR$/src/DocumentBundle/Tests/Controller/DefaultControllerTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php" afterPath="$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Controller/LoginController.php" afterPath="$PROJECT_DIR$/src/UserBundle/Controller/LoginController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/DependencyInjection/Configuration.php" afterPath="$PROJECT_DIR$/src/UserBundle/DependencyInjection/Configuration.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/DependencyInjection/UserExtension.php" afterPath="$PROJECT_DIR$/src/UserBundle/DependencyInjection/UserExtension.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Entity/Agents.php" afterPath="$PROJECT_DIR$/src/UserBundle/Entity/Agents.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Entity/PasswordResets.php" afterPath="$PROJECT_DIR$/src/UserBundle/Entity/PasswordResets.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Entity/Services.php" afterPath="$PROJECT_DIR$/src/UserBundle/Entity/Services.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Entity/Users.php" afterPath="$PROJECT_DIR$/src/UserBundle/Entity/Users.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Form/AgentsType.php" afterPath="$PROJECT_DIR$/src/UserBundle/Form/AgentsType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Form/ServicesType.php" afterPath="$PROJECT_DIR$/src/UserBundle/Form/ServicesType.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Resources/config/routing.yml" afterPath="$PROJECT_DIR$/src/UserBundle/Resources/config/routing.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/UserBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Resources/views/Security/login.html.twig" afterPath="$PROJECT_DIR$/src/UserBundle/Resources/views/Security/login.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig" afterPath="$PROJECT_DIR$/src/UserBundle/Resources/views/layout.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/UserBundle/UserBundle.php" afterPath="$PROJECT_DIR$/src/UserBundle/UserBundle.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/.htaccess" afterPath="$PROJECT_DIR$/web/.htaccess" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app.php" afterPath="$PROJECT_DIR$/web/app.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/app_dev.php" afterPath="$PROJECT_DIR$/web/app_dev.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/.bower.json" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/.bowerrc" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/.bowerrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/.gitignore" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/CHANGELOG.md" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/CHANGELOG.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/LICENSE" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/README.md" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/bower.json" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/css/bootstrap2/bootstrap-switch.css" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/css/bootstrap2/bootstrap-switch.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/css/bootstrap2/bootstrap-switch.min.css" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/css/bootstrap2/bootstrap-switch.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/css/bootstrap3/bootstrap-switch.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/js/bootstrap-switch.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/js/bootstrap-switch.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/js/bootstrap-switch.min.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/dist/js/bootstrap-switch.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/documentation-2.html" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/documentation-2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/events.html" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/events.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/examples.html" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/examples.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/karma.json" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/karma.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/main.html" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/main.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/methods.html" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/methods.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/options.html" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/options.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/coffee/bootstrap-switch.coffee" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/coffee/bootstrap-switch.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/coffee/bootstrap-switch.tests.coffee" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/coffee/bootstrap-switch.tests.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap2/bootstrap-switch.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap2/bootstrap-switch.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap2/build.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap2/build.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap2/mixins.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap2/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap2/variables.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap2/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap3/bootstrap-switch.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap3/bootstrap-switch.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap3/build.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap3/build.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap3/mixins.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap3/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap3/variables.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap-switch/src/less/bootstrap3/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/.bower.json" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/Gruntfile.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/LICENSE" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/README.md" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/bower.json" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/css/bootstrap-theme.css" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/css/bootstrap-theme.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/css/bootstrap-theme.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/css/bootstrap.css" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/css/bootstrap.min.css" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/css/bootstrap.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/js/bootstrap.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/js/npm.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/dist/js/npm.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/fonts/glyphicons-halflings-regular.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/.jshintrc" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/bs-commonjs-generator.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/bs-commonjs-generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/bs-glyphicons-data-generator.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/bs-glyphicons-data-generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/bs-lessdoc-parser.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/bs-lessdoc-parser.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/bs-raw-files-generator.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/bs-raw-files-generator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/configBridge.json" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/configBridge.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/sauce_browsers.yml" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/grunt/sauce_browsers.yml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/.jscsrc" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/.jscsrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/.jshintrc" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/.jshintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/affix.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/affix.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/alert.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/alert.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/button.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/button.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/carousel.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/carousel.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/collapse.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/collapse.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/dropdown.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/dropdown.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/modal.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/modal.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/popover.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/popover.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/scrollspy.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/scrollspy.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/tab.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/tab.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/tooltip.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/tooltip.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/transition.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/js/transition.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/.csscomb.json" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/.csscomb.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/.csslintrc" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/.csslintrc" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/alerts.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/alerts.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/badges.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/badges.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/bootstrap.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/bootstrap.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/breadcrumbs.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/breadcrumbs.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/button-groups.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/button-groups.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/buttons.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/buttons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/carousel.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/carousel.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/close.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/close.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/code.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/code.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/component-animations.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/component-animations.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/dropdowns.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/dropdowns.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/forms.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/forms.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/glyphicons.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/glyphicons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/grid.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/grid.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/input-groups.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/input-groups.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/jumbotron.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/jumbotron.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/labels.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/labels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/list-group.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/list-group.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/media.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/media.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/alerts.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/alerts.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/background-variant.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/background-variant.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/border-radius.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/border-radius.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/buttons.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/buttons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/center-block.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/center-block.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/clearfix.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/clearfix.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/forms.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/forms.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/gradients.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/gradients.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/grid-framework.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/grid-framework.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/grid.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/grid.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/hide-text.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/hide-text.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/image.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/image.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/labels.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/labels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/list-group.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/list-group.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/nav-divider.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/nav-divider.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/nav-vertical-align.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/nav-vertical-align.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/opacity.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/opacity.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/pagination.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/pagination.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/panels.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/panels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/progress-bar.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/progress-bar.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/reset-filter.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/reset-filter.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/reset-text.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/reset-text.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/resize.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/resize.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/responsive-visibility.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/responsive-visibility.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/size.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/size.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/tab-focus.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/tab-focus.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/table-row.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/table-row.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/text-emphasis.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/text-emphasis.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/text-overflow.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/text-overflow.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/vendor-prefixes.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/mixins/vendor-prefixes.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/modals.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/modals.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/navbar.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/navbar.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/navs.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/navs.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/normalize.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/normalize.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/pager.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/pager.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/pagination.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/pagination.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/panels.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/panels.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/popovers.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/popovers.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/print.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/print.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/progress-bars.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/progress-bars.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/responsive-embed.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/responsive-embed.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/responsive-utilities.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/responsive-utilities.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/scaffolding.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/scaffolding.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/tables.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/tables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/theme.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/theme.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/thumbnails.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/thumbnails.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/tooltip.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/tooltip.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/type.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/type.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/utilities.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/utilities.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/variables.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/wells.less" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/less/wells.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/package.js" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/package.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/bootstrap/package.json" afterPath="$PROJECT_DIR$/web/assets/vendor/bootstrap/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/.bower.json" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/.gitignore" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/.npmignore" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/.npmignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/HELP-US-OUT.txt" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/HELP-US-OUT.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/bower.json" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/css/font-awesome.css" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/css/font-awesome.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/css/font-awesome.css.map" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/css/font-awesome.css.map" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/css/font-awesome.min.css" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/css/font-awesome.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/fonts/fontawesome-webfont.svg" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/animated.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/animated.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/bordered-pulled.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/bordered-pulled.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/core.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/core.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/fixed-width.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/fixed-width.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/font-awesome.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/font-awesome.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/larger.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/larger.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/mixins.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/mixins.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/path.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/path.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/rotated-flipped.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/rotated-flipped.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/stacked.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/stacked.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_animated.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_animated.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_bordered-pulled.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_bordered-pulled.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_core.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_core.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_fixed-width.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_fixed-width.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_icons.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_icons.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_larger.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_larger.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_list.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_list.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_mixins.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_mixins.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_path.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_path.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_rotated-flipped.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_rotated-flipped.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_stacked.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_stacked.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_variables.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/_variables.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/font-awesome.scss" afterPath="$PROJECT_DIR$/web/assets/vendor/font-awesome/scss/font-awesome.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/.bower.json" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/.bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/MIT-LICENSE.txt" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/MIT-LICENSE.txt" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/bower.json" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/dist/jquery.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/dist/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/dist/jquery.min.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/dist/jquery.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/jsonp.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/jsonp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/load.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/load.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/parseJSON.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/parseJSON.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/parseXML.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/parseXML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/script.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/script.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/var/nonce.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/var/nonce.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/var/rquery.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/var/rquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/xhr.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/ajax/xhr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes/attr.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes/attr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes/classes.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes/classes.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes/prop.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes/prop.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes/support.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes/val.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/attributes/val.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/callbacks.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/callbacks.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core/access.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core/access.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core/init.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core/init.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core/parseHTML.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core/parseHTML.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core/ready.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core/ready.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core/var/rsingleTag.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/core/var/rsingleTag.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/addGetHookIf.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/addGetHookIf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/curCSS.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/curCSS.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/defaultDisplay.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/defaultDisplay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/hiddenVisibleSelectors.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/hiddenVisibleSelectors.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/support.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/swap.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/swap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/var/cssExpand.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/var/cssExpand.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/var/getStyles.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/var/getStyles.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/var/isHidden.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/var/isHidden.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/var/rmargin.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/var/rmargin.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/var/rnumnonpx.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/css/var/rnumnonpx.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/data.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/data/Data.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/data/Data.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/data/accepts.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/data/accepts.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/data/var/data_priv.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/data/var/data_priv.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/data/var/data_user.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/data/var/data_user.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/deferred.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/deferred.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/deprecated.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/deprecated.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/dimensions.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/dimensions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/effects.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/effects.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/effects/Tween.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/effects/Tween.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/effects/animatedSelector.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/effects/animatedSelector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/event.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/event.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/event/ajax.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/event/ajax.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/event/alias.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/event/alias.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/event/support.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/event/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/exports/amd.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/exports/amd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/exports/global.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/exports/global.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/intro.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/intro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/jquery.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/manipulation.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/manipulation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/manipulation/_evalUrl.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/manipulation/_evalUrl.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/manipulation/support.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/manipulation/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/manipulation/var/rcheckableType.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/manipulation/var/rcheckableType.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/offset.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/offset.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/outro.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/outro.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/queue.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/queue.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/queue/delay.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/queue/delay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/selector-native.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/selector-native.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/selector-sizzle.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/selector-sizzle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/selector.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/selector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/serialize.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/serialize.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/sizzle/dist/sizzle.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/sizzle/dist/sizzle.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/sizzle/dist/sizzle.min.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/sizzle/dist/sizzle.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/traversing.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/traversing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/traversing/findFilter.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/traversing/findFilter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/traversing/var/rneedsContext.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/traversing/var/rneedsContext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/arr.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/arr.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/class2type.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/class2type.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/concat.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/concat.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/hasOwn.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/hasOwn.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/indexOf.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/indexOf.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/pnum.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/pnum.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/push.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/push.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/rnotwhite.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/rnotwhite.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/slice.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/slice.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/strundefined.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/strundefined.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/support.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/support.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/toString.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/var/toString.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/assets/vendor/jquery/src/wrap.js" afterPath="$PROJECT_DIR$/web/assets/vendor/jquery/src/wrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/config.php" afterPath="$PROJECT_DIR$/web/config.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app.css" afterPath="$PROJECT_DIR$/web/css/compiled/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_1_bootstrap-theme.min_3.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_1_bootstrap-theme.min_3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_1_bootstrap-theme_1.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_1_bootstrap-theme_1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_1_bootstrap.min_6.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_1_bootstrap.min_6.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_1_bootstrap_4.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_1_bootstrap_4.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_2_font-awesome.css_2.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_2_font-awesome.css_2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_2_font-awesome.min_3.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_2_font-awesome.min_3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_2_font-awesome_1.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_2_font-awesome_1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_3_bootstrap-switch.min_2.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_3_bootstrap-switch.min_2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_3_bootstrap-switch_1.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_3_bootstrap-switch_1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_3_multiple-step-form_1.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_3_multiple-step-form_1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_3_preloader_2.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_3_preloader_2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_3_styles-pdf_2.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_3_styles-pdf_2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_3_styles-pdf_3.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_3_styles-pdf_3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_3_styles_3.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_3_styles_3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_3_styles_4.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_3_styles_4.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_4_bootstrap-switch.min_2.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_4_bootstrap-switch.min_2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_4_bootstrap-switch_1.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_4_bootstrap-switch_1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_5_bootstrap-switch.min_2.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_5_bootstrap-switch.min_2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_part_5_bootstrap-switch_1.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_part_5_bootstrap-switch_1.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_preloader_4.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_preloader_4.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_styles-pdf_2.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_styles-pdf_2.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_styles-pdf_3.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_styles-pdf_3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/css/compiled/app_styles_3.css" afterPath="$PROJECT_DIR$/web/css/compiled/app_styles_3.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app.js" afterPath="$PROJECT_DIR$/web/js/compiled/app.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_bootstrap-switch_3.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_bootstrap-switch_3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_bootstrap_2.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_bootstrap_2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_jquery_1.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_jquery_1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_1_jquery.min_2.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_1_jquery.min_2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_1_jquery_1.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_1_jquery_1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_dynamictables_1.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_dynamictables_1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_modal_2.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_modal_2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_multi-step-form_2.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_multi-step-form_2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_multi-step-form_3.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_multi-step-form_3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_preloader_3.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_preloader_3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_preloader_4.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_preloader_4.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_toggles_3.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_toggles_3.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_toggles_4.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_toggles_4.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_toggles_5.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_toggles_5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_upload-button_4.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_upload-button_4.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_upload-button_5.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_upload-button_5.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_upload-button_6.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_upload-button_6.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app_part_4_upload-files_6.js" afterPath="$PROJECT_DIR$/web/js/compiled/app_part_4_upload-files_6.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/preload.js" afterPath="$PROJECT_DIR$/web/js/compiled/preload.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/preload_jquery.min_1.js" afterPath="$PROJECT_DIR$/web/js/compiled/preload_jquery.min_1.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/preload_preloader_2.js" afterPath="$PROJECT_DIR$/web/js/compiled/preload_preloader_2.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/robots.txt" afterPath="$PROJECT_DIR$/web/robots.txt" />
+=======
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/public/js/preloader.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/deployment.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/index.html.twig" afterPath="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/index.html.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/js/compiled/app.js" afterPath="$PROJECT_DIR$/web/js/compiled/app.js" />
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+    </list>
+    <list id="837fe451-f254-4299-8d4e-54eeca8c6d0f" name="First merge" comment="Merging FOSUserBundle modifications with CSS and JS installations" />
+    <ignored path="VillersNumeriqueArchitectureBase.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <ignored path=".idea/dataSources.local.xml" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DatabaseView">
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  </component>
+  <component name="ErrorTreeViewConfiguration">
+    <option name="autoscrollToSource" value="true" />
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="true" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="VillersNumeriqueArchitectureBase" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
+      <file leaf-file-name="RegistrationController.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Controller/RegistrationController.php">
+          <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state vertical-scroll-proportion="-8.967742">
+              <caret line="312" column="112" selection-start-line="312" selection-start-column="112" selection-end-line="312" selection-end-column="112" />
+=======
+            <state vertical-scroll-proportion="-22.032259">
+              <caret line="329" column="10" selection-start-line="329" selection-start-column="10" selection-end-line="329" selection-end-column="10" />
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+              <folding>
+                <element signature="e#48#90#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="app.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/app.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="parameters.yml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+=======
+      <file leaf-file-name="preloader.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/js/preloader.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+<<<<<<< HEAD
+      <file leaf-file-name="config.yml" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7231121">
+              <caret line="92" column="121" selection-start-line="92" selection-start-column="121" selection-end-line="92" selection-end-column="121" />
+=======
+      <file leaf-file-name="index.html.twig" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Default/index.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.8173191">
+              <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="association-pdf.html.twig" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Resources/views/PDF/association-pdf.html.twig">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="363" column="158" selection-start-line="363" selection-start-column="158" selection-end-line="363" selection-end-column="158" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Categoriesadherents.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Entity/Categoriesadherents.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="64" column="30" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="FORCE_PUSH_ALLOWED" value="true" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Form/CategoriesadherentsType.php" />
+        <option value="$PROJECT_DIR$/app/config/security.yml" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Form/AgrementsadministratifsType.php" />
+        <option value="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/DemandeFormType.php" />
+        <option value="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Miseadisposition.php" />
+        <option value="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Manifestations.php" />
+        <option value="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Faitsmarquants.php" />
+        <option value="$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Actions.php" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Entity/Categoriesadherents.php" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Entity/Membresconseiladministration.php" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Entity/Membresbureau.php" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Entity/Expertscomptable.php" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Entity/Bureaux.php" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Entity/Agrementsadministratifs.php" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Entity/Affiliations.php" />
+        <option value="$PROJECT_DIR$/../pagepdf.php" />
+        <option value="$PROJECT_DIR$/app/config/parameters.yml" />
+        <option value="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/BilansactiviteType.php" />
+        <option value="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/TravauxinvestissementsType.php" />
+        <option value="$PROJECT_DIR$/src/DemandeSubventionBundle/Form/DemandessubventionType.php" />
+        <option value="$PROJECT_DIR$/src/DemandeSubventionBundle/Controller/DefaultController.php" />
+        <option value="$USER_HOME$/Downloads/processed_file_2015-12-21-15-56-33/o_dda84667b01e70c6.html" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/public/css/styles-pdf.css" />
+        <option value="$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/views/Demande/demandesubvention_content.html.twig" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Entity/Associations.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/public/js/multi-step-form.js" />
+        <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/app/AppKernel.php" />
+        <option value="$PROJECT_DIR$/app/.htaccess" />
+        <option value="$PROJECT_DIR$/app/Resources/views/default/index.html.twig" />
+        <option value="$PROJECT_DIR$/app/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/sidebar-admin.html.twig" />
+        <option value="$PROJECT_DIR$/src/UserBundle/Controller/LoginController.php" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/DocumentBundle/Entity/Documents.php" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/register_association.html.twig" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Class/HZip.php" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Model/HZip.php" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Form/RegistrationFormType.php" />
+        <option value="$PROJECT_DIR$/src/DemandeSubventionBundle/Controller/DemandeController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php" />
+        <option value="$PROJECT_DIR$/src/AdminBundle/Resources/views/Default/index.html.twig" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Resources/views/PDF/association-pdf.html.twig" />
+        <option value="$PROJECT_DIR$/src/AssociationBundle/Controller/RegistrationController.php" />
+<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/app/config/config.yml" />
+=======
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/AppBundle/Resources/views/Default/index.html.twig" />
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsBuildToolPackageJson" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+  </component>
+  <component name="PhpServers">
+    <servers />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-9" />
+    <option name="y" value="-9" />
+    <option name="width" value="1938" />
+    <option name="height" value="1098" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files" />
+        <subPane subId="Tests" />
+      </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueArchitectureBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueArchitectureBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueDemandeSubvention" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueArchitectureBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueDemandeSubvention" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+<<<<<<< HEAD
+              <option name="myItemId" value="app" />
+=======
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueArchitectureBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueDemandeSubvention" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="web" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="uploads" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueArchitectureBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueDemandeSubvention" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="vendor" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueArchitectureBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueDemandeSubvention" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueArchitectureBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueDemandeSubvention" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueArchitectureBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueDemandeSubvention" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueArchitectureBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueDemandeSubvention" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueArchitectureBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueDemandeSubvention" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="AppBundle" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Resources" />
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueArchitectureBase" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="VillersNumeriqueDemandeSubvention" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+<<<<<<< HEAD
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+=======
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+<<<<<<< HEAD
+=======
+      <pane id="Scope">
+        <subPane subId="Problems" />
+        <subPane subId="Project Files" />
+        <subPane subId="Tests" />
+      </pane>
+      <pane id="Scratches" />
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
+    <property name="WebServerToolWindowFactoryState" value="true" />
+    <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.size" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.date" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.show.permissions" value="false" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.symlinks" value="true" />
+    <property name="WebServerToolWindowPanel.toolwindow.highlight.mappings" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="SearchEverywhereHistoryKey" value="form&#9;FILE&#9;file://C:/wamp/www/VillersNumeriqueDemandeSubvention/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/form_errors.html.php&#10;form_errors&#9;FILE&#9;file://C:/wamp/www/VillersNumeriqueDemandeSubvention/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views/Form/form_errors.html.php&#10;app_dev&#9;FILE&#9;file://C:/wamp/www/VillersNumeriqueDemandeSubvention/web/app_dev.php&#10;#infos-modal&#9;null&#9;null&#10;FOSUserBundle&#9;null&#9;null&#10;login.html.tw&#9;FILE&#9;file://C:/wamp/www/VillersNumeriqueDemandeSubvention/src/UserBundle/Resources/views/Security/login.html.twig&#10;index&#9;FILE&#9;file://C:/wamp/www/VillersNumeriqueArchitectureBase/app/Resources/views/default/index.html.twig&#10;.navbar-inverse&#9;null&#9;null&#10;app.&#9;FILE&#9;file://C:/wamp/www/VillersNumeriqueArchitectureBase/web/app.php&#10;filters/assets.xml&#9;null&#9;null&#10;assets.xml&#9;FILE&#9;file://C:/wamp/www/VillersNumeriqueArchitectureBase/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/config/assets.xml" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\VillersNumeriqueDemandeSubvention\src\AppBundle\Resources\views\Default" />
+      <recent name="C:\wamp\www\VillersNumeriqueDemandeSubvention\src\AssociationBundle" />
+      <recent name="C:\wamp\www\VillersNumeriqueDemandeSubvention\src\AssociationBundle\Resources\views" />
+      <recent name="C:\wamp\www\VillersNumeriqueDemandeSubvention\src" />
+      <recent name="C:\wamp\www\VillersNumeriqueDemandeSubvention\src\UserBundle" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp\www\VillersNumeriqueDemandeSubvention\src\AppBundle\Resources\public\js" />
+      <recent name="C:\wamp\www\VillersNumeriqueDemandeSubvention\src\AssociationBundle\Resources\views" />
+      <recent name="C:\wamp\www\VillersNumeriqueDemandeSubvention\src\UserBundle" />
+      <recent name="C:\wamp\www\VillersNumeriqueDemandeSubvention\src" />
+      <recent name="C:\wamp\www\VillersNumeriqueArchitectureBase\src\UserBundle\Resources\views\Page" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
+      <BehatRunner />
+      <method />
+    </configuration>
+    <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
+      <command value="run-script" />
+      <scripts />
+      <envs />
+      <method />
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="94a0c34e-c54c-4af8-a6d4-4bbf5166a418" name="Default" comment="" />
+      <changelist id="837fe451-f254-4299-8d4e-54eeca8c6d0f" name="First merge" comment="Merging FOSUserBundle modifications with CSS and JS installations" />
+      <created>1447419179853</created>
+      <option name="number" value="Default" />
+      <updated>1447419179853</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Init">
+      <created>1447421027100</created>
+      <option name="number" value="00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1447421027100</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Init">
+      <created>1447421331171</created>
+      <option name="number" value="00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1447421331171</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Intégration de FOSUserBundle">
+      <created>1447429575769</created>
+      <option name="number" value="00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1447429575769</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Installing bower&#10;Installing with bower CSS and JS plugins (bootstrap, bootstrap-switch, jquery)&#10;Adding CSS and JS filters (yuicompressor)&#10;Adding default.html.twig&#10;Setting JS and CSS custom files&#10;Setting preloader page&#10;">
+      <created>1447944483386</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1447944483386</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Installing bower&#10;Installing with bower CSS and JS plugins (bootstrap, bootstrap-switch, jquery)&#10;Adding CSS and JS filters (yuicompressor)&#10;Adding default.html.twig&#10;Setting JS and CSS custom files&#10;Setting preloader page&#10;">
+      <created>1447944805981</created>
+      <option name="number" value="00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1447944805981</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Installing bower&#10;Installing with bower CSS and JS plugins (bootstrap, bootstrap-switch, jquery)&#10;Adding CSS and JS filters (yuicompressor)&#10;Adding default.html.twig&#10;Setting JS and CSS custom files&#10;Setting preloader page&#10;">
+      <created>1447945151861</created>
+      <option name="number" value="00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1447945151861</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Fixed files not adding into git">
+      <created>1448010360067</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1448010360067</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Update login.html.twig">
+      <created>1448024968894</created>
+      <option name="number" value="00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1448024968894</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changing login view">
+      <created>1448282657687</created>
+      <option name="number" value="00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1448282657687</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-9" y="-9" width="1938" height="1098" extended-state="6" />
+    <editor active="false" />
+    <layout>
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28778136" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+=======
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2915327" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284356" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955848" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3284356" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39955848" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3289183" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gulp" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.29957128" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329582" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32855567" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
+      <collection />
+    </option>
+    <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="SHOW_DIRTY_RECURSIVELY" value="true" />
+    <MESSAGE value="Init" />
+    <MESSAGE value="Intégration de FOSUserBundle" />
+    <MESSAGE value="Installing bower&#10;Installing with bower CSS and JS plugins (bootstrap, bootstrap-switch, jquery)&#10;Adding CSS and JS filters (yuicompressor)&#10;Adding default.html.twig&#10;Setting JS and CSS custom files&#10;Setting preloader page&#10;" />
+    <MESSAGE value="Fixed files not adding into git" />
+    <MESSAGE value="Update login.html.twig" />
+    <MESSAGE value="Changing login view" />
+    <MESSAGE value="Changing login view (2)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changing login view (2)" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="2" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="editorHistoryManager">
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Entity/Categoriesadherents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DemandeSubventionBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2609727">
+          <caret line="10" column="61" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/register_identification.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.46975088">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+=======
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/css/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.49584815">
+          <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/css/styles-pdf.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.76512456">
+          <caret line="90" column="0" selection-start-line="90" selection-start-column="0" selection-end-line="90" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Entity/Agrementsadministratifs.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.548388">
+          <caret line="105" column="34" selection-start-line="105" selection-start-column="20" selection-end-line="105" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Entity/Bureaux.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.0">
+          <caret line="75" column="36" selection-start-line="75" selection-start-column="20" selection-end-line="75" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Form/CategoriesadherentsType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20166074">
+          <caret line="18" column="60" selection-start-line="18" selection-start-column="60" selection-end-line="18" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Form/MembresbureauType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Form/AffiliationsType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="17" column="33" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Form/AssociationsType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="70" selection-start-line="36" selection-start-column="70" selection-end-line="36" selection-end-column="70" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/js/toggles.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="24" column="32" selection-start-line="24" selection-start-column="32" selection-end-line="24" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Entity/Membresbureau.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="44" selection-start-line="84" selection-start-column="44" selection-end-line="84" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/js/multi-step-form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="84" column="61" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Entity/Roles.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/autoload.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33926454">
+          <caret line="48" column="64" selection-start-line="48" selection-start-column="64" selection-end-line="48" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+=======
+    <entry file="file://$PROJECT_DIR$/vendor/friendsofsymfony/user-bundle/Resources/config/routing/security.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+    <entry file="file://$PROJECT_DIR$/app/AppKernel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.16129">
+          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="26" selection-start-line="0" selection-start-column="9" selection-end-line="0" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7046263">
+          <caret line="34" column="15" selection-start-line="10" selection-start-column="0" selection-end-line="38" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Resources/views/default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-56.774193">
+          <caret line="80" column="67" selection-start-line="80" selection-start-column="67" selection-end-line="80" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/security.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="36" selection-start-line="19" selection-start-column="36" selection-end-line="19" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.201373">
+          <caret line="8" column="9" selection-start-line="8" selection-start-column="9" selection-end-line="8" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Default/sidebar-admin.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46975088">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Resources/config/routing.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.35240275">
+          <caret line="14" column="56" selection-start-line="14" selection-start-column="56" selection-end-line="14" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/LoginController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2609727">
+          <caret line="11" column="59" selection-start-line="11" selection-start-column="59" selection-end-line="11" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Default/sidebar.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="15" column="25" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="64" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DemandeSubventionBundle/Resources/views/Demande/demandesubvention_content.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="658" column="201" selection-start-line="658" selection-start-column="179" selection-end-line="658" selection-end-column="204" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/UserBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33926454">
+          <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DocumentBundle/Entity/Documents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19098458">
+          <caret line="351" column="118" selection-start-line="351" selection-start-column="118" selection-end-line="351" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Entity/Associations.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.4116254">
+          <caret line="98" column="22" selection-start-line="98" selection-start-column="22" selection-end-line="98" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Model/HZip.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.419354">
+          <caret line="47" column="5" selection-start-line="47" selection-start-column="5" selection-end-line="47" selection-end-column="5" />
+          <folding>
+            <element signature="e#6#188#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Form/AgrementsadministratifsType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Form/ExpertscomptableType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DemandeSubventionBundle/Controller/DemandeController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="49.677418">
+          <caret line="8" column="25" selection-start-line="8" selection-start-column="25" selection-end-line="8" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Resources/views/Registration/register_association.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="8.859975">
+          <caret line="325" column="78" selection-start-line="325" selection-start-column="67" selection-end-line="325" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.064516">
+          <caret line="18" column="47" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DemandeSubventionBundle/Entity/Demandessubvention.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8351127">
+          <caret line="89" column="33" selection-start-line="89" selection-start-column="12" selection-end-line="89" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.57413995">
+          <caret line="22" column="40" selection-start-line="22" selection-start-column="40" selection-end-line="22" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AdminBundle/Controller/DefaultController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5219454">
+          <caret line="20" column="32" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Form/RegistrationFormType.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.46975088">
+          <caret line="20" column="97" selection-start-line="20" selection-start-column="97" selection-end-line="20" selection-end-column="97" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Entity/Categoriesadherents.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="64" column="30" selection-start-line="64" selection-start-column="12" selection-end-line="64" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Resources/views/PDF/association-pdf.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="363" column="158" selection-start-line="363" selection-start-column="158" selection-end-line="363" selection-end-column="158" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27720505">
+          <caret line="11" column="13" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3146603">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AssociationBundle/Controller/RegistrationController.php">
+      <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state vertical-scroll-proportion="-8.967742">
+          <caret line="312" column="112" selection-start-line="312" selection-start-column="112" selection-end-line="312" selection-end-column="112" />
+=======
+        <state vertical-scroll-proportion="-22.032259">
+          <caret line="329" column="10" selection-start-line="329" selection-start-column="10" selection-end-line="329" selection-end-column="10" />
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+          <folding>
+            <element signature="e#48#90#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/web/app.php">
+=======
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/public/js/preloader.js">
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+<<<<<<< HEAD
+    <entry file="file://$PROJECT_DIR$/app/config/parameters.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/config/config.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7231121">
+          <caret line="92" column="121" selection-start-line="92" selection-start-column="121" selection-end-line="92" selection-end-column="121" />
+=======
+    <entry file="file://$PROJECT_DIR$/src/AppBundle/Resources/views/Default/index.html.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8173191">
+          <caret line="97" column="37" selection-start-line="97" selection-start-column="37" selection-end-line="97" selection-end-column="37" />
+>>>>>>> d66d553f9687314c6437d0a71b86f65abc8ba9d9
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

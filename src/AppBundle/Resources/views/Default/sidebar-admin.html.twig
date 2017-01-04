@@ -1,0 +1,31 @@
+{#Sidebar admin#}
+<div class="col-sm-3 col-md-3 sidebar">
+    <div class="sidebar-container">
+        <ul class="nav nav-sidebar menu">
+            <li>
+                <a href="{{ path('AdminBundle_homepage') }}" class="list-group-item">
+                    <h4><b><i class="fa fa-home"></i> Accueil</b></h4>
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('AdminBundle_homepage') }}#association" class="list-group-item">
+                    <h4><b><i class="fa fa-users"></i> Association</b></h4>
+                </a>
+            </li>
+            <li>
+                <a href="{{ path('AdminBundle_homepage')}}#subvention" class="list-group-item">
+                    <h4><b><i class="fa fa-folder"></i> Demande de subvention</b></h4>
+                </a>
+            </li>
+            <li>
+                {#Disconnect#}
+                <form action="{{ path('fos_user_security_logout') }}">
+                    <button class="btn btn-block btn-danger list-group-item">
+                        <h4><b><i class="fa fa-sign-out"></i> Se d&eacuteconnecter</b></h4>
+                    </button>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+{#End Sidebar#}

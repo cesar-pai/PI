@@ -1,0 +1,22 @@
+{
+  "name": "VillersNumeriqueDemandeSubvention",
+  "homepage": "https://bitbucket.org/Antoin3/villersnumeriquedemandesubvention",
+  "authors": [
+    "Antoin3 <antoine.rouyer@viacesi.fr>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "bootstrap-sass": "bootstrap-sass-official#~3.3.5"
+  }
+}

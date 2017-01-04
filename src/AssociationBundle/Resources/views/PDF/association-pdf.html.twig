@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="http://www.villersenligne.fr/assets/vendor/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <style>
+        @page {
+            margin-right: 0.02in;
+            margin-bottom: 0.69in
+        }
+
+        P {
+            margin-bottom: 0.08in;
+            direction: ltr;
+            widows: 2;
+            orphans: 2
+        }
+
+        H1 {
+            margin-bottom: 0in;
+            direction: ltr;
+            color: #2e74b5;
+            page-break-inside: avoid;
+            widows: 2;
+            orphans: 2
+        }
+
+        H1.western {
+            font-family: "Calibri Light", serif;
+            font-size: 16pt;
+            font-weight: normal
+        }
+
+        H1.cjk {
+            font-size: 16pt;
+            font-weight: normal
+        }
+
+        H1.ctl {
+            font-size: 16pt;
+            font-weight: normal
+        }
+
+        H2 {
+            margin-top: 0.03in;
+            margin-bottom: 0in;
+            direction: ltr;
+            color: #2e74b5;
+            page-break-inside: avoid;
+            widows: 2;
+            orphans: 2
+        }
+
+        H2.western {
+            font-family: "Calibri Light", serif;
+            font-size: 13pt;
+            font-weight: normal
+        }
+
+        H2.cjk {
+            font-family: "Arial";
+            font-size: 13pt;
+            font-weight: normal
+        }
+
+        H2.ctl {
+            font-size: 13pt;
+            font-weight: normal
+        }
+
+        H3 {
+            margin-top: 0.03in;
+            margin-bottom: 0in;
+            direction: ltr;
+            color: #1f4d78;
+            page-break-inside: avoid;
+            widows: 2;
+            orphans: 2
+        }
+
+        H3.western {
+            font-family: "Calibri Light", serif;
+            font-size: 12pt;
+            font-weight: normal
+        }
+
+        H3.cjk {
+            font-family: "Arial";
+            font-size: 12pt;
+            font-weight: normal
+        }
+
+        H3.ctl {
+            font-size: 12pt;
+            font-weight: normal
+        }
+
+        .centered {
+            margin-top: 0;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 0;
+            float: none;
+        }
+
+        .objet{
+            min-width: 10%;
+            width:95%;
+            max-width:95%;
+            border: 1px solid #00000a;
+        }
+
+        table, tr, td, th, tbody, thead, tfoot {
+            page-break-inside: avoid !important;
+            font-size: small;
+        }
+    </style>
+
+    <title>{{ association.nom }} - {{ association.numassoc }}</title>
+
+    <body>
+        {#Entête#}
+        <div class="col-md-12 centered">
+            <div class="col-md-12">
+                {#Titre#}
+                <P ALIGN="CENTER">
+                    <FONT FACE="Calibri Light, serif">
+                        <FONT SIZE=6 STYLE="font-size: 28pt;">
+                            <FONT SIZE=7><B>RECAPITULATIF DE L'ASSOCIATION</B></FONT>
+                        </FONT>
+                    </FONT>
+                </P>
+                <br>
+                <P ALIGN="CENTER">
+                    <FONT FACE="Calibri Light, serif">
+                        <FONT SIZE=6 STYLE="font-size: 28pt;">
+                            <FONT SIZE=7><B>-</B></FONT>
+                        </FONT>
+                    </FONT>
+                </P>
+            </div>
+            <br>
+            <P ALIGN="CENTER">
+                <FONT FACE="Calibri Light, serif">
+                    <FONT SIZE=6 STYLE="font-size: 28pt">
+                        <FONT SIZE=7>{{ association.nom }} </FONT>
+                    </FONT>
+                </FONT>
+            </P>
+            <P ALIGN="CENTER">
+                <FONT FACE="Calibri Light, serif">
+                    <FONT SIZE=6 STYLE="font-size: 28pt">
+                        <FONT SIZE=7>(N° {{ association.numassoc }}) </FONT>
+                    </FONT>
+                </FONT>
+            </P>
+            <br>
+            <br>
+            <hr>
+            <br>
+        </div>
+
+        {#Corps#}
+        <div class="form-group col-md-10 centered">
+
+            {#1/ Coordonnées#}
+            <div class="col-md-12 form-group">
+                <H1 CLASS="western">
+                    <B>1/ Coordonnées</B>
+                </H1>
+                </br>
+                <div class="col-md-12">
+                    <div class="col-md-6 row">
+                        <p><FONT COLOR="#5a5a5a"><B>Nom :</B> {{ association.nom }}</FONT></p>
+                    </div>
+
+                    <div class="col-md-6 row">
+                        <p><FONT COLOR="#5a5a5a"><B>Sigle :</B> {{ association.sigle }}</FONT></p>
+                    </div>
+                </div>
+                </br>
+                <div class="col-md-12">
+                    <p><FONT COLOR="#5a5a5a"><B>Adresse du si&egrave;ge social :</B> {{ association.adresse }}</FONT></p>
+                </div>
+                </br>
+                <div class="col-md-12">
+                    <div class="col-md-6 row">
+                        <p><FONT COLOR="#5a5a5a"><B>T&eacute;l&eacute;phone :</B> {{ association.telephone }}</FONT></p>
+                    </div>
+                    <div class="col-md-6 row">
+                        <p><FONT COLOR="#5a5a5a"><B>Horaires de permanence :</B> {{ association.horaires }}</FONT></p>
+                    </div>
+                </div>
+                </br>
+                <div class="col-md-12">
+                    <p><FONT COLOR="#5a5a5a"><B>Site internet :</B> {{ association.website }}</FONT></p>
+                </div>
+            </div>
+
+            </br>
+            </br>
+
+            {#2/ Informations légales#}
+            <div class="col-md-12 form-group">
+                <H1 CLASS="western">
+                    <B>2/ Informations légales</B>
+                </H1>
+
+                </br>
+
+                <div class="col-md-12">
+                    <p><FONT COLOR="#5a5a5a"><B>Date de création de l'association :</B> {{ association.datecrea|date('d/m/Y') }}</FONT></p>
+                </div>
+
+                </br>
+
+                <div class="col-md-12">
+                    <div class="col-md-6 row">
+                        <p><FONT COLOR="#5a5a5a"><B>Dernière déclaration à la préfecture/sous-préfecture de :</B> {{ association.villedecl }}</FONT></p>
+                    </div>
+                    <div class="col-md-6 row">
+                        <p><FONT COLOR="#5a5a5a"><i>Le :</i> {{ association.datedecl|date('d/m/Y') }}</FONT></p>
+                    </div>
+                </div>
+
+                </br>
+
+                <div class="col-md-12">
+                    <p><FONT COLOR="#5a5a5a"><B>Date de publication au journal officiel :</B> {{ association.datepubjo|date('d/m/Y') }}</FONT></p>
+                </div>
+
+                </br>
+
+                {#Objectifs#}
+                <div class="col-md-12">
+                    <p><FONT COLOR="#5a5a5a"><B>Objet :</B></FONT></p>
+                    <textarea class="objet" readonly name="" id="" cols="30" rows="10">{{ association.objet }}</textarea>
+                    <br>
+                </div>
+
+                </br>
+
+                <div class="col-md-12">
+                    <div class="col-md-6 row">
+                        <br>
+                        <p><FONT COLOR="#5a5a5a"><B>SIREN :</B> {{ association.SIREN }}</FONT></p>
+                    </div>
+
+                    <div class="col-md-6 row">
+                        <p><FONT COLOR="#5a5a5a"><B>SIRET :</B> {{ association.SIRET }}</FONT></p>
+                    </div>
+                </div>
+
+                </br>
+
+                {#Responsable#}
+                <div class="col-md-12">
+                    <p><FONT COLOR="#5a5a5a"><B>Responsable :</B></FONT></p>
+                    <div class="col-md-12">
+                        <div class="col-md-6 row">
+                            <p><FONT COLOR="#5a5a5a">Nom :</FONT> {{ responsable.nom }}</p>
+                        </div>
+                        <div class="col-md-6 row">
+                            <p><FONT COLOR="#5a5a5a">Prénom :</FONT> {{ responsable.prenom }}</p>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <p><FONT COLOR="#5a5a5a">Adresse :</FONT> {{ responsable.adresse }}</p>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="col-md-6 row">
+                            <p><FONT COLOR="#5a5a5a">Téléphone :</FONT> {{ responsable.telephone }}</p>
+                        </div>
+                        <div class="col-md-6 row">
+                            <p><FONT COLOR="#5a5a5a">Mail :</FONT> {{ responsable.mail }}</p>
+                        </div>
+                    </div>
+                </div>
+
+                </br>
+
+                {#Agrement administratif#}
+                <div class="col-md-12">
+                    <div class="col-md-12 row">
+                        <p><FONT COLOR="#5a5a5a"><B>Agrément administratif :</B> {{ agrementadministratif is null ? "Non" : "Oui" }}</FONT></p>
+                    </div>
+                    {% if(agrementadministratif is not null) %}
+                        <div class="col-md-12">
+                            <p><FONT COLOR="#5a5a5a">Type :</FONT> {{ agrementadministratif.typeagrement }}</p>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-6 row">
+                                <p><FONT COLOR="#5a5a5a">Attribué par :</FONT> {{ agrementadministratif.attribuepar }}</p>
+                            </div>
+                            <div class="col-md-6 row">
+                                <p><FONT COLOR="#5a5a5a">Le :</FONT> {{ agrementadministratif.dateattribution|date('d/m/Y') }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+
+                </br>
+
+                {#Affiliation à un administratif#}
+                <div class="col-md-12">
+                    <div class="col-md-12 row">
+                        <p><FONT COLOR="#5a5a5a"><B>Affiliation à un organisme reconnu :</B> {{ affiliation is null ? "Non" : "Oui" }}</FONT></p>
+                    </div>
+                    {% if(affiliation is not null) %}
+                        <div class="col-md-12">
+                            <div class="col-md-6 row">
+                                <p><FONT COLOR="#5a5a5a">Type :</FONT> {{ affiliation.numeroagrement }}</p>
+                            </div>
+                            <div class="col-md-6 row">
+                                <p><FONT COLOR="#5a5a5a">Attribué par :</FONT> {{ affiliation.organisme }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+
+                </br>
+
+                {#Utilité publique#}
+                <div class="col-md-12">
+                    <div class="col-md-12 row">
+                        <p><FONT COLOR="#5a5a5a"><B>Reconnue d'utilité publique :</B> {{ association.dateutilitepub is null ? "Non" : "Oui" }}</FONT></p>
+                    </div>
+                    {% if(association.dateutilitepub is not null) %}
+                        <div class="col-md-12">
+                            <p><FONT COLOR="#5a5a5a">Depuis le :</FONT> {{ association.dateutilitepub|date('d/m/Y') }}</p>
+                        </div>
+                    {% endif %}
+                </div>
+
+                </br>
+
+                <div class="col-md-12">
+                    <p><FONT COLOR="#5a5a5a"><B>Association sportive :</B> {{ association.isSportive ? "Oui" : "Non" }}</FONT></p>
+                </div>
+
+                </br>
+
+                {#Expert comptable#}
+                <div class="col-md-12">
+                    <div class="col-md-12 row">
+                        <p><FONT COLOR="#5a5a5a"><B>Expert-comptable / commissaire des comptes :</B> {{ expertcomptable == null ? "Non" : "Oui"}}</FONT></p>
+                    </div>
+                    {% if(expertcomptable is not null) %}
+                        <div class="col-md-12">
+                            <div class="col-md-6 row">
+                                <p><FONT COLOR="#5a5a5a">Nom :</FONT> {{ expertcomptable.nom }}</p>
+                            </div>
+                            <div class="col-md-6 row">
+                                <p><FONT COLOR="#5a5a5a">Prénom :</FONT> {{ expertcomptable.prenom }}</p>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <p><FONT COLOR="#5a5a5a">Adresse :</FONT> {{ expertcomptable.adresse }}</p>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="col-md-6 row">
+                                <p><FONT COLOR="#5a5a5a">Mail :</FONT> {{ expertcomptable.mail }}</p>
+                            </div>
+                            <div class="col-md-6 row">
+                                <p><FONT COLOR="#5a5a5a">Téléphone :</FONT> {{ expertcomptable.telephone }}</p>
+                            </div>
+                        </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            </br>
+            </br>
+
+            {#3/ Composition de l'association#}
+            <div class="col-md-12 form-group">
+                <H1 CLASS="western">
+                    <B>3/ Composition de l'association</B>
+                </H1>
+                </br>
+                <div class="col-md-12">
+                    <H2 CLASS="western"><B>Bureau :</B></H2>
+                    <div class="col-md-12">
+                        <p><FONT COLOR="#5a5a5a"><B>Date de la dernière assemblée générale :</B> {{ bureau.dateassemblee|date('d/m/Y') }}</FONT></p>
+                    </div>
+                    </br>
+                    <div class="col-md-12">
+                        <H3 CLASS="western">Membres du bureau :</H3>
+                    </div>
+                    </br>
+                    <div class="col-md-12">
+                        <TABLE>
+                            <TR VALIGN=TOP>
+                                <TD STYLE="border: 1px solid #00000a;"><P><B>&nbsp;NOM&nbsp;</B></P></TD>
+                                <TD STYLE="border: 1px solid #00000a;"><P><B>&nbsp;PRENOM&nbsp;</B></P></TD>
+                                <TD STYLE="border: 1px solid #00000a;"><P><B>&nbsp;ADRESSE POSTAL&nbsp;</B></P></TD>
+                                <TD STYLE="border: 1px solid #00000a;"><P><B>&nbsp;TELEPHONE&nbsp;</B></P></TD>
+                                <TD STYLE="border: 1px solid #00000a;"><P><B>&nbsp;MAIL&nbsp;</B></P></TD>
+                                <TD STYLE="border: 1px solid #00000a;"><P><B>&nbsp;PROFESSION&nbsp;</B></P></TD>
+                                <TD STYLE="border: 1px solid #00000a;"><P><B>&nbsp;RÔLE&nbsp;</B></P></TD>
+                            </TR>
+                            {% for membrebureau in membresbureau %}
+                            <TR VALIGN=TOP>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P>&nbsp;{{ membrebureau.nom }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P>&nbsp;{{ membrebureau.prenom }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P>&nbsp;{{ membrebureau.adresse }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P>&nbsp;{{ membrebureau.telephone }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P>&nbsp;{{ membrebureau.mail }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P>&nbsp;{{ membrebureau.profession }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P>&nbsp;{{ membrebureau.roles.nom }}&nbsp;</P>
+                                </TD>
+                            </TR>
+                            {% endfor %}
+                        </TABLE>
+                    </div>
+                    </br>
+                    </br>
+                    <div class="col-md-12">
+                        <H3 CLASS="western">Membres du conseil d'administration :</H3>
+                    </div>
+                    </br>
+                    <div class="col-md-12">
+                        <TABLE>
+                            <TR VALIGN=TOP>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P><B>&nbsp;NOM&nbsp;</B></P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P><B>&nbsp;PRENOM&nbsp;</B></P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P><B>&nbsp;COMMUNE DE RESIDENCE&nbsp;</B></P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P><B>&nbsp;PROFESSION&nbsp;</B></P>
+                                </TD>
+                            </TR>
+                            {% for membreconseil in membresconseil %}
+                            <TR VALIGN=TOP>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P>&nbsp;{{ membreconseil.nom }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P>&nbsp;{{ membreconseil.prenom }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P>&nbsp;{{ membreconseil.communeResidence }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P>&nbsp;{{ membreconseil.profession }}&nbsp;</P>
+                                </TD>
+                            </TR>
+                            {% endfor %}
+                        </TABLE>
+                    </div>
+                    </br>
+                    </br>
+                    <div class="col-md-12">
+                        <H3 CLASS="western">Catégories d'adhérents :</H3>
+                    </div>
+                    </br>
+                    <div class="col-md-12">
+                        <TABLE>
+                            <TR VALIGN=TOP>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P><B>&nbsp;CATEGORIE&nbsp;</B></P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P><B>&nbsp;TRANCHE D’ÂGE&nbsp;</B></P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P><B>&nbsp;NOMBRE&nbsp;</B></P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P><B>&nbsp;NIVEAU&nbsp;</B></P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P><B>&nbsp;RESIDENCE&nbsp;</B></P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a;">
+                                    <P><B>&nbsp;COTISATION&nbsp;</B></P>
+                                </TD>
+                            </TR>
+                            {% for categorieadherent in categoriesadherents %}
+                                <TR VALIGN=TOP>
+                                    <TD STYLE="border: 1px solid #00000a;">
+                                        <P>&nbsp;{{ categorieadherent.categorie }}&nbsp;</P>
+                                    </TD>
+                                    <TD STYLE="border: 1px solid #00000a;">
+                                        <P>&nbsp;{{ categorieadherent.trancheage }}&nbsp;</P>
+                                    </TD>
+                                    <TD STYLE="border: 1px solid #00000a;">
+                                        <P>&nbsp;{{ categorieadherent.nombre }}&nbsp;</P>
+                                    </TD>
+                                    <TD STYLE="border: 1px solid #00000a;">
+                                        <P>&nbsp;{{ categorieadherent.niveau }}&nbsp;</P>
+                                    </TD>
+                                    <TD STYLE="border: 1px solid #00000a;">
+                                        <P>&nbsp;{{ categorieadherent.residence }}&nbsp;</P>
+                                    </TD>
+                                    <TD STYLE="border: 1px solid #00000a;">
+                                        <P>&nbsp;{{ categorieadherent.montantcotisation }} €&nbsp;</P>
+                                    </TD>
+                                </TR>
+                            {% endfor %}
+                        </TABLE>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>

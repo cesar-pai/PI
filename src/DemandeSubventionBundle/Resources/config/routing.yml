@@ -1,0 +1,17 @@
+DemandesubventionBundle_demande:
+    path:     /demande
+    defaults: { _controller: DemandeSubventionBundle:Demande:dossier }
+
+UserBundle_login:
+    path:  /login
+    defaults: { _controller: UserBundle:Login:login }
+
+AssociationBundle_homepage:
+   path:  /
+   defaults: { _controller: AssociationBundle:Default:index }
+   requirements:
+       methods:  GET
+
+AssociationBundle_association:
+    path:  /association
+    defaults: { _controller: AssociationBundle:Association:association }

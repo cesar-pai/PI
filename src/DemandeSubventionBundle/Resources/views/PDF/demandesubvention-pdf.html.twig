@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS -->
+    <link href="http://www.villersenligne.fr/assets/vendor/bootstrap/dist/css/bootstrap.css" type="text/css" rel="stylesheet"/>
+    <style>
+        @page {
+            margin-right: 0.02in;
+            margin-bottom: 0.69in
+        }
+
+        P {
+            margin-bottom: 0.08in;
+            direction: ltr;
+            widows: 2;
+            orphans: 2
+        }
+
+        H1 {
+            margin-bottom: 0in;
+            direction: ltr;
+            color: #2e74b5;
+            page-break-inside: avoid;
+            widows: 2;
+            orphans: 2
+        }
+
+        H1.western {
+            font-family: "Calibri Light", serif;
+            font-size: 16pt;
+            font-weight: normal
+        }
+
+        H1.cjk {
+            font-size: 16pt;
+            font-weight: normal
+        }
+
+        H1.ctl {
+            font-size: 16pt;
+            font-weight: normal
+        }
+
+        H2 {
+            margin-top: 0.03in;
+            margin-bottom: 0in;
+            direction: ltr;
+            color: #2e74b5;
+            page-break-inside: avoid;
+            widows: 2;
+            orphans: 2
+        }
+
+        H2.western {
+            font-family: "Calibri Light", serif;
+            font-size: 13pt;
+            font-weight: normal
+        }
+
+        H2.cjk {
+            font-family: "Arial";
+            font-size: 13pt;
+            font-weight: normal
+        }
+
+        H2.ctl {
+            font-size: 13pt;
+            font-weight: normal
+        }
+
+        H3 {
+            margin-top: 0.03in;
+            margin-bottom: 0in;
+            direction: ltr;
+            color: #1f4d78;
+            page-break-inside: avoid;
+            widows: 2;
+            orphans: 2
+        }
+
+        H3.western {
+            font-family: "Calibri Light", serif;
+            font-size: 12pt;
+            font-weight: normal
+        }
+
+        H3.cjk {
+            font-family: "Arial";
+            font-size: 12pt;
+            font-weight: normal
+        }
+
+        H3.ctl {
+            font-size: 12pt;
+            font-weight: normal
+        }
+
+        .centered {
+            margin-top: 0;
+            margin-right: auto;
+            margin-left: auto;
+            margin-bottom: 0;
+            float: none;
+        }
+
+        .objet{
+            min-width: 10%;
+            width:95%;
+            max-width: 95%;
+            border: 1px solid #00000a;
+        }
+
+        table, tr, td, th, tbody, thead, tfoot {
+            page-break-inside: avoid !important;
+            font-size: small;
+        }
+    </style>
+
+    <title>Demande de subvention {{ 'now'|date('Y') }} - {{ association.nom }}</title>
+</head>
+
+<body>
+
+    {#Entête#}
+    <div class="col-md-12 centered">
+        <div class="col-md-12">
+            {#Titre#}
+            <P ALIGN="CENTER">
+                <FONT FACE="Calibri Light, serif">
+                    <FONT SIZE=6 STYLE="font-size: 28pt;margin-left:-3%;">
+                        <FONT SIZE=7><B>DEMANDE DE SUBVENTION {{ 'now'|date('Y') }}</B></FONT>
+                    </FONT>
+                </FONT>
+            </P>
+            <br>
+            <P ALIGN="CENTER">
+                <FONT FACE="Calibri Light, serif">
+                    <FONT SIZE=6 STYLE="font-size: 28pt;">
+                        <FONT SIZE=7><B>-</B></FONT>
+                    </FONT>
+                </FONT>
+            </P>
+        </div>
+        <br>
+        <P ALIGN="CENTER">
+            <FONT FACE="Calibri Light, serif">
+                <FONT SIZE=6 STYLE="font-size: 28pt">
+                    <FONT SIZE=7>{{ association.nom }} </FONT>
+                </FONT>
+            </FONT>
+        </P>
+        <br>
+        <br>
+        <hr>
+        <br>
+    </div>
+
+    {#Corps#}
+    <div class="form-group col-md-10 centered">
+
+        {#1/ Renseignements#}
+        <div class="col-md-12 form-group">
+            <H1 CLASS="western">
+                <B>1/ Renseignements sur la demande</B>
+            </H1>
+            <br>
+            <div class="col-md-6">
+                <p><FONT COLOR="#5a5a5a"><B>Montant de la demande :</B> {{ demandesubvention.montantSubvention }} €</FONT></p>
+            </div>
+            <div class="col-md-12">
+                <p><FONT COLOR="#5a5a5a"><B>Subvention demandée afin de réaliser des travaux ou des acquisitions d'investissements :</B> {{ travauxinvestissement == null ? "Non" : "Oui"}}</FONT></p>
+            </div>
+            {% if(travauxinvestissement is not null) %}
+                <div class="col-md-12">
+                    <p><FONT COLOR="#5a5a5a"><B>Nature des travaux / acquisitions d'investissements :</B></FONT></p>
+                </div>
+                <textarea class="objet" readonly name="" id="" cols="30" rows="10">{{ travauxinvestissement.nature }}</textarea>
+            {% endif %}
+
+            </br>
+            </br>
+            {#Subventions demandées#}
+            <div class="col-md-12 form-group">
+                {#Subventions#}
+                <div class="col-md-12">
+                    <H3 CLASS="western">Subventions reçues les années précédentes et demandées en {{ 'now'|date('Y') }} :</H3>
+                </div>
+                </br>
+                <div class="col-md-12">
+                    <TABLE>
+                        <TR VALIGN=TOP>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;ORGANISME&nbsp;</B></P></TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;ANNÉES&nbsp;</B></P></TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;DEMANDÉE&nbsp;</B></P></TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;RECUE&nbsp;</B></P></TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;MONTANT&nbsp;</B></P></TD>
+                        </TR>
+                        {% for subvention in subventions %}
+                            <TR VALIGN=TOP>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                    <P>&nbsp;{{ subvention.organisme }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                    <P>&nbsp;{{ subvention.annee }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                    <P>&nbsp;{{ subvention.demandee ? "Oui" : "Non" }}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                    <P>&nbsp;{{ subvention.recue ? "Oui" : "Non"}}&nbsp;</P>
+                                </TD>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                    <P>&nbsp;{{ subvention.montant }} €&nbsp;</P>
+                                </TD>
+                            </TR>
+                        {% endfor %}
+                    </TABLE>
+                </div>
+            </div>
+        </div>
+
+        {#2/ Activités#}
+        <div class="col-md-12 form-group">
+                <H1 CLASS="western">
+                    <B>2/ Activités</B>
+                </H1>
+                <br>
+                {#Objectifs#}
+                <div class="col-md-12">
+                    <p><FONT COLOR="#5a5a5a"><B>Bilan d'activités :</B></FONT></p>
+                    <textarea class="objet" readonly name="" id="" cols="30" rows="10">{{ bilanactivite.objectifs }}</textarea>
+                    <br>
+                </div>
+
+                {#Faits et évenements marquants au court de l'année écoulée#}
+                <div class="col-md-12 form-group">
+                    {#Faits et évenements marquants#}
+                    <div class="col-md-12">
+                        <H3 CLASS="western">Faits et évenements marquants au court de l'année écoulée :</H3>
+                    </div>
+                    <div class="col-md-12">
+                        <br>
+                        <TABLE>
+                            <TR VALIGN=TOP>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;Description&nbsp;</B></P></TD>
+                            </TR>
+                            {% for faitmarquant in faitsmarquants %}
+                                <TR VALIGN=TOP>
+                                    <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                        <P>&nbsp;{{ faitmarquant.description }}&nbsp;</P>
+                                    </TD>
+                                </TR>
+                            {% endfor %}
+                        </TABLE>
+                    </div>
+                </div>
+
+                </br>
+                </br>
+                {#Manifestations réalisées (y compris les participations aux manifestions de la ville)#}
+                <div class="col-md-12 form-group">
+                    {#Manifestations#}
+                    <div class="col-md-12">
+                        <H3 CLASS="western">Manifestations réalisées (y compris les participations aux manifestions de la ville) :</H3>
+                    </div>
+                    </br>
+                    <div class="col-md-12">
+                        <TABLE>
+                            <TR VALIGN=TOP>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;NOM&nbsp;</B></P></TD>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;DATE&nbsp;</B></P></TD>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;THÈME&nbsp;</B></P></TD>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;PUBLIC&nbsp;</B></P></TD>
+                            </TR>
+                            {% for manifestation in manifestations %}
+                                <TR VALIGN=TOP>
+                                    <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                        <P>&nbsp;{{ manifestation.nom }}&nbsp;</P>
+                                    </TD>
+                                    <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                        <P>&nbsp;{{ manifestation.date|date('d/m/Y') }}&nbsp;</P>
+                                    </TD>
+                                    <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                        <P>&nbsp;{{ manifestation.theme }}&nbsp;</P>
+                                    </TD>
+                                    <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                        <P>&nbsp;{{ manifestation.public }}&nbsp;</P>
+                                    </TD>
+                                </TR>
+                            {% endfor %}
+                        </TABLE>
+                    </div>
+                </div>
+
+                {#Autres#}
+                <div class="col-md-12">
+                    <p><FONT COLOR="#5a5a5a"><B>Autres informations relatives au bilan d'activité :</B></FONT></p>
+                    <textarea class="objet" readonly name="" id="" cols="30" rows="10">{{  bilanactivite.autres }}</textarea>
+                </div>
+
+                </br>
+                </br>
+                {#Programme d'actions#}
+                <div class="col-md-12 form-group">
+                    {#Programme d'actions#}
+                    <div class="col-md-12">
+                        <H3 CLASS="western"> Programme d'actions :</H3>
+                    </div>
+                    </br>
+                    <div class="col-md-12">
+                        <TABLE>
+                            <TR VALIGN=TOP>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;NOM&nbsp;</B></P></TD>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;EST UNE NOUVELLE ACTION&nbsp;</B></P></TD>
+                                <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;OBJECTIF&nbsp;</B></P></TD>
+                            </TR>
+                            {% for action in actions %}
+                                <TR VALIGN=TOP>
+                                    <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                        <P>&nbsp;{{ action.nom }}&nbsp;</P>
+                                    </TD>
+                                    <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                        <P>&nbsp;{{ action.isnew ? "Oui" : "Non"}}&nbsp;</P>
+                                    </TD>
+                                    <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in" WIDTH="50%">
+                                        <P>&nbsp;{{ action.objectif }}&nbsp;</P>
+                                    </TD>
+                                </TR>
+                            {% endfor %}
+                        </TABLE>
+                    </div>
+                </div>
+
+                {#Activités payantes#}
+                <div class="col-md-12">
+                    <div class="col-md-12">
+                        <p><FONT COLOR="#5a5a5a"><B>Activités payantes en {{ 'now'|date('Y') }} :</B> {{ demandesubvention.activitespayantes is null ? "Non" : "Oui"}}</FONT></p>
+                    </div>
+                    {% if(demandesubvention.activitespayantes is not null) %}
+                    <div class="col-md-12">
+                        <p><FONT COLOR="#5a5a5a">Ces activités seront : </FONT>{{ demandesubvention.activitespayantes }}</p>
+                    </div>
+                    {% endif %}
+                </div>
+
+                </br>
+
+                {#Prestations prises en charge par la commune#}
+                <div class="col-md-12">
+                    <div class="col-md-12 row">
+                        <p><FONT COLOR="#5a5a5a"><B>Prestations prises en charge par la commune :</B> {{ demandesubvention.commVill ? "Oui" : "Non"}}</FONT></p>
+                    </div>
+                </div>
+
+                </br>
+
+                {#Photocopie prise en charge par la ville#}
+                <div class="col-md-12">
+                    <div class="col-md-12 row">
+                        <p><FONT COLOR="#5a5a5a"><B>Photocopie prise en charge par la ville :</B> {{ demandesubvention.photocopieVille ? "Oui" : "Non"}}</FONT></p>
+                    </div>
+                </div>
+
+                </br>
+
+                {#Tâches de secrétariat ou autres assurées par la ville#}
+                <div class="col-md-12">
+                    <div class="col-md-12 row">
+                        <p><FONT COLOR="#5a5a5a"><B>Tâches de secrétariat ou autres assurées par la ville :</B> {{ demandesubvention.tachesSecretariat == null ? "Non" : "Oui"}}</FONT></p>
+                    </div>
+                    {% if(demandesubvention.tachesSecretariat is not null) %}
+                        <textarea class="objet" readonly name="" id="" cols="30" rows="10">{{ demandesubvention.tachesSecretariat }}</textarea>
+                        <br>
+                    {% endif %}
+                </div>
+            </div>
+
+        {#3/ Biens et locaux mises à disposition#}
+        <div class="col-md-12 form-group">
+            <H1 CLASS="western">
+                <B>3/ Biens et locaux mises à disposition</B>
+            </H1>
+            </br>
+            </br>
+            <div class="col-md-12">
+                <H2 CLASS="western"><B>Liste des locaux communaux mis à disposition de façon permanente (salles, vestiaires, garages, bureaux, etc.) :</B></H2>
+                </br>
+                <div class="col-md-12">
+                    <TABLE>
+                        <TR VALIGN=TOP>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;NOM&nbsp;</B></P></TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;ADRESSE&nbsp;</B></P></TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;FRÉQUENCE D'UTILISATION&nbsp;</B></P></TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;HORAIRES D'UTILISATION&nbsp;</B></P></TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;TYPE DE RESSOURCES&nbsp;</B></P></TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in"><P><B>&nbsp;PROPRIÉTÉ DE LA VILLE&nbsp;</B></P></TD>
+                        </TR>
+                        {% for mad in miseadispo %}
+                        <TR VALIGN=TOP>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                <P>&nbsp;{{ mad.nom }}&nbsp;</P>
+                            </TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                <P>&nbsp;{{ mad.adresse }}&nbsp;</P>
+                            </TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                <P>&nbsp;{{ mad.freqUtil }}&nbsp;</P>
+                            </TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                <P>&nbsp;{{ mad.horairesUtil }}&nbsp;</P>
+                            </TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                <P>&nbsp;{{ mad.typesmiseadisposition.nom }}&nbsp;</P>
+                            </TD>
+                            <TD STYLE="border: 1px solid #00000a; padding-top: 0in; padding-bottom: 0in; padding-left: 0.08in; padding-right: 0.08in">
+                                <P>&nbsp;{{ mad.appartientVille ? "Oui" : "Non" }}&nbsp;</P>
+                            </TD>
+                        </TR>
+                        {% endfor %}
+                    </TABLE>
+                </div>
+            </div>
+        </div>
+
+        {#4/ Personne en charge du dossier#}
+        <div class="col-md-12 form-group">
+            <H1 CLASS="western">
+                <B>4/ Personne en charge du dossier</B>
+            </H1>
+            <br>
+            <div class="col-md-6">
+                <p><FONT COLOR="#5a5a5a">Nom :</FONT> {{ persencharge.nom }}</p>
+            </div>
+            <div class="col-md-6">
+                <p><FONT COLOR="#5a5a5a">Prénom :</FONT> {{ persencharge.prenom }}</p>
+            </div>
+            <div class="col-md-6">
+                <p><FONT COLOR="#5a5a5a">Qualité au sein de l'association :</FONT> {{ persencharge.qualite }}</p>
+            </div>
+            <div class="col-md-6">
+                <p><FONT COLOR="#5a5a5a">Adresse :</FONT> {{ persencharge.adresse }}</p>
+            </div>
+            <div class="col-md-6">
+                <p><FONT COLOR="#5a5a5a">Téléphone :</FONT> {{ persencharge.telephone }}</p>
+            </div>
+            <div class="col-md-6">
+                <p><FONT COLOR="#5a5a5a">Mail :</FONT> {{ persencharge.mail }}</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>

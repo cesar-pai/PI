@@ -1,0 +1,16 @@
+{% extends 'AppBundle:Default:index.html.twig' %}
+
+{% block title %}Enregistrement réussi !{% endblock %}
+
+{% block content %}
+    <div class="col-md-9 col-sm-9 centered container main-div" xmlns="http://www.w3.org/1999/html">
+        <h3 class="sub-header">{% block section %}{% endblock %}</h3>
+        <div class="content">
+
+            <h5><p>Vous venez d'enregistrer votre comtpe utilisateur {{ user.username }} ! Vous pouvez d&eacutesormais enregistrer votre association afin de faire une demande de subvention</p></h5>
+            <p><a href="{{ path('AssociationBundle_homepage') }}">Acc&eacute;der votre espace utilisateur</a></p>
+
+        </div>
+    </div>
+
+{% endblock content %}

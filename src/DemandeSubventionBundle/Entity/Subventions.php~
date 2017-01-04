@@ -1,0 +1,244 @@
+<?php
+
+namespace DemandeSubventionBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Subventions
+ *
+ * @ORM\Table(name="subventions", indexes={@ORM\Index(name="fk_subventions_demandes_subvention1_idx", columns={"demandessubvention_id"})})
+ * @ORM\Entity
+ * @ORM\HasLifecycleCallbacks
+ */
+class Subventions
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="annee", type="integer", nullable=true)
+     */
+    private $annee;
+
+    /**
+     * @var float
+     *
+     * @ORM\Column(name="montant", type="float", precision=10, scale=0, nullable=true)
+     */
+    private $montant;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="recue", type="boolean")
+     */
+    private $recue = true;
+
+    /**
+     * @var boolean
+     *
+     * @ORM\Column(name="demandee", type="boolean")
+     */
+    private $demandee = true;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="organisme", type="string", length=45, nullable=true)
+     */
+    private $organisme;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="created_at", type="datetime", nullable=false)
+     */
+    private $createdAt;
+
+    /**
+     * @var \DateTime
+     *
+     * @ORM\Column(name="updated_at", type="datetime", nullable=false)
+     */
+    private $updatedAt;
+
+    /**
+     * @var \DemandeSubventionBundle\Entity\Demandessubvention
+     *
+     * @ORM\GeneratedValue(strategy="NONE")
+     * @ORM\ManyToOne(targetEntity="Demandessubvention", cascade={"persist", "merge"})
+     * @ORM\JoinColumns({
+     *   @ORM\JoinColumn(name="demandessubvention_id", referencedColumnName="id")
+     * })
+     */
+    private $demandessubvention;
+
+    /**
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * @param int $id
+     */
+    public function setId($id)
+    {
+        $this->id = $id;
+    }
+
+    /**
+     * @return int
+     */
+    public function getAnnee()
+    {
+        return $this->annee;
+    }
+
+    /**
+     * @param int $annee
+     */
+    public function setAnnee($annee)
+    {
+        $this->annee = $annee;
+    }
+
+    /**
+     * @return float
+     */
+    public function getMontant()
+    {
+        return $this->montant;
+    }
+
+    /**
+     * @param float $montant
+     */
+    public function setMontant($montant)
+    {
+        $this->montant = $montant;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isRecue()
+    {
+        return $this->recue;
+    }
+
+    /**
+     * @param boolean $recue
+     */
+    public function setRecue($recue)
+    {
+        $this->recue = $recue;
+    }
+
+    /**
+     * @return boolean
+     */
+    public function isDemandee()
+    {
+        return $this->demandee;
+    }
+
+    /**
+     * @param boolean $demandee
+     */
+    public function setDemandee($demandee)
+    {
+        $this->demandee = $demandee;
+    }
+
+    /**
+     * @return string
+     */
+    public function getOrganisme()
+    {
+        return $this->organisme;
+    }
+
+    /**
+     * @param string $organisme
+     */
+    public function setOrganisme($organisme)
+    {
+        $this->organisme = $organisme;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt()
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param \DateTime $createdAt
+     */
+    public function setCreatedAt($createdAt)
+    {
+        $this->createdAt = $createdAt;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getUpdatedAt()
+    {
+        return $this->updatedAt;
+    }
+
+    /**
+     * @param \DateTime $updatedAt
+     */
+    public function setUpdatedAt($updatedAt)
+    {
+        $this->updatedAt = $updatedAt;
+    }
+
+    /**
+     * @return \Demandessubvention
+     */
+    public function getDemandessubvention()
+    {
+        return $this->demandessubvention;
+    }
+
+    /**
+     * @param \Demandessubvention $demandessubvention
+     */
+    public function setDemandessubvention($demandessubvention)
+    {
+        $this->demandessubvention = $demandessubvention;
+    }
+
+    /**
+     *
+     * @ORM\PrePersist
+     * @ORM\PreUpdate
+     */
+    public function updatedTimestamps()
+    {
+        $this->setUpdatedAt(new \DateTime('now'));
+
+        if ($this->getCreatedAt() == null) {
+            $this->setCreatedAt(new \DateTime('now'));
+        }
+    }
+
+}
+
