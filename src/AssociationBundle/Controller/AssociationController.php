@@ -19,12 +19,12 @@ class AssociationController extends Controller
 {
     public function AssociationAction(Request $request)
     {
-        if ($this->container->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
         {
             // redirect authenticated admin to homepage
             return $this->redirectToRoute('AdminBundle_homepage');
         }
-        else if ($this->container->get('security.authorization_checker')->isGranted('ROLE_USER'))
+        else if ($this->get('security.authorization_checker')->isGranted('ROLE_USER'))
         {
             // Get User
             $user = $this->getUser();
@@ -34,7 +34,7 @@ class AssociationController extends Controller
                 ->getRepository('AssociationBundle:Associations')
                 ->findOneBy(array('users' => $user));
 
-            if($association == null) 
+            if($association == null)
             {
                 // 1) build the form
                 $form = $this->createForm(new RegistrationFormType());
@@ -166,12 +166,12 @@ class AssociationController extends Controller
 
     public function updateAction(Request $request)
     {
-        if ($this->container->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
         {
             // redirect authenticated admin to homepage
             return $this->redirectToRoute('AdminBundle_homepage');
         }
-        else if ($this->container->get('security.authorization_checker')->isGranted('ROLE_USER'))
+        else if ($this->get('security.authorization_checker')->isGranted('ROLE_USER'))
         {
             $user = $this->getUser();
 

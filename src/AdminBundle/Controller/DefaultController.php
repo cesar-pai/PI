@@ -10,7 +10,7 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        if ($this->get('security.context')->isGranted('ROLE_ADMIN'))
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
         {
 //      Get Association
             $associations = $this->getDoctrine()
@@ -29,7 +29,7 @@ class DefaultController extends Controller
             // redirect authenticated users to homepage
             return $this->render('AdminBundle:Default:index.html.twig',array('associations' => $associations, 'demandessubvention' => $demandessubvention));
         }
-        else if ($this->get('security.context')->isGranted('ROLE_USER')) {
+        else if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
 
             // redirect authenticated admin to homepage
             return $this->redirectToRoute('AssociationBundle_homepage');

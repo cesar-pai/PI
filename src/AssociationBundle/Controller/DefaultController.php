@@ -23,12 +23,12 @@ class DefaultController extends Controller
             ->getRepository('DemandeSubventionBundle:Demandessubvention')
             ->findOneBy(array('associationsNumassoc' => $association),array('id' => 'DESC'));
 
-        if ($this->get('security.context')->isGranted('ROLE_ADMIN'))
+        if ($this->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
         {
             // redirect authenticated admin to homepage
             return $this->redirectToRoute('AdminBundle_homepage');
         }
-        else if ($this->get('security.context')->isGranted('ROLE_USER')) {
+        else if ($this->get('security.authorization_checker')->isGranted('ROLE_USER')) {
             // redirect authenticated users to homepage
             return $this->render('AssociationBundle:Default:index.html.twig', array('association' => $association, 'demandesubvention' => $demandesubvention,'accueil' => true));
         } else {

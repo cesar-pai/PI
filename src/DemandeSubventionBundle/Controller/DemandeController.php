@@ -26,17 +26,17 @@ class DemandeController extends Controller
     {
         if ($this->get('security.authorization_checker')->isGranted('ROLE_USER'))
         {
-//              Get User
+            // Get User
             $user = $this->getUser();
 
-//              Get Association
+            // Get Association
             $association = $this->getDoctrine()
                 ->getRepository('AssociationBundle:Associations')
                 ->findOneBy(array('users' => $user));
 
             if ($association instanceof Associations) {
 
-//                  Get Test Demande Subvention
+                // Get Test Demande Subvention
                 $testds = $this
                     ->getDoctrine()
                     ->getRepository('DemandeSubventionBundle:Demandessubvention')
@@ -54,41 +54,41 @@ class DemandeController extends Controller
                     // 2) handle the submit (will only happen on POST)
                     if ($form->handleRequest($request)->isValid()) {
 
-//                  Set Demande subvention
+                        // Set Demande subvention
                         $demandesubvention = $form['demandesubvention']->getData();
                         $demandesubvention->setAssociationsNumassoc($association);
                         $demandesubvention->setActivitespayantes(implode(", ", $demandesubvention->getActivitespayantes())); //Rassemble tous les choix en une string
 
-//                  Set Pers en charge
+                        // Set Pers en charge
                         $persencharge = $form['persencharge']->getData();
                         $persencharge->setDemandessubvention($demandesubvention);
 
-//                  Set Travaux investissement
+                        // Set Travaux investissement
                         $travauxinvestissement = $form['travauxinvestissement']->getData();
 
-//                  Set Bilan activite
+                        // Set Bilan activite
                         $bilanactivite = $form['bilanactivite']->getData();
                         $bilanactivite->setDemandessubvention($demandesubvention);
 
-//                  Set Actions
+                        // Set Actions
                         $actions = $form['actions']->getData();
 
-//                  Set Subventions
+                        // Set Subventions
                         $subventions = $form['subventions']->getData();
 
-//                  Set Manifestations
+                        // Set Manifestations
                         $manifestations = $form['manifestations']->getData();
 
-//                  Set Faits marquants
+                        // Set Faits marquants
                         $faitsmarquants = $form['faitsmarquants']->getData();
 
-//                  Set Mise a dispo
+                        // Set Mise a dispo
                         $miseadispo = $form['miseadispo']->getData();
 
-//                  Set Documents
+                        // Set Documents
                         $documents = $form['documents']->getData();
 
-//                  Set Entity Manager
+                        // Set Entity Manager
                         $em = $this->getDoctrine()->getManager();
 
                         $dossier = $this->createDossierDemande($association,$demandesubvention,$bilanactivite,$persencharge,$manifestations,$actions,$faitsmarquants,$subventions,$miseadispo,$travauxinvestissement);
@@ -149,19 +149,19 @@ class DemandeController extends Controller
                             $em->persist($fait);
                         }
 
-//                    On persiste tout les documents uploadés
+                        // On persiste tout les documents uploadés
                         foreach($uploaded as $uploads => $up) {
                             $em->persist($up);
                         }
 
                         $em->flush();
 
-//                On créé le zip associé
+                        // On créé le zip associé
                         $sourcepath = $this->get('kernel')->getRootDir() . '/../web/uploads/'.$association->getNumassoc().'/demandessubvention/demandesubvention-'.date('Y').'/';
                         $targetpath = $sourcepath.'/demandesubvention-'.date('Y').'.zip';
                         HZip::zipDir($sourcepath,$targetpath);
 
-//                    Remove all tmp files
+                        // Remove all tmp files
                         $tmpfiles = glob($this->get('kernel')->getRootDir().'/../web/uploads/tmp/*'); // get all file names
                         foreach($tmpfiles as $tmpfile){ // iterate files
                             if(is_file($tmpfile))
@@ -186,7 +186,7 @@ class DemandeController extends Controller
 
     public function setDocumentsDemande(){
 
-//      Les différents fichiers qui seront uploadés lors de l'enregistrement de l'association
+        // Les différents fichiers qui seront uploadés lors de l'enregistrement de l'association
         $bilans = new Documents();
         $bilans->setObjet('bilans');
 
@@ -218,7 +218,7 @@ class DemandeController extends Controller
     }
 
     public function createDossierDemande($association,$demandesubvention,$bilanactivite,$persencharge,$manifestations,$actions,$faitsmarquants,$subventions,$miseadispo,$travauxinvestissement) {
-//        Création du PDF dossier de demande de subvention de l'association
+        // Création du PDF dossier de demande de subvention de l'association
 
         $recap = new Documents();
         $recap->setObjet('dossier-demandesubvention-'.date('Y'));
@@ -227,10 +227,10 @@ class DemandeController extends Controller
         $path = $association->getNumassoc().'/demandessubvention/demandesubvention-'.date('Y').'/'.$recap->getObjet().'/'.$recap->getNom().'.pdf';
         $recap->setPath($path);
 
-//        On genère la vue à convertir en PDF, en n'oubliant pas les paramètres twig si la vue comporte des données dynamiques
+        // On genère la vue à convertir en PDF, en n'oubliant pas les paramètres twig si la vue comporte des données dynamiques
         $file = $this->get('knp_snappy.pdf');
 
-//        On save la session
+        // On save la session
         $session = $this->getRequest()->getSession();
         $session->save();
         $file->generateFromHtml(
@@ -256,5 +256,4 @@ class DemandeController extends Controller
 
         return $recap;
     }
-
 }
