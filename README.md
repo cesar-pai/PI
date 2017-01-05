@@ -86,7 +86,7 @@ $ php composer.phar update
 
 Then initialize the database :
 
-$ php app/console help doctrine:database:create
+$ php app/console doctrine:database:create
 
 $ php app/console doctrine:generate:entities AssociationBundle
 

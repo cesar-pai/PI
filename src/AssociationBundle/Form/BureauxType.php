@@ -5,6 +5,7 @@ namespace AssociationBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use SC\DatetimepickerBundle\Form\Type\DatetimeType;
 
 class BureauxType extends AbstractType
 {
@@ -15,12 +16,12 @@ class BureauxType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('dateassemblee', 'collot_datetime',array('pickerOptions' =>
+            ->add('dateassemblee', DatetimeType::class,array('pickerOptions' =>
                 array('format' => 'dd/mm/yyyy','minView' => 'month',
                     'maxView' => 'decade')))
         ;
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */

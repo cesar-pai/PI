@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use UserBundle\Entity\Users;
 use UserBundle\Form\UsersType;
+use SC\DatetimepickerBundle\Form\Type\DatetimeType;
 
 class AssociationsType extends AbstractType
 {
@@ -22,7 +23,7 @@ class AssociationsType extends AbstractType
             ->add('numassoc', 'text')
             ->add('nom', 'text')
             ->add('sigle', 'text',array('required' => false))
-            ->add('datecrea', 'collot_datetime', array('pickerOptions' =>
+            ->add('datecrea', DatetimeType::class, array('pickerOptions' =>
                 array('format' => 'dd/mm/yyyy','minView' => 'month',
                     'maxView' => 'decade')))
             ->add('objet', 'textarea')
@@ -30,22 +31,22 @@ class AssociationsType extends AbstractType
             ->add('telephone', 'text')
             ->add('website', 'text',array('required' => false))
             ->add('horaires', 'text',array('required' => false))
-            ->add('datepubjo', 'collot_datetime',array('required' => false,'pickerOptions' =>
+            ->add('datepubjo', DatetimeType::class,array('required' => false,'pickerOptions' =>
                 array('format' => 'dd/mm/yyyy','minView' => 'month',
                     'maxView' => 'decade')))
             ->add('villedecl', 'text')
-            ->add('datedecl','collot_datetime',array('pickerOptions' =>
+            ->add('datedecl',DatetimeType::class,array('pickerOptions' =>
                 array('format' => 'dd/mm/yyyy','minView' => 'month',
                     'maxView' => 'decade')))
             ->add('siren', 'text')
             ->add('siret', 'text',array('required' => false))
-            ->add('dateUtilitepub','collot_datetime',array('required' => false,'pickerOptions' =>
+            ->add('dateUtilitepub',DatetimeType::class,array('required' => false,'pickerOptions' =>
                 array('format' => 'dd/mm/yyyy','minView' => 'month',
                     'maxView' => 'decade')))
             ->add('isSportive','checkbox',array('required'  => false))
         ;
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */
