@@ -41,7 +41,7 @@
         "twbs/bootstrap": "3.0.*",
         "jquery/jquery":  "1.11.*",
         "knplabs/knp-snappy-bundle": "dev-master",
-        "stephanecollot/datetimepicker-bundle": "dev-master",
+        "stephanecollot/datetimepicker-bundle": "1.0.1",
         "oneup/uploader-bundle": "~1.5",
         "ircmaxell/password-compat": "^1.0"
     },

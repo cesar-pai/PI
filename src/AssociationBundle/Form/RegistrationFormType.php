@@ -24,7 +24,7 @@ class RegistrationFormType extends AbstractType
             ->add('membreconseiladministration', 'collection', array(
                 'type'          => new MembresconseiladministrationType(),
                 'allow_add'     => true,
-                'required'      =>  false,
+                'required'      => false,
                 'label'         => false,
                 'by_reference'  => false
             ))

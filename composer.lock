@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "03339b59502e3bb9ac0c1109cc1dfa4f",
+    "content-hash": "621f9a9e8dbae5137de77cf486b6e7ca",
     "packages": [
         {
             "name": "braincrafted/bootstrap-bundle",
@@ -1671,17 +1671,17 @@
         },
         {
             "name": "stephanecollot/datetimepicker-bundle",
-            "version": "dev-master",
+            "version": "1.0.1",
             "target-dir": "SC/DatetimepickerBundle",
             "source": {
                 "type": "git",
                 "url": "https://github.com/stephanecollot/DatetimepickerBundle.git",
-                "reference": "cb242723883f59f3c849a9c3c7f3af4ed16e7717"
+                "reference": "dcdc1f5ff0b93e9c7372700103ffaa459064f3f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/stephanecollot/DatetimepickerBundle/zipball/cb242723883f59f3c849a9c3c7f3af4ed16e7717",
-                "reference": "cb242723883f59f3c849a9c3c7f3af4ed16e7717",
+                "url": "https://api.github.com/repos/stephanecollot/DatetimepickerBundle/zipball/dcdc1f5ff0b93e9c7372700103ffaa459064f3f3",
+                "reference": "dcdc1f5ff0b93e9c7372700103ffaa459064f3f3",
                 "shasum": ""
             },
             "require": {
@@ -1713,7 +1713,7 @@
                 "symfony",
                 "timepicker"
             ],
-            "time": "2016-03-31 09:55:00"
+            "time": "2015-02-27T05:46:07+00:00"
         },
         {
             "name": "swiftmailer/swiftmailer",
@@ -2531,8 +2531,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "braincrafted/bootstrap-bundle": 20,
-        "knplabs/knp-snappy-bundle": 20,
-        "stephanecollot/datetimepicker-bundle": 20
+        "knplabs/knp-snappy-bundle": 20
     },
     "prefer-stable": false,
     "prefer-lowest": false,

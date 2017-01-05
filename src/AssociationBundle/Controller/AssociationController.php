@@ -7,94 +7,83 @@ use AssociationBundle\Entity\Agrementsadministratifs;
 use AssociationBundle\Entity\Expertscomptable;
 use AssociationBundle\Entity\Responsables;
 use DocumentBundle\Entity\Documents;
-
 use AppBundle\Model\HZip;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Symfony\Component\Process\Exception\ProcessTimedOutException;
 use Symfony\Component\Filesystem\Filesystem;
-
 use AssociationBundle\Form\RegistrationFormType;
 use AssociationBundle\Form\UpdateFormType;
-
-use Symfony\Component\VarDumper\VarDumper;
-
-use Doctrine\Common\Collections\Collection;
-
-use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
-use Symfony\Component\Security\Core\Exception\AccessDeniedException;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\Form\Forms;
 
 class AssociationController extends Controller
 {
     public function AssociationAction(Request $request)
     {
-        if ($this->get('security.context')->isGranted('ROLE_ADMIN'))
+        if ($this->container->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
         {
             // redirect authenticated admin to homepage
             return $this->redirectToRoute('AdminBundle_homepage');
         }
-        else if ($this->get('security.context')->isGranted('ROLE_USER'))
+        else if ($this->container->get('security.authorization_checker')->isGranted('ROLE_USER'))
         {
-//              Get User
+            // Get User
             $user = $this->getUser();
 
-//              Get Association
+            // Get Association
             $association = $this->getDoctrine()
                 ->getRepository('AssociationBundle:Associations')
                 ->findOneBy(array('users' => $user));
 
-            if($association == null) {
+            if($association == null) 
+            {
                 // 1) build the form
-
-                $form = $this->get('form.factory')->createBuilder(new RegistrationFormType())
-                    ->getForm();
+                $form = $this->createForm(new RegistrationFormType());
 
                 $form['documents']->setData($this->setDocumentsAssociation());
 
                 // 2) handle the submit (will only happen on POST)
                 if ($form->handleRequest($request)->isValid()) {
 
-//                Set Association
+                    // Set Association
                     $association = $form['association']->getData();
 
                     $association->setUsers($user);
 
-//                Set Responsable
+                    // Set Responsable
                     $responsable = $form['responsable']->getData();
                     $responsable->setAssociationsNumassoc($association);
 
-//                Set Agrement administratif
+                    // Set Agrement administratif
                     $agrementadministratif = $form['agrementadministratif']->getData();
 
-//                Set Affiliation
+                    // Set Affiliation
                     $affiliation = $form['affiliation']->getData();
 
-//                Set Expert comptable
+                    // Set Expert comptable
                     $expertcomptable = $form['expertcomptable']->getData();
 
-//                Set Membres Conseil Administration
+                    // Set Membres Conseil Administration
                     $membresconseil = $form['membreconseiladministration']->getData();
 
-//                Set Bureau
+                    // Set Bureau
                     $bureau = $form['bureau']->getData();
                     $bureau->setAssociationsNumassoc($association);
 
-//              Set Membres Bureau
+                    // Set Membres Bureau
                     $membresbureau = $form['membrebureau']->getData();
 
-//              Set Categories Adhérents
+                    // Set Categories Adhérents
                     $categoriesadherents = $form['categorieadherent']->getData();
 
-//              Set Documents
+                    // Set Documents
                     $documents = $form['documents']->getData();
 
                     $recap = $this->createRecapAssociation($association,$bureau,$affiliation,$expertcomptable,$categoriesadherents,$membresbureau,$membresconseil,$agrementadministratif,$responsable);
 
-//                Documents qui ont été uploadés
+                    // Documents qui ont été uploadés
                     $uploaded[] = $recap;
 
-//              Set Entity Manager
+                    // Set Entity Manager
                     $em = $this->getDoctrine()->getManager();
 
                     foreach($categoriesadherents as $categorieadherents => $ca) {
@@ -146,12 +135,12 @@ class AssociationController extends Controller
 
                     $em->flush();
 
-//                On créé le zip associé
+                    // On créé le zip associé
                     $sourcepath = realpath($this->get('kernel')->getRootDir().'/../web/uploads/'.$association->getNumassoc().'/association/');
                     $targetpath = $sourcepath.'/association-'.$association->getNumassoc().'.zip';
                     HZip::zipDir($sourcepath,$targetpath);
 
-//                    Remove all tmp files
+                    // Remove all tmp files
                     $tmpfiles = glob($this->get('kernel')->getRootDir().'/../web/uploads/tmp/*'); // get all file names
                     foreach($tmpfiles as $tmpfile){ // iterate files
                         if(is_file($tmpfile))
@@ -177,12 +166,12 @@ class AssociationController extends Controller
 
     public function updateAction(Request $request)
     {
-        if ($this->get('security.context')->isGranted('ROLE_ADMIN'))
+        if ($this->container->get('security.authorization_checker')->isGranted('ROLE_ADMIN'))
         {
             // redirect authenticated admin to homepage
             return $this->redirectToRoute('AdminBundle_homepage');
         }
-        else if ($this->get('security.context')->isGranted('ROLE_USER'))
+        else if ($this->container->get('security.authorization_checker')->isGranted('ROLE_USER'))
         {
             $user = $this->getUser();
 
@@ -222,16 +211,16 @@ class AssociationController extends Controller
                 // 2) handle the submit (will only happen on POST)
                 if ($form->handleRequest($request)->isValid()) {
 
-//              Removing the old documents
+                    // Removing the old documents
                     foreach($documents_registered as $doc) {
                         $em->remove($doc);
                     }
 
-//                    Remove recursively the association's folder
+                    // Remove recursively the association's folder
                     $fs = new Filesystem();
                     $fs->remove($this->get('kernel')->getRootDir() . '/../web/uploads/'.$association->getNumassoc());
 
-//                Set Agrement administratif
+                    // Set Agrement administratif
                     if ($agrementadministratif->getAttribuepar() == null && $agrementadministratif->getDateattribution() == null) {
                         $em->remove($agrementadministratif);
                         $agrementadministratif = null;
@@ -240,7 +229,7 @@ class AssociationController extends Controller
 
                     }
 
-//                Set Affiliation
+                    // Set Affiliation
                     if ($affiliation->getNumeroagrement() == null && $affiliation->getOrganisme() == null) {
                         $em->remove($affiliation);
                         $affiliation = null;
@@ -248,7 +237,7 @@ class AssociationController extends Controller
                         $affiliation->setAssociationsNumassoc($association);
                     }
 
-//                Set Expert comptable
+                    // Set Expert comptable
                     if ($expertcomptable->getNom() == null && $expertcomptable->getPrenom() == null && $expertcomptable->getAdresse() == null && $expertcomptable->getMail() == null && $expertcomptable->getTelephone() == null) {
                         $em->remove($expertcomptable);
                         $expertcomptable = null;
@@ -258,7 +247,7 @@ class AssociationController extends Controller
 
                     $documents = $form['documents']->getData();
 
-//                    Set Membresconseil, membresbureau and categoriesadherents : nécessaire de faire un get data du form pour récupérer les données AJOUTEES
+                    // Set Membresconseil, membresbureau and categoriesadherents : nécessaire de faire un get data du form pour récupérer les données AJOUTEES
                     $categoriesadherents = $form['categorieadherent']->getData();
                     foreach($categoriesadherents as $categorieadherents => $ca) {
                         if($ca->getResidence() == null) {
@@ -296,7 +285,7 @@ class AssociationController extends Controller
 
                     $recap = $this->createRecapAssociation($association,$bureau,$affiliation,$expertcomptable,$categoriesadherents,$membresbureau,$membresconseil,$agrementadministratif,$responsable);
 
-//                Documents qui ont été uploadés
+                    // Documents qui ont été uploadés
                     $uploaded[] = $recap;
 
                     foreach($documents as $docs => $doc){
@@ -306,7 +295,7 @@ class AssociationController extends Controller
                         }
                     }
 
-//                On ajoute les documents à l'association
+                    // On ajoute les documents à l'association
                     $association->setDocuments($uploaded);
 
                     foreach($uploaded as $uploads => $up) {
@@ -315,12 +304,12 @@ class AssociationController extends Controller
 
                     $em->flush();
 
-//                On créé le zip associé
+                    // On créé le zip associé
                     $sourcepath = realpath($this->get('kernel')->getRootDir().'/../web/uploads/'.$association->getNumassoc().'/association/');
                     $targetpath = $sourcepath.'/association-'.$association->getNumassoc().'.zip';
                     HZip::zipDir($sourcepath,$targetpath);
 
-//                    Remove all tmp files
+                    // Remove all tmp files
                     $tmpfiles = glob($this->get('kernel')->getRootDir().'/../web/uploads/tmp/*'); // get all file names
                     foreach($tmpfiles as $tmpfile){ // iterate files
                         if(is_file($tmpfile))
@@ -343,7 +332,7 @@ class AssociationController extends Controller
 
     public function setDocumentsAssociation(){
 
-//      Les différents fichiers qui seront uploadés lors de l'enregistrement de l'association
+        // Les différents fichiers qui seront uploadés lors de l'enregistrement de l'association
         $statuts = new Documents();
         $statuts->setObjet('statuts');
 
@@ -363,7 +352,7 @@ class AssociationController extends Controller
     }
 
     public function createRecapAssociation($association,$bureau,$affiliation,$expertcomptable,$categoriesadherents,$membresbureau,$membresconseil,$agrementadministratif,$responsable) {
-//        Création du PDF récapitulatif de l'association
+        // Création du PDF récapitulatif de l'association
         $recap = new Documents();
         $recap->setObjet('recapitulatif-association');
         $recap->setNom('assoc-'.$association->getNumassoc().'-'.date('Y'));
@@ -371,10 +360,10 @@ class AssociationController extends Controller
         $path = $recap->getAssociationsNumassoc()->getNumassoc().'/association/'.$recap->getObjet().'/'.$recap->getNom().'.pdf';
         $recap->setPath($path);
 
-//        On genère la vue à convertir en PDF, en n'oubliant pas les paramètres twig si la vue comporte des données dynamiques
+        // On genère la vue à convertir en PDF, en n'oubliant pas les paramètres twig si la vue comporte des données dynamiques
         $file = $this->get('knp_snappy.pdf');
 
-//        On save la session
+        // On save la session
         $session = $this->getRequest()->getSession();
         $session->save();
         $file->generateFromHtml(
@@ -401,10 +390,10 @@ class AssociationController extends Controller
     }
 
     public function testPDFAction() {
-//        On genère la vue à convertir en PDF, en n'oubliant pas les paramètres twig si la vue comporte des données dynamiques
+        // On genère la vue à convertir en PDF, en n'oubliant pas les paramètres twig si la vue comporte des données dynamiques
         $file = $this->get('knp_snappy.pdf');
 
-//        On save la session
+        // On save la session
         $session = $this->getRequest()->getSession();
         $session->save();
         $file->generateFromHtml(

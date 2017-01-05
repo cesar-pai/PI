@@ -5,7 +5,6 @@ namespace AssociationBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-use SC\DatetimepickerBundle\Form\Type\DatetimeType;
 
 class AgrementsadministratifsType extends AbstractType
 {
@@ -18,7 +17,7 @@ class AgrementsadministratifsType extends AbstractType
         $builder
             ->add('typeagrement','text')
             ->add('attribuepar','text')
-            ->add('dateattribution',DatetimeType::class,array('required' =>  false,'pickerOptions' =>
+            ->add('dateattribution','collot_datetime',array('required' =>  false,'pickerOptions' =>
                 array('format' => 'dd/mm/yyyy','minView' => 'month',
                     'maxView' => 'decade')))
         ;
