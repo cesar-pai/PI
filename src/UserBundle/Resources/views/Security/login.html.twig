@@ -9,7 +9,7 @@
 {% block fos_user_content %}
 
     {% block message %}
-        {% if error %}{{ error.message }}{% endif %}
+        {% if error %}{{ error|trim('.')|trans({}, 'FOSUserBundle') }}{% endif %}
     {% endblock %}
 
     {% block content %}
@@ -22,7 +22,7 @@
                         <br>
                         <form action="{{ path("fos_user_security_check") }}" method="post">
                             {% if error %}
-                                <div>{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                                <div class="error" style="color:red;">{{ error|trans({}, 'FOSUserBundle') }}</div>
                             {% endif %}
                             <div class="form-group">
                                 <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
@@ -59,32 +59,35 @@
 {% block breadcrumb %}
 {% endblock %}
 
+
 {% block modal %}
-    <div id="infos" class="modal fade" tabindex="-1" role="dialog">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h4 class="modal-title text-center">Bienvenue sur le portail de demande de subvention de la commune de Villers-L&egrave;s-Nancy </h4>
-                </div>
-                <div class="modal-body">
-                    <ul class="text-center">
-                        <li style="list-style-type:none;">
-                            <a href="#" data-dismiss="modal" class="unstyled-link">
-                                <h2>
-                                    <b>Je suis d&eacute;j&agrave; enregistr&eacute; <i class="fa fa-arrow-circle-o-right"></i></b>
-                                </h2>
-                            </a>
-                        </li>
-                        <li style="list-style-type:none;">
-                            <a href="{{ path('UserBundle_register') }}" class="unstyled-link">
-                                <h2>
-                                    <b>Je ne suis pas enregistr&eacute; <i class="fa fa-arrow-circle-o-right"></i></b>
-                                </h2>
-                            </a>
-                        </li>
-                    </ul>
+    {% if not error %}
+        <div id="infos" class="modal fade" tabindex="-1" role="dialog">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-center">Bienvenue sur le portail de demande de subvention de la commune de Villers-L&egrave;s-Nancy </h4>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="text-center">
+                            <li style="list-style-type:none;">
+                                <a href="#" data-dismiss="modal" class="unstyled-link">
+                                    <h2>
+                                        <b>Je suis d&eacute;j&agrave; enregistr&eacute; <i class="fa fa-arrow-circle-o-right"></i></b>
+                                    </h2>
+                                </a>
+                            </li>
+                            <li style="list-style-type:none;">
+                                <a href="{{ path('UserBundle_register') }}" class="unstyled-link">
+                                    <h2>
+                                        <b>Je ne suis pas enregistr&eacute; <i class="fa fa-arrow-circle-o-right"></i></b>
+                                    </h2>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    {% endif %}
 {% endblock %}
