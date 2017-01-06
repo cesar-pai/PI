@@ -108,7 +108,7 @@ Finally, you can launch the server with the following command :
 
 $ php app/console server:run
 
-You can access the web site at the URL : localhost:8000/app_dev.php.
+You can access the web site at the URL : localhost:8000.
 
 
 

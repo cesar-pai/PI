@@ -11,6 +11,9 @@
         $loader->add('', __DIR__.'/../vendor/symfony/symfony/src/Symfony/Component/Locale/Resources/stubs');
     }
 
+    $loader->add('', __DIR__.'/../app/bootstrap.php.cache');
+    $loader->add('', __DIR__.'/../app/AppKernel.php');
+
     AnnotationRegistry::registerLoader(array($loader, 'loadClass'));
 
     return $loader;

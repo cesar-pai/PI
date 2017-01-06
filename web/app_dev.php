@@ -17,11 +17,9 @@
         exit('You are not allowed to access this file. Check '.basename(__FILE__).' for more information.');
     }
 
-    $loader = require_once __DIR__.'/../app/bootstrap.php.cache';
+    $loader = require __DIR__.'/../app/autoload.php';
 
     Debug::enable();
-
-    require_once __DIR__.'/../app/AppKernel.php';
 
 	$kernel = new AppKernel('dev', true);
 	$kernel->loadClassCache();

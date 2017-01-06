@@ -22,7 +22,7 @@
                         <br>
                         <form action="{{ path("fos_user_security_check") }}" method="post">
                             {% if error %}
-                                <div class="error" style="color:red;">{{ error|trans({}, 'FOSUserBundle') }}</div>
+                                <div style="color:red;">{{ error|trans({}, 'FOSUserBundle') }}</div>
                             {% endif %}
                             <div class="form-group">
                                 <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
