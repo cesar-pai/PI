@@ -69,7 +69,7 @@
                                     <h3><i class="fa fa-info"></i></h3>
                                 </div>
                                 <div class="col-md-11">
-                                    <h4>Si votre demande de subvention est supérieure à 23 000 €, il vous faut transmettre les derniers bilans et comptes de résultat approuvés par l'assemblée et signés du Président et du Trésorier, ainsi le dernier rapport d'activité.</h4></h4>
+                                    <h4>Si votre demande de subvention est supérieure à 23 000 €, il vous faut transmettre les derniers bilans et comptes de résultat approuvés par l'assemblée et signés du Président et du Trésorier, ainsi que le dernier rapport d'activité.</h4></h4>
                                 </div>
                             </div>
 
@@ -168,7 +168,7 @@
 
                         {#Subvention#}
                         <div class="col-md-12 collapse" id="renseignementssubvention">
-                            <h4>Subventions reçues les années précédentes et demandées en 2016</h4>
+                            <h4>Subventions reçues les années précédentes et demandées en {{ 'now'|date('Y') }}</h4>
                             <div class="form-group">
                                 <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
                                 <div class="table-responsive">
@@ -821,12 +821,12 @@
                     <div id="alert-modal" class="first current">
                         <h4>
                             <span>
-                                DOSSIER DE DEMANDE DE SUBVENTION POUR L'ANNEE 2015
+                                DOSSIER DE DEMANDE DE SUBVENTION POUR L'ANNEE {{ 'now'|date('Y') }}
                                 </br>
                                 DOSSIER CONFORME AU MODELE NATIONAL
                                 FORMULAIRE CERFA N°12156*03 (www.associations.gouv.fr)
                                 </br>
-                                Ce dossier a été préparé pour vous aider dans votre demande de subvention auprès de la Ville de Villers-lès-Nancy. Une subvention n'est jamais attribuée spontanément, il vous appartient donc d'en faire la demande.
+                                Ce dossier a été préparé pour vous aider dans votre demande de subvention auprès de la ville de Villers-lès-Nancy. Une subvention n'est jamais attribuée spontanément, il vous appartient donc d'en faire la demande.
                             </span>
                         </h4>
                     </div>
@@ -834,8 +834,8 @@
                         <h4>
                             <span>Vous devez remplir toutes les pages de ce dossier et joindre (ou renseigner) les informations ci-dessous :
                                 <ul class="fa-ul">
-                                    <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Le bilan financier définitif ou prévisionnel de votre association ;</li>
-                                    <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Le budget prévisionnel 2015</li>
+                                    <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i> Le bilan financier définitif ou prévisionnel de votre association ;</li>
+                                    <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i> Le budget prévisionnel {{ 'now'|date('Y') - 1}}.</li>
                                 </ul>
                                 Si la demande de subvention est supérieure à 23 000 €, il faut par ailleurs transmettre les derniers bilans et comptes de résultat approuvés par l'assemblée et signés du Président et du Trésorier et le dernier rapport d'activité.
                             </span>
@@ -846,13 +846,13 @@
                         </br>
                         <h4>
                             <span>
-                                <li style="list-style-type: none;">1 - l'attribution d'une subvention ou son refus n’est ni une récompense, ni une sanction</li>
-                                <li style="list-style-type: none;">2 - une subvention n'est pas un cadeau des élus mais une redistribution de l'argent des contribuables villarois donnant un sens à la vie associative locale</li>
-                                <li style="list-style-type: none;">3 - la gestion responsable d'une association n'est jamais facultative</li>
-                                <li style="list-style-type: none;">4 - la subvention doit avoir pour multiple le bénévolat</li>
-                                <li style="list-style-type: none;">5 - l'octroi d'une subvention en 2014 ne saurait présager de la décision en 2015</li>
+                                <li style="list-style-type: none;">1 - L'attribution d'une subvention ou son refus n’est ni une récompense, ni une sanction.</li>
+                                <li style="list-style-type: none;">2 - Une subvention n'est pas un cadeau des élus mais une redistribution de l'argent des contribuables villarois donnant un sens à la vie associative locale.</li>
+                                <li style="list-style-type: none;">3 - La gestion responsable d'une association n'est jamais facultative.</li>
+                                <li style="list-style-type: none;">4 - La subvention doit avoir pour multiple le bénévolat.</li>
+                                <li style="list-style-type: none;">5 - L'octroi d'une subvention pour une année ne saurait présager de la décision l'année suivante.</li>
                                 </br>
-                                <b>"Avant de commencer à remplir ce dossier, je reconnais, en poursuivant ma démarche, avoir pris connaissance des principes prévalant pour l'attribution d'une subvention"</b>
+                                <b>"Avant de commencer à remplir ce dossier, je reconnais, en poursuivant ma démarche, avoir pris connaissance des principes prévalant pour l'attribution d'une subvention."</b>
                             </span>
                         </h4>
                     </div>
