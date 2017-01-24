@@ -104,6 +104,8 @@ Make sure the database is OK :
 
 $ php app/console doctrine:ensure-production-settings --env=prod
 
+You need the wkhtmltopdf tool used to create some pdf with html pages. You can download the tool accordingly to your OS at the following address : [wkhtmltopdf.org/downloads.html][14]. Don't forget to check the app/config/config.yml (especially the knp_snappy section) and change the paths used if they are not adapted to your OS.
+
 Finally, you can launch the server with the following command :
 
 $ php app/console server:run
@@ -122,3 +124,4 @@ You can access the web site at the URL : localhost:8000.
 [11]: https://symfony.com/doc/2.7/cookbook/logging/monolog.html
 [12]: https://symfony.com/doc/2.7/cookbook/assetic/asset_management.html
 [13]: https://symfony.com/doc/2.7/bundles/SensioGeneratorBundle/index.html
+[14]: http://wkhtmltopdf.org/downloads.html
