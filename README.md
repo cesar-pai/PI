@@ -104,6 +104,23 @@ Make sure the database is OK :
 
 $ php app/console doctrine:ensure-production-settings --env=prod
 
+Add the default roles for the board members of the associations with mysql :
+
+$ mysql -u root
+
+mysql> use villerseglsubv
+
+mysql> INSERT INTO roles (`id`, `nom`, `created_at`, `updated_at`) 
+VALUES ('1', 'président', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+('2', 'vice-président', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+('3', 'trésorier', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+('4', 'trésorier adjoint', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+('5', 'secrétaire', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+('6', 'secrétaire adjoint', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+('7', 'autre membre du bureau', '2017-01-01 00:00:00', '2017-01-01 00:00:00');
+
+mysql> exit
+
 You need the wkhtmltopdf tool used to create some pdf with html pages. You can download the tool accordingly to your OS at the following address : [wkhtmltopdf.org/downloads.html][14]. Don't forget to check the app/config/config.yml (especially the knp_snappy section) and change the paths used if they are not adapted to your OS.
 
 Finally, you can launch the server with the following command :
@@ -111,6 +128,13 @@ Finally, you can launch the server with the following command :
 $ php app/console server:run
 
 You can access the web site at the URL : localhost:8000.
+
+
+
+In order to create an admin user, you must type the following commands :  
+$ php app/console fos:user:create <username> <mail> <password>  
+$ php app/console fos:user:promote <username> ROLE_ADMIN  
+(You can demote an admin user with : $ php app/console fos:user:demote <username> ROLE_ADMIN)  
 
 
 
