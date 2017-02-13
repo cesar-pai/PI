@@ -20,7 +20,7 @@ class BilansactiviteType extends AbstractType
             ->add('autres','textarea',array('required'   =>  false))
         ;
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */

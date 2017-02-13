@@ -33,7 +33,7 @@ class DemandessubventionType extends AbstractType
             ))
         ;
     }
-    
+
     /**
      * @param OptionsResolver $resolver
      */
