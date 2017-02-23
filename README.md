@@ -74,8 +74,6 @@ Then get composer.phar and install the bundles :
 
 $ php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
 
-$ php -r "if (hash_file('SHA384', 'composer-setup.php') === '61069fe8c6436a4468d0371454cf38a812e451a14ab1691543f25a9627b97ff96d8753d92a00654c21e2212a5ae1ff36') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
-
 $ php composer-setup.php
 
 $ php -r "unlink('composer-setup.php');"
@@ -111,12 +109,12 @@ $ mysql -u root
 mysql> use villerseglsubv
 
 mysql> INSERT INTO roles (`id`, `nom`, `created_at`, `updated_at`) 
-VALUES ('1', 'président', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
-('2', 'vice-président', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
-('3', 'trésorier', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
-('4', 'trésorier adjoint', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
-('5', 'secrétaire', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
-('6', 'secrétaire adjoint', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+VALUES ('1', 'prÃ©sident', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+('2', 'vice-prÃ©sident', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+('3', 'trÃ©sorier', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+('4', 'trÃ©sorier adjoint', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+('5', 'secrÃ©taire', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
+('6', 'secrÃ©taire adjoint', '2017-01-01 00:00:00', '2017-01-01 00:00:00'), 
 ('7', 'autre membre du bureau', '2017-01-01 00:00:00', '2017-01-01 00:00:00');
 
 mysql> exit
