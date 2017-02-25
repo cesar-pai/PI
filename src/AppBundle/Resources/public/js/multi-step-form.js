@@ -14,7 +14,7 @@ $(function() {
                 if($(this).prop('required')){
                     if(!$(this).val() ) {
                         var label = $('label[for="' + this.id + '"]').html();
-                        if (label === 'undefined') {
+                        if (label === undefined) {
                             alert("Veuillez remplir le champ requis (ou effacer la ligne si possible)");
                         } else {
                             alert("Veuillez remplir le champ \"" + label +"\"");
@@ -32,7 +32,7 @@ $(function() {
                 if($(this).prop('required')){
                     if(!$(this).val() ) {
                         var label = $('label[for="' + this.id + '"]').html();
-                        if (label === 'undefined') {
+                        if (label === undefined) {
                             alert("Veuillez remplir le champs requis (ou effacer la ligne si possible)");
                         } else {
                             alert("Veuillez remplir le champ \"" + label +"\"");
