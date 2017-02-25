@@ -12294,14 +12294,14 @@ if (typeof jQuery === 'undefined') {
  */
 $(document).ready(function(){
     // setup links
-    var $addMBLink = $('<a href="#" class="add_mb_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addMCLink = $('<a href="#" class="add_mc_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addIALink = $('<a href="#" class="add_ia_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addSUBLink = $('<a href="#" class="add_sub_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addFMLink = $('<a href="#" class="add_fm_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addMANLink = $('<a href="#" class="add_man_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addACTLink = $('<a href="#" class="add_act_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addMADLink = $('<a href="#" class="add_mad_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
+    var $addMBLink = $('<a href="#" class="add_mb_link btn btn-default btn-block pull-left">Ajouter un membre</a>');
+    var $addMCLink = $('<a href="#" class="add_mc_link btn btn-default btn-block pull-left">Ajouter un membre</a>');
+    var $addIALink = $('<a href="#" class="add_ia_link btn btn-default btn-block pull-left">Ajouter un adhérent</a>');
+    var $addSUBLink = $('<a href="#" class="add_sub_link btn btn-default btn-block pull-left">Ajouter une subvention</a>');
+    var $addFMLink = $('<a href="#" class="add_fm_link btn btn-default btn-block pull-left">Ajouter un événement</a>');
+    var $addMANLink = $('<a href="#" class="add_man_link btn btn-default btn-block pull-left">Ajouter une manifestation</a>');
+    var $addACTLink = $('<a href="#" class="add_act_link btn btn-default btn-block pull-left">Ajouter une action</a>');
+    var $addMADLink = $('<a href="#" class="add_mad_link btn btn-default btn-block pull-left">Ajouter un local</a>');
 
     // Collections holders
     var $collectionHolderMB = $('tbody.membrebureau');
