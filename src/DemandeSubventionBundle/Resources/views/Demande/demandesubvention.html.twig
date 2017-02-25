@@ -161,13 +161,13 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#renseignementssubvention" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Renseignements financiers divers :</b>
+                                    <a data-toggle="collapse" data-target="#renseignementssubvention" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Renseignements financiers divers :</b>
                                 </small>
                             </h3>
                         </legend>
 
                         {#Subvention#}
-                        <div class="col-md-12 collapse" id="renseignementssubvention">
+                        <div class="col-md-12 collapse in" id="renseignementssubvention">
                             <h4>Subventions demandées et reçues les années précédentes par tout autre organisme que Villers-lès-Nancy : </h4>
                             <div class="form-group">
                                 <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
@@ -216,13 +216,13 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#travauxinvestissement" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Nature de la demande :</b>
+                                    <a data-toggle="collapse" data-target="#travauxinvestissement" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Nature de la demande :</b>
                                 </small>
                             </h3>
                         </legend>
 
                         {#Travaux investissement#}
-                        <div class="col-md-12 collapse" id="travauxinvestissement">
+                        <div class="col-md-12 collapse in" id="travauxinvestissement">
                             <div class="form-group">
                                 <div class="col-md-10">
                                     {{ form_label(form.travauxinvestissement,"La subvention est-elle demandée afin de réaliser des travaux ou des acquisitions d'investissements ?") }}
@@ -412,11 +412,11 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#actions" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Programme d'actions :</b>
+                                    <a data-toggle="collapse" data-target="#actions" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Programme d'actions :</b>
                                 </small>
                             </h3>
                         </legend>
-                        <div class="col-md-12 collapse" id="actions">
+                        <div class="col-md-12 collapse in" id="actions">
                             <div class="col-md-12">
                                 <h4>Liste des actions projetées qui ont été prévues financièrement au niveau du Budget Prévisionnel et pour laquelle l'association sollicite une subvention.</h4>
                             </div>
@@ -463,13 +463,13 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#activites" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Activités :</b>
+                                    <a data-toggle="collapse" data-target="#activites" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Activités :</b>
                                 </small>
                             </h3>
                         </legend>
 
                         {#Activités#}
-                        <div class="col-md-12 collapse" id="activites">
+                        <div class="col-md-12 collapse in" id="activites">
                             <div class="form-group">
                                 {{ form_label(form.bilanactivite.objectifs,"Décrivez en détails les objectifs et le contenu des activités de l'association pour l'année "~'now'|date('Y')) }}
                                 {{ form_errors(form.bilanactivite.objectifs) }}
@@ -638,13 +638,13 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#persencharge" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Personne en charge du dossier de demande de subvention :</b>
+                                    <a data-toggle="collapse" data-target="#persencharge" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Personne en charge du dossier de demande de subvention :</b>
                                 </small>
                             </h3>
                         </legend>
 
                         {#Responsable de l'association#}
-                        <div class="col-md-12 collapse" id="persencharge">
+                        <div class="col-md-12 collapse in" id="persencharge">
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     {{ form_label(form.persencharge.nom, "Nom de la personne en charge:") }}
@@ -752,12 +752,12 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#budgetprev" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Budget prévisionnel :</b>
+                                    <a data-toggle="collapse" data-target="#budgetprev" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Budget prévisionnel :</b>
                                 </small>
                             </h3>
                         </legend>
                         {#Budget previsionnel#}
-                        <div class="col-md-12 collapse" id="budgetprev">
+                        <div class="col-md-12 collapse in" id="budgetprev">
                             <div class="col-md-12">
                                 <h4>Veuillez télécharger vers le site le budget prévisionnel pour {{ 'now'|date('Y') }} de votre association</h4></h4>
                             </div>

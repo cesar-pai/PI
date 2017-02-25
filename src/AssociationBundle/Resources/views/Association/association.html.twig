@@ -84,13 +84,13 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#coordonnees" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Coordonnées :</b>
+                                        <a data-toggle="collapse" data-target="#coordonnees" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Coordonnées :</b>
                                     </small>
                                 </h3>
                             </legend>
 
                             {#Coordonnées#}
-                            <div class="col-md-12 collapse" id="coordonnees">
+                            <div class="col-md-12 collapse in" id="coordonnees">
                                 <div class="form-group">
                                     {{ form_label(form.association.adresse,"Adresse complète du siège social de l'association") }}
                                     {{ form_errors(form.association.adresse) }}
@@ -126,13 +126,13 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#identification" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Identification :</b>
+                                        <a data-toggle="collapse" data-target="#identification" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Identification :</b>
                                     </small>
                                 </h3>
                             </legend>
 
                             {#Identification#}
-                            <div class="col-md-12 collapse" id="identification">
+                            <div class="col-md-12 collapse in" id="identification">
                                 <div class="row">
                                     <div class="form-group">
                                         <div class="col-md-6">
@@ -187,13 +187,13 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#responsable" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Responsable de l'association :</b>
+                                        <a data-toggle="collapse" data-target="#responsable" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Responsable de l'association :</b>
                                     </small>
                                 </h3>
                             </legend>
 
                             {#Responsable de l'association#}
-                            <div class="col-md-12 collapse" id="responsable">
+                            <div class="col-md-12 collapse in" id="responsable">
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         {{ form_label(form.responsable.nom, "Nom du responsable de l'association") }}
@@ -315,12 +315,12 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#assembgen" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Dernière assemblée générale :</b>
+                                        <a data-toggle="collapse" data-target="#assembgen" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Dernière assemblée générale :</b>
                                     </small>
                                 </h3>
                             </legend>
                             {#Téléchargement du compte rendu de la dernirèe assemblée générale#}
-                            <div class="col-md-12 collapse" id="assembgen">
+                            <div class="col-md-12 collapse in" id="assembgen">
                                 <div class="form-group">
                                     <span style="color:red;">*</span> {{ form_label(form.documents[2].nom, "Compte rendu de la dernière assemblée générale") }}
                                     {#Upload button#}
@@ -365,13 +365,13 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#renseignements" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Renseignements :</b>
+                                        <a data-toggle="collapse" data-target="#renseignements" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Renseignements :</b>
                                     </small>
                                 </h3>
                             </legend>
 
                             {#Renseigenemnts "administratifs" de l'association#}
-                            <div class="col-md-12 collapse" id="renseignements">
+                            <div class="col-md-12 collapse in" id="renseignements">
                                 <div class="form-group">
                                     {{ form_label(form.association.objet, "Décrivez les objectifs de votre association") }}
                                     {{ form_errors(form.association.objet) }}
@@ -474,13 +474,13 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#ribrip" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>RIB / RIP :</b>
+                                        <a data-toggle="collapse" data-target="#ribrip" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>RIB / RIP :</b>
                                     </small>
                                 </h3>
                             </legend>
 
                             {#Téléchargement du RIB/RIP#}
-                            <div class="col-md-12 collapse" id="ribrip">
+                            <div class="col-md-12 collapse in" id="ribrip">
                                 <div class="form-group">
                                     <span style="color:red;">*</span> {{ form_label(form.documents[3].nom, "RIB/RIP") }}
                                     {#Upload button#}
@@ -592,12 +592,12 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#membresconseiladministration" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Membres du conseil d'administration :</b>
+                                        <a data-toggle="collapse" data-target="#membresconseiladministration" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Membres du conseil d'administration :</b>
                                     </small>
                                 </h3>
                             </legend>
 
-                            <div class="col-md-12 collapse" id="membresconseiladministration">
+                            <div class="col-md-12 collapse in" id="membresconseiladministration">
 
                                 <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
                                 <div class="table-responsive">
@@ -644,11 +644,11 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#infosadherents" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Informations sur les adhérents :</b>
+                                        <a data-toggle="collapse" data-target="#infosadherents" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Informations sur les adhérents :</b>
                                     </small>
                                 </h3>
                             </legend>
-                            <div class="col-md-12 collapse" id="infosadherents">
+                            <div class="col-md-12 collapse in" id="infosadherents">
                                 <div class="form-group">
                                     <div class="row col-md-8">
                                         {{ form_label(form.association.isSportive, "Votre association est-elle une association sportive ?") }}
@@ -699,14 +699,14 @@
                                     <div class="col-md-12">
                                         <h3>
                                             <small>
-                                                <a data-toggle="collapse" data-target="#tab-categorieadherents" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Remplir ici :</b>
+                                                <a data-toggle="collapse" data-target="#tab-categorieadherents" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Remplir ici :</b>
                                             </small>
                                         </h3>
                                     </div>
 
                                     <br>
 
-                                    <div class="col-md-12 collapse" id="tab-categorieadherents">
+                                    <div class="col-md-12 collapse in" id="tab-categorieadherents">
                                         <div class="form-group col-md-12">
                                             <h4>Adhérents/Licenciés :</h4>
                                             <div class="table-responsive">
