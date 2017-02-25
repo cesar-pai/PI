@@ -193,5 +193,14 @@ class Actions
             $this->setCreatedAt(new \DateTime('now'));
         }
     }
-}
 
+    /**
+     * Get isnew
+     *
+     * @return boolean
+     */
+    public function getIsnew()
+    {
+        return $this->isnew;
+    }
+}

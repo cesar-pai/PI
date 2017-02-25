@@ -37,8 +37,8 @@ class AssociationsType extends AbstractType
             ->add('datedecl','collot_datetime',array('pickerOptions' =>
                 array('format' => 'dd/mm/yyyy','minView' => 'month',
                     'maxView' => 'decade')))
-            ->add('siren', 'text')
-            ->add('siret', 'text',array('required' => false))
+            ->add('siren', 'text',array('required' => false))
+            ->add('siret', 'text')
             ->add('dateUtilitepub','collot_datetime',array('required' => false,'pickerOptions' =>
                 array('format' => 'dd/mm/yyyy','minView' => 'month',
                     'maxView' => 'decade')))

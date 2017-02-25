@@ -25,7 +25,7 @@ class Bilansactivite
     /**
      * @var string
      *
-     * @ORM\Column(name="objectifs", type="string", length=255,nullable=true)
+     * @ORM\Column(name="objectifs", type="string", length=4095,nullable=true)
      */
     private $objectifs;
 
@@ -171,4 +171,3 @@ class Bilansactivite
         }
     }
 }
-

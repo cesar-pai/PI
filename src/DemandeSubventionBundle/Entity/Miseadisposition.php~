@@ -267,5 +267,14 @@ class Miseadisposition
         }
     }
 
-}
 
+    /**
+     * Get appartientVille
+     *
+     * @return boolean
+     */
+    public function getAppartientVille()
+    {
+        return $this->appartientVille;
+    }
+}
