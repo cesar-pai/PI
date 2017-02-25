@@ -487,7 +487,12 @@
                                     <div class="form-group col-md-12">
                                         {{ form_label(form.demandesubvention.activitespayantes,"Sélectionner toutes les activités payantes pour l'année "~'now'|date('Y')~" :") }}
                                         {{ form_errors(form.demandesubvention.activitespayantes) }}
-                                        {{ form_widget(form.demandesubvention.activitespayantes, {'attr':{'class':'form-control','style':'font-size:83%;'}}) }}
+                                        <br/>
+                                        {% for t in form.demandesubvention.activitespayantes %}
+	                                        {{ form_widget(t, {'attr':{'class':'form-check','style':'font-size:83%;'}}) }}
+	                                        {{ form_label(t) }}
+	                                        <br/>
+										{% endfor %}
                                     </div>
                                     <div class="form-group">
                                         {{ form_label(form.documents[6].nom, "Tarifs (si billeterie)") }}
