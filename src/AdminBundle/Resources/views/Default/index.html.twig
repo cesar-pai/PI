@@ -24,9 +24,17 @@
                                 {% for demandesubvention in demandessubvention %}
                                     <li style="list-style: none;">
                                         <h6>
-                                            <a href="{{ asset('uploads/' ~ association.numassoc ~ '/demandessubvention/demandesubvention-' ~ demandesubvention.updatedAt|date("Y") ~ '/demandesubvention-' ~ demandesubvention.updatedAt|date("Y") ~ '.zip')}}" class="unstyled-link">
-                                                <i class="fa fa-arrow-circle-right"></i> <i>Obtenir le dossier de demande subvention pour l'année {{ demandesubvention.updatedAt|date("Y") }}</i>
-                                            </a>
+                                            {% if demandesubvention.updatedAt|date('m') <= 2 %}
+                                                <a href="{{ asset('uploads/' ~ association.numassoc ~ '/demandessubvention/demandesubvention-' ~ demandesubvention.updatedAt|date("Y") ~ '/demandesubvention-' ~ demandesubvention.updatedAt|date("Y") ~ '.zip')}}" class="unstyled-link">
+                                                    <i class="fa fa-arrow-circle-right"></i>
+                                                    <i>Obtenir le dossier de demande subvention pour l'année {{ demandesubvention.updatedAt|date("Y") }}</i>
+                                                </a>
+                                            {% else %}
+                                                <a href="{{ asset('uploads/' ~ association.numassoc ~ '/demandessubvention/demandesubvention-' ~ (demandesubvention.updatedAt|date("Y") + 1) ~ '/demandesubvention-' ~ (demandesubvention.updatedAt|date("Y") + 1) ~ '.zip')}}" class="unstyled-link">
+                                                    <i class="fa fa-arrow-circle-right"></i>
+                                                    <i>Obtenir le dossier de demande subvention pour l'année {{ demandesubvention.updatedAt|date("Y") + 1 }}</i>
+                                                </a>
+                                            {% endif %}
                                         </h6>
                                     </li>
                                 {% endfor %}

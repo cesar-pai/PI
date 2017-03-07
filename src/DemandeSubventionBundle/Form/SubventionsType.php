@@ -14,7 +14,7 @@ class SubventionsType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $currentyear = intval(date('Y'));
+        $currentyear = intval(date('m') <= 2 ? date('Y') : date('Y') + 1);
         $builder
             ->add('annee','choice', array(
                 'choices'   =>  [
@@ -30,7 +30,7 @@ class SubventionsType extends AbstractType
             ->add('organisme','text')
         ;
     }
-    
+
     /**
      * @param OptionsResolverInterface $resolver
      */
