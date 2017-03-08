@@ -32,27 +32,6 @@ class Demandessubvention
     private $montantSubvention;
 
     /**
-     * @var boolean
-     *
-     * @ORM\Column(name="comm_vill", type="boolean")
-     */
-    private $commVill = false;
-
-    /**
-     * @var boolean
-     *
-     * @ORM\Column(name="photocopie_ville", type="boolean")
-     */
-    private $photocopieVille = false;
-
-    /**
-     * @var string
-     *
-     * @ORM\Column(name="taches_secretariat", type="text", length=16777215, nullable=true)
-     */
-    private $tachesSecretariat;
-
-    /**
      * @var string
      *
      * @ORM\Column(name="activites_payantes", type="string", length=255, nullable=true)
@@ -121,54 +100,6 @@ class Demandessubvention
     public function setMontantSubvention($montantSubvention)
     {
         $this->montantSubvention = $montantSubvention;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function isCommVill()
-    {
-        return $this->commVill;
-    }
-
-    /**
-     * @param boolean $commVill
-     */
-    public function setCommVill($commVill)
-    {
-        $this->commVill = $commVill;
-    }
-
-    /**
-     * @return boolean
-     */
-    public function isPhotocopieVille()
-    {
-        return $this->photocopieVille;
-    }
-
-    /**
-     * @param boolean $photocopieVille
-     */
-    public function setPhotocopieVille($photocopieVille)
-    {
-        $this->photocopieVille = $photocopieVille;
-    }
-
-    /**
-     * @return string
-     */
-    public function getTachesSecretariat()
-    {
-        return $this->tachesSecretariat;
-    }
-
-    /**
-     * @param string $tachesSecretariat
-     */
-    public function setTachesSecretariat($tachesSecretariat)
-    {
-        $this->tachesSecretariat = $tachesSecretariat;
     }
 
     /**
@@ -263,36 +194,5 @@ class Demandessubvention
         if ($this->getCreatedAt() == null) {
             $this->setCreatedAt(new \DateTime('now'));
         }
-    }
-
-
-    /**
-     * Get commVill
-     *
-     * @return boolean
-     */
-    public function getCommVill()
-    {
-        return $this->commVill;
-    }
-
-    /**
-     * Get photocopieVille
-     *
-     * @return boolean
-     */
-    public function getPhotocopieVille()
-    {
-        return $this->photocopieVille;
-    }
-
-    /**
-     * Get validee
-     *
-     * @return boolean
-     */
-    public function getValidee()
-    {
-        return $this->validee;
     }
 }

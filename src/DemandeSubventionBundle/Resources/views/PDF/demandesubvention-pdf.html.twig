@@ -350,37 +350,6 @@
                     </div>
                     {% endif %}
                 </div>
-
-                </br>
-
-                {#Prestations prises en charge par la commune#}
-                <div class="col-md-12">
-                    <div class="col-md-12 row">
-                        <p><FONT COLOR="#5a5a5a"><B>Prestations prises en charge par la commune :</B> {{ demandesubvention.commVill ? "Oui" : "Non"}}</FONT></p>
-                    </div>
-                </div>
-
-                </br>
-
-                {#Photocopie prise en charge par la ville#}
-                <div class="col-md-12">
-                    <div class="col-md-12 row">
-                        <p><FONT COLOR="#5a5a5a"><B>Photocopie prise en charge par la ville :</B> {{ demandesubvention.photocopieVille ? "Oui" : "Non"}}</FONT></p>
-                    </div>
-                </div>
-
-                </br>
-
-                {#Tâches de secrétariat ou autres assurées par la ville#}
-                <div class="col-md-12">
-                    <div class="col-md-12 row">
-                        <p><FONT COLOR="#5a5a5a"><B>Tâches de secrétariat ou autres assurées par la ville :</B> {{ demandesubvention.tachesSecretariat == null ? "Non" : "Oui"}}</FONT></p>
-                    </div>
-                    {% if(demandesubvention.tachesSecretariat is not null) %}
-                        <textarea class="objet" readonly name="" id="" cols="30" rows="10">{{ demandesubvention.tachesSecretariat }}</textarea>
-                        <br>
-                    {% endif %}
-                </div>
             </div>
 
         {#3/ Biens et locaux mises à disposition#}

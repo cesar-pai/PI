@@ -19,9 +19,6 @@ class DemandessubventionType extends AbstractType
         $activites = ['Loto' => 'Loto','Repas dansant ou autre' => 'Repas dansant ou autre','Droit d\'entrée' => 'Droit d\'entrée','Buvette' => 'Buvette','Belote' => 'Belote','Salon' => 'Salon','Centre de loisirs' => 'Centre de loisirs','Tournois' => 'Tournois','Brocante/vide grenier' => 'Brocante/vide grenier','Autres' => 'Autres'];
         $builder
             ->add('montantSubvention','text')
-            ->add('commVill','checkbox',array('required'   =>  false))
-            ->add('photocopieVille','checkbox',array('required'   =>  false))
-            ->add('tachesSecretariat','textarea',array('required'   =>  false))
             ->add('activitespayantes','choice',array(
                 'choices'       =>  $activites,
                 'required'      =>  false,

@@ -141,24 +141,6 @@ $(document).ready(function() {
         }
     });
 
-    //Show/Hide div taches secretariat
-    var divtachessecretariat = $('#divtachesSecretariat');
-    if (!$('#chktachesSecretariat').prop('checked')){
-        divtachessecretariat.hide();
-        divtachessecretariat.find(':text').val('');
-        divtachessecretariat.find(':input').val('');
-    }
-    $('#chktachesSecretariat').on('switchChange.bootstrapSwitch', function() {
-        if (this.checked) {
-            $('#divtachesSecretariat').fadeIn();
-        }
-        else {
-            divtachessecretariat.fadeOut();
-            divtachessecretariat.find(':text').val('');
-            divtachessecretariat.find(':input').val('');
-        }
-    });
-
     //    Toggle Next/Previous div in modal
     $('#next-modal').click(function() {
         $('.current').removeClass('current').hide()

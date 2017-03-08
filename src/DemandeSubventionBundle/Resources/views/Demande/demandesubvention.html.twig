@@ -532,42 +532,6 @@
                                     </div>
                                 </div>
                             </div>
-                            </br>
-                            <div class="form-group">
-                                <div class="col-md-10">
-                                    {{ form_label(form.demandesubvention.commVill,"Prestations de communication prises en charge par la ville (conception, élaboration)") }}
-                                    {{ form_errors(form.demandesubvention.commVill) }}
-                                </div>
-                                <div class="col-md-2">
-                                    {{ form_widget(form.demandesubvention.commVill, {'attr':{'class':'form-control bs','data-on-text':'Oui', 'data-off-text':'Non'}}) }}
-                                </div>
-                            </div>
-                            </br>
-                            <div class="from-group">
-                                <div class="col-md-10">
-                                    {{ form_label(form.demandesubvention.photocopieVille,"Photocopies prises en charge par la ville :") }}
-                                    {{ form_errors(form.demandesubvention.photocopieVille) }}
-                                </div>
-                                <div class="col-md-2">
-                                    {{ form_widget(form.demandesubvention.photocopieVille, {'attr':{'class':'form-control bs','data-on-text':'Oui', 'data-off-text':'Non'}}) }}
-                                </div>
-                            </div>
-                            </br>
-                            <div class="form-group">
-                                <div class="col-md-10">
-                                    {{ form_label(form.demandesubvention.tachesSecretariat,"Tâches de secrétariat ou autres assurées par la ville : ") }}
-                                </div>
-                                <div class="col-md-2">
-                                    <input type="checkbox" class="bs"  id="chktachesSecretariat" name="chktachesSecretariat" data-on-text="Oui" data-off-text="Non" unchecked>
-                                </div>
-                                {{ form_errors(form.demandesubvention.tachesSecretariat) }}
-                                </br>
-                                </br>
-                                <div class="form-group" id="divtachesSecretariat">
-                                    {{ form_widget(form.demandesubvention.tachesSecretariat, {'attr':{'class':'form-control', 'row': '5'}}) }}
-                                    <span>Veuillez préciser</span>
-                                </div>
-                            </div>
                         </div>
 
                     </fieldset>
