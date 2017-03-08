@@ -265,5 +265,34 @@ class Demandessubvention
         }
     }
 
-}
 
+    /**
+     * Get commVill
+     *
+     * @return boolean
+     */
+    public function getCommVill()
+    {
+        return $this->commVill;
+    }
+
+    /**
+     * Get photocopieVille
+     *
+     * @return boolean
+     */
+    public function getPhotocopieVille()
+    {
+        return $this->photocopieVille;
+    }
+
+    /**
+     * Get validee
+     *
+     * @return boolean
+     */
+    public function getValidee()
+    {
+        return $this->validee;
+    }
+}

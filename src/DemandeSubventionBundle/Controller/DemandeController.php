@@ -34,18 +34,22 @@ class DemandeController extends Controller
                 ->getRepository('AssociationBundle:Associations')
                 ->findOneBy(array('users' => $user));
 
-            if ($association instanceof Associations) {
-
+            if ($association instanceof Associations)
+            {
                 // Get Test Demande Subvention
                 $testds = $this
                     ->getDoctrine()
                     ->getRepository('DemandeSubventionBundle:Demandessubvention')
                     ->findOneBy(array('associationsNumassoc' => $association),array('id' => 'DESC'));
 
-                $isAvailable = $testds instanceof Demandessubvention ? $testds->getUpdatedAt()->format('Y') : null ;
+                $isAvailable = $testds instanceof Demandessubvention
+                                ? ($testds->getUpdatedAt()->format('m') <= 2
+                                    ? $testds->getUpdatedAt()->format('Y')
+                                    : $testds->getUpdatedAt()->format('Y') + 1)
+                                : null ;
 
-                if($isAvailable != date('Y')) {
-
+                if($isAvailable != $this->getSubvYear())
+                {
                     $form = $this->get('form.factory')->createBuilder(new DemandeFormType())
                         ->getForm();
 
@@ -157,8 +161,8 @@ class DemandeController extends Controller
                         $em->flush();
 
                         // On créé le zip associé
-                        $sourcepath = $this->get('kernel')->getRootDir() . '/../web/uploads/'.$association->getNumassoc().'/demandessubvention/demandesubvention-'.date('Y').'/';
-                        $targetpath = $sourcepath.'/demandesubvention-'.date('Y').'.zip';
+                        $sourcepath = $this->get('kernel')->getRootDir() . '/../web/uploads/'.$association->getNumassoc().'/demandessubvention/demandesubvention-'.$this->getsubvYear().'/';
+                        $targetpath = $sourcepath.'/demandesubvention-'.$this->getsubvYear().'.zip';
                         HZip::zipDir($sourcepath,$targetpath);
 
                         // Remove all tmp files
@@ -169,19 +173,14 @@ class DemandeController extends Controller
                         }
 
                         return $this->redirectToRoute('AssociationBundle_homepage');
-                    } else {
-                        return $this->render('DemandeSubventionBundle:Demande:demandesubvention.html.twig', array('form' => $form->createView(),'accueil' => false));
                     }
-                } else {
-                    return $this->redirectToRoute('AssociationBundle_homepage');
+                    else return $this->render('DemandeSubventionBundle:Demande:demandesubvention.html.twig', array('form' => $form->createView(),'accueil' => false));
                 }
-
-            } else {
-                return $this->redirectToRoute('AssociationBundle_association');
+                else return $this->redirectToRoute('AssociationBundle_homepage');
             }
-        } else {
-                return $this->redirectToRoute('UserBundle_login');
-            }
+            else return $this->redirectToRoute('AssociationBundle_association');
+        }
+        else return $this->redirectToRoute('UserBundle_login');
     }
 
     public function setDocumentsDemande(){
@@ -221,10 +220,10 @@ class DemandeController extends Controller
         // Création du PDF dossier de demande de subvention de l'association
 
         $recap = new Documents();
-        $recap->setObjet('dossier-demandesubvention-'.date('Y'));
-        $recap->setNom('demandesubvention'.date('Y'));
+        $recap->setObjet('dossier-demandesubvention-'.$this->getsubvYear());
+        $recap->setNom('demandesubvention'.$this->getsubvYear());
         $recap->setDemandesubvention($demandesubvention);
-        $path = $association->getNumassoc().'/demandessubvention/demandesubvention-'.date('Y').'/'.$recap->getObjet().'/'.$recap->getNom().'.pdf';
+        $path = $association->getNumassoc().'/demandessubvention/demandesubvention-'.$this->getsubvYear().'/'.$recap->getObjet().'/'.$recap->getNom().'.pdf';
         $recap->setPath($path);
 
         // On genère la vue à convertir en PDF, en n'oubliant pas les paramètres twig si la vue comporte des données dynamiques
@@ -255,5 +254,14 @@ class DemandeController extends Controller
         );
 
         return $recap;
+    }
+
+    /**
+     * Get the year associated to the current date
+     * (if the current month is <= february, the subsidy is for the current year, otherwise it is for the next year)
+     */
+    private function getSubvYear()
+    {
+        return date('m') <= 2 ? date('Y') : date('Y') + 1;
     }
 }

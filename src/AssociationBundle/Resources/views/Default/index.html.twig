@@ -24,8 +24,8 @@
                                 <b>Cliquer ici <i class="fa fa-arrow-circle-o-right"></i></b>
                             </h3>
                         </a>
-                    {% elseif demandesubvention is null%}
-                        <h2><b>Faites votre demande de subvention pour l'année {{ 'now'|date('Y') }}  </b></h2>
+                    {% elseif demandesubvention is null %}
+                        <h2><b>Faites votre demande de subvention pour l'année {% if 'now'|date('m') <= 2 %} {{ 'now'|date('Y') }} {% else %} {{ 'now'|date('Y') + 1 }} {% endif %} </b></h2>
                         </br>
                         <a href="{{ path('DemandesubventionBundle_demande') }}" class="unstyled-link">
                             <h3>
@@ -35,7 +35,7 @@
                         </br>
                         <p>Vous pouvez d'ores et déjà télécharger le dossier de l'association en cliquant sur la barre latérale gauche</p>
                     {% else %}
-                        <h2><b>Vous avez enregistré votre association et complété votre dossier de demande de subvention pour l'année {{ demandesubvention.updatedAt|date('Y') }}  </b></h2>
+                        <h2><b>Vous avez enregistré votre association et complété votre dossier de demande de subvention pour l'année {% if demandesubvention.updatedAt|date('m') <= 2 %} {{ demandesubvention.updatedAt|date('Y') }} {% else %} {{ demandesubvention.updatedAt|date('Y') + 1 }} {% endif %} </b></h2>
                         <p>Vous pouvez télécharger chacun de ces deux dossiers en cliquant sur la barre latérale gauche</p>
                     {% endif %}
 

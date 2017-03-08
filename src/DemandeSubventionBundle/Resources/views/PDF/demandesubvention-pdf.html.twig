@@ -122,7 +122,9 @@
         }
     </style>
 
-    <title>Demande de subvention {{ 'now'|date('Y') }} - {{ association.nom }}</title>
+    <title>
+        Demande de subvention {% if 'now'|date('m') <= 2 %} {{ 'now'|date('Y') }} {% else %} {{ 'now'|date('Y') + 1 }} {% endif %} - {{ association.nom }}
+    </title>
 </head>
 
 <body>
@@ -134,7 +136,7 @@
             <P ALIGN="CENTER">
                 <FONT FACE="Calibri Light, serif">
                     <FONT SIZE=6 STYLE="font-size: 28pt;margin-left:-3%;">
-                        <FONT SIZE=7><B>DEMANDE DE SUBVENTION {{ 'now'|date('Y') }}</B></FONT>
+                        <FONT SIZE=7><B>DEMANDE DE SUBVENTION {% if 'now'|date('m') <= 2 %} {{ 'now'|date('Y') }} {% else %} {{ 'now'|date('Y') + 1 }} {% endif %}</B></FONT>
                     </FONT>
                 </FONT>
             </P>
@@ -340,7 +342,7 @@
                 {#Activités payantes#}
                 <div class="col-md-12">
                     <div class="col-md-12">
-                        <p><FONT COLOR="#5a5a5a"><B>Activités payantes en {{ 'now'|date('Y') }} :</B> {{ demandesubvention.activitespayantes is null ? "Non" : "Oui"}}</FONT></p>
+                        <p><FONT COLOR="#5a5a5a"><B>Activités payantes en {% if 'now'|date('m') <= 2 %} {{ 'now'|date('Y') }} {% else %} {{ 'now'|date('Y') + 1 }} {% endif %} :</B> {{ demandesubvention.activitespayantes is null ? "Non" : "Oui"}}</FONT></p>
                     </div>
                     {% if(demandesubvention.activitespayantes is not null) %}
                     <div class="col-md-12">

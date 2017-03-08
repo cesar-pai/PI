@@ -3,8 +3,10 @@
 namespace AssociationBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
+
 
 /**
  * Associations
@@ -107,14 +109,15 @@ class Associations
     /**
      * @var string
      *
-     * @ORM\Column(name="SIREN", type="string", length=45)
+     * @ORM\Column(name="SIREN", type="string", length=45,nullable=true)
+     * @Assert\Length(max=5)
      */
     private $siren;
 
     /**
      * @var string
      *
-     * @ORM\Column(name="SIRET", type="string", length=45,nullable=true)
+     * @ORM\Column(name="SIRET", type="string", length=45)
      */
     private $siret;
 

@@ -240,5 +240,24 @@ class Subventions
         }
     }
 
-}
 
+    /**
+     * Get recue
+     *
+     * @return boolean
+     */
+    public function getRecue()
+    {
+        return $this->recue;
+    }
+
+    /**
+     * Get demandee
+     *
+     * @return boolean
+     */
+    public function getDemandee()
+    {
+        return $this->demandee;
+    }
+}

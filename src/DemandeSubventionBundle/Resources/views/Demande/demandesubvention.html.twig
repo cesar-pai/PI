@@ -23,7 +23,7 @@
                 <!-- progressbar -->
                 <div class="centered col-md-12 text-left">
                     <ul id="progressbar">
-                        <li class="active four" style="font-size: smaller;">Renseignement sur la demande de subvention</li>
+                        <li class="active four" style="font-size: smaller;">Renseignements sur la demande de subvention</li>
                         <li class="inactive four" style="font-size: smaller;">Activit&eacutes</li>
                         <li class="inactive four" style="font-size: smaller;">Mise &agrave; disposition de biens/personnels communaux et personne en charge du dossier</li>
                         <li class="inactive four" style="font-size: smaller;">Bilan financier et budget prévisionnel</li>
@@ -44,7 +44,7 @@
 
                 <div class="page">
 
-                    <h3 class="sub-header">Renseignement sur la demande de subvention</h3>
+                    <h3 class="sub-header">Renseignements sur la demande de subvention</h3>
 
                     {#Subvention#}
                     <fieldset>
@@ -69,7 +69,7 @@
                                     <h3><i class="fa fa-info"></i></h3>
                                 </div>
                                 <div class="col-md-11">
-                                    <h4>Si votre demande de subvention est supérieure à 23 000 €, il vous faut transmettre les derniers bilans et comptes de résultat approuvés par l'assemblée et signés du Président et du Trésorier, ainsi que le dernier rapport d'activité.</h4></h4>
+                                    <h4>Si votre demande de subvention est supérieure à 23 000 €, il vous faut transmettre les derniers bilans et comptes de résultat approuvés par l'assemblée et signés du président et du trésorier, ainsi que le dernier rapport d'activité.</h4></h4>
                                 </div>
                             </div>
 
@@ -161,14 +161,14 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#renseignementssubvention" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Renseignements financiers divers :</b>
+                                    <a data-toggle="collapse" data-target="#renseignementssubvention" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Renseignements financiers divers :</b>
                                 </small>
                             </h3>
                         </legend>
 
                         {#Subvention#}
-                        <div class="col-md-12 collapse" id="renseignementssubvention">
-                            <h4>Subventions demandées et reçues les années précédentes : </h4>
+                        <div class="col-md-12 collapse in" id="renseignementssubvention">
+                            <h4>Subventions demandées et reçues les années précédentes par tout autre organisme que Villers-lès-Nancy : </h4>
                             <div class="form-group">
                                 <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
                                 <div class="table-responsive">
@@ -178,7 +178,7 @@
                                                 <thead>
                                                 <tr>
                                                     <th class="text-center">
-                                                        Organisme
+                                                        Organisme verseur
                                                     </th>
                                                     <th class="text-center">
                                                         Année
@@ -216,13 +216,13 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#travauxinvestissement" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Nature de la demande :</b>
+                                    <a data-toggle="collapse" data-target="#travauxinvestissement" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Nature de la demande :</b>
                                 </small>
                             </h3>
                         </legend>
 
                         {#Travaux investissement#}
-                        <div class="col-md-12 collapse" id="travauxinvestissement">
+                        <div class="col-md-12 collapse in" id="travauxinvestissement">
                             <div class="form-group">
                                 <div class="col-md-10">
                                     {{ form_label(form.travauxinvestissement,"La subvention est-elle demandée afin de réaliser des travaux ou des acquisitions d'investissements ?") }}
@@ -339,7 +339,7 @@
                                 </div>
                             </div>
                             <div class="form-group">
-                                <h4> Manifestations réalisées au cours de l'année {{ 'now'|date('Y') - 1 }} (y compris les participations aux manifestions de la ville) :</h4>
+                                <h4> Manifestations réalisées au cours de l'année {% if 'now'|date('m') <= 2 %} {{ 'now'|date('Y') - 1 }} {% else %} {{ 'now'|date('Y') }} {% endif %} (y compris les participations aux manifestions de la ville) :</h4>
                                 <div class="table-responsive">
                                     <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Cette rubrique doit impérativement être complétée</h4></label>
                                     <div class="row clearfix col-md-12">
@@ -412,11 +412,11 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#actions" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Programme d'actions :</b>
+                                    <a data-toggle="collapse" data-target="#actions" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Programme d'actions :</b>
                                 </small>
                             </h3>
                         </legend>
-                        <div class="col-md-12 collapse" id="actions">
+                        <div class="col-md-12 collapse in" id="actions">
                             <div class="col-md-12">
                                 <h4>Liste des actions projetées qui ont été prévues financièrement au niveau du Budget Prévisionnel et pour laquelle l'association sollicite une subvention.</h4>
                             </div>
@@ -463,21 +463,29 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#activites" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Activités :</b>
+                                    <a data-toggle="collapse" data-target="#activites" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Activités :</b>
                                 </small>
                             </h3>
                         </legend>
 
                         {#Activités#}
-                        <div class="col-md-12 collapse" id="activites">
+                        <div class="col-md-12 collapse in" id="activites">
                             <div class="form-group">
-                                {{ form_label(form.bilanactivite.objectifs,"Décrivez succintement les objectifs et le contenu des activités de l'association pour l'année "~'now'|date('Y')) }}
+                            	{% if 'now'|date('m') <= 2 %}
+                                	{{ form_label(form.bilanactivite.objectifs,"Décrivez en détails les objectifs et le contenu des activités de l'association pour l'année "~'now'|date('Y')) }}
+                                {% else %}
+                                	{{ form_label(form.bilanactivite.objectifs,"Décrivez en détails les objectifs et le contenu des activités de l'association pour l'année "~('now'|date('Y') + 1)) }}
+                                {% endif %}
                                 {{ form_errors(form.bilanactivite.objectifs) }}
                                 {{ form_widget(form.bilanactivite.objectifs,{'attr':{'class':'form-control', 'row': '5'}}) }}
                             </div>
                             <div class="form-group">
                                 <div class="col-md-10">
-                                    {{ form_label(form.demandesubvention.activitespayantes,"Outre ses activités bénévoles, l'association aura-t-elle en "~'now'|date('Y')~" des activités payantes ?") }}
+                                    {% if 'now'|date('m') <= 2 %}
+                                		{{ form_label(form.demandesubvention.activitespayantes,"Outre ses activités bénévoles, l'association aura-t-elle en "~'now'|date('Y')~" des activités payantes ?") }}
+                                	{% else %}
+                                		{{ form_label(form.demandesubvention.activitespayantes,"Outre ses activités bénévoles, l'association aura-t-elle en "~('now'|date('Y') + 1)~" des activités payantes ?") }}
+                                	{% endif %}
                                 </div>
                                 <div class="col-md-2">
                                     <input type="checkbox" class="bs" id="chkActivitespayantes" name="chkActivitespayantes" data-on-text="Oui" data-off-text="Non" unchecked>
@@ -485,9 +493,18 @@
                                 {{ form_errors(form.demandesubvention.activitespayantes) }}
                                 <div class="col-md-12 form-group" id="divActivitespayantes">
                                     <div class="form-group col-md-12">
-                                        {{ form_label(form.demandesubvention.activitespayantes,"Sélectionner toutes les activités payantes pour l'année "~'now'|date('Y')~" :") }}
+                                        {% if 'now'|date('m') <= 2 %}
+	                                		{{ form_label(form.demandesubvention.activitespayantes,"Sélectionnez toutes les activités payantes pour l'année "~'now'|date('Y')~" :") }}
+	                                	{% else %}
+	                                		{{ form_label(form.demandesubvention.activitespayantes,"Sélectionnez toutes les activités payantes pour l'année "~('now'|date('Y') + 1)~" :") }}
+	                                	{% endif %}
                                         {{ form_errors(form.demandesubvention.activitespayantes) }}
-                                        {{ form_widget(form.demandesubvention.activitespayantes, {'attr':{'class':'form-control','style':'font-size:83%;'}}) }}
+                                        <br/>
+                                        {% for t in form.demandesubvention.activitespayantes %}
+	                                        {{ form_widget(t, {'attr':{'class':'form-check','style':'font-size:83%;'}}) }}
+	                                        {{ form_label(t) }}
+	                                        <br/>
+										{% endfor %}
                                     </div>
                                     <div class="form-group">
                                         {{ form_label(form.documents[6].nom, "Tarifs (si billeterie)") }}
@@ -518,7 +535,7 @@
                             </br>
                             <div class="form-group">
                                 <div class="col-md-10">
-                                    {{ form_label(form.demandesubvention.commVill,"Prestations de communication prise en charge par la ville (conception, élaboration)") }}
+                                    {{ form_label(form.demandesubvention.commVill,"Prestations de communication prises en charge par la ville (conception, élaboration)") }}
                                     {{ form_errors(form.demandesubvention.commVill) }}
                                 </div>
                                 <div class="col-md-2">
@@ -633,13 +650,13 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#persencharge" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Personne en charge du dossier de demande de subvention :</b>
+                                    <a data-toggle="collapse" data-target="#persencharge" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Personne en charge du dossier de demande de subvention :</b>
                                 </small>
                             </h3>
                         </legend>
 
                         {#Responsable de l'association#}
-                        <div class="col-md-12 collapse" id="persencharge">
+                        <div class="col-md-12 collapse in" id="persencharge">
                             <div class="row">
                                 <div class="form-group col-md-6">
                                     {{ form_label(form.persencharge.nom, "Nom de la personne en charge:") }}
@@ -706,7 +723,7 @@
                         {#Bilan financier#}
                         <div class="col-md-12 collapse in" id="bilanfin">
                             <div class="col-md-12">
-                                <h4>Veuillez télécharger vers le site le bilan financier {{ 'now'|date('Y') - 1 }} de votre association</h4></h4>
+                                <h4>Veuillez télécharger vers le site le bilan financier {% if 'now'|date('m') <= 2 %} {{ 'now'|date('Y') - 1 }} {% else %} {{ 'now'|date('Y') }} {% endif %} de votre association</h4></h4>
                             </div>
                             </br>
                             </br>
@@ -747,14 +764,14 @@
                         <legend>
                             <h3>
                                 <small>
-                                    <a data-toggle="collapse" data-target="#budgetprev" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Budget prévisionnel :</b>
+                                    <a data-toggle="collapse" data-target="#budgetprev" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Budget prévisionnel :</b>
                                 </small>
                             </h3>
                         </legend>
                         {#Budget previsionnel#}
-                        <div class="col-md-12 collapse" id="budgetprev">
+                        <div class="col-md-12 collapse in" id="budgetprev">
                             <div class="col-md-12">
-                                <h4>Veuillez télécharger vers le site le budget prévisionnel pour {{ 'now'|date('Y') }} de votre association</h4></h4>
+                                <h4>Veuillez télécharger vers le site le budget prévisionnel pour {% if 'now'|date('m') <= 2 %} {{ 'now'|date('Y') }} {% else %} {{ 'now'|date('Y') + 1 }} {% endif %} de votre association</h4></h4>
                             </div>
                             </br>
                             </br>
@@ -821,7 +838,7 @@
                     <div id="alert-modal" class="first current">
                         <h4>
                             <span>
-                                DOSSIER DE DEMANDE DE SUBVENTION POUR L'ANNEE {{ 'now'|date('Y') }}
+                                DOSSIER DE DEMANDE DE SUBVENTION POUR L'ANNEE {% if 'now'|date('m') <= 2 %} {{ 'now'|date('Y') }} {% else %} {{ 'now'|date('Y') + 1 }} {% endif %}
                                 </br>
                                 DOSSIER CONFORME AU MODELE NATIONAL
                                 FORMULAIRE CERFA N°12156*03 (www.associations.gouv.fr)
@@ -835,9 +852,9 @@
                             <span>Vous devez remplir toutes les pages de ce dossier et joindre (ou renseigner) les informations ci-dessous :
                                 <ul class="fa-ul">
                                     <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i> Le bilan financier définitif ou prévisionnel de votre association ;</li>
-                                    <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i> Le budget prévisionnel pour l'année {{ 'now'|date('Y') }}.</li>
+                                    <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i> Le budget prévisionnel pour l'année {% if 'now'|date('m') <= 2 %} {{ 'now'|date('Y') }} {% else %} {{ 'now'|date('Y') + 1 }} {% endif %}.</li>
                                 </ul>
-                                Si la demande de subvention est supérieure à 23 000 €, il faut par ailleurs transmettre les derniers bilans et comptes de résultat approuvés par l'assemblée et signés du Président et du Trésorier et le dernier rapport d'activité.
+                                Si la demande de subvention est supérieure à 23 000 €, il faut par ailleurs transmettre les derniers bilans et comptes de résultat approuvés par l'assemblée et signés du président et du trésorier et le dernier rapport d'activité.
                             </span>
                         </h4>
                     </div>

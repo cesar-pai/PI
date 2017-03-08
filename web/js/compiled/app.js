@@ -12294,14 +12294,14 @@ if (typeof jQuery === 'undefined') {
  */
 $(document).ready(function(){
     // setup links
-    var $addMBLink = $('<a href="#" class="add_mb_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addMCLink = $('<a href="#" class="add_mc_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addIALink = $('<a href="#" class="add_ia_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addSUBLink = $('<a href="#" class="add_sub_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addFMLink = $('<a href="#" class="add_fm_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addMANLink = $('<a href="#" class="add_man_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addACTLink = $('<a href="#" class="add_act_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
-    var $addMADLink = $('<a href="#" class="add_mad_link btn btn-default btn-block pull-left">Ajouter une ligne</a>');
+    var $addMBLink = $('<a href="#" class="add_mb_link btn btn-default btn-block pull-left">Ajouter un membre</a>');
+    var $addMCLink = $('<a href="#" class="add_mc_link btn btn-default btn-block pull-left">Ajouter un membre</a>');
+    var $addIALink = $('<a href="#" class="add_ia_link btn btn-default btn-block pull-left">Ajouter un adhérent</a>');
+    var $addSUBLink = $('<a href="#" class="add_sub_link btn btn-default btn-block pull-left">Ajouter une subvention</a>');
+    var $addFMLink = $('<a href="#" class="add_fm_link btn btn-default btn-block pull-left">Ajouter un événement</a>');
+    var $addMANLink = $('<a href="#" class="add_man_link btn btn-default btn-block pull-left">Ajouter une manifestation</a>');
+    var $addACTLink = $('<a href="#" class="add_act_link btn btn-default btn-block pull-left">Ajouter une action</a>');
+    var $addMADLink = $('<a href="#" class="add_mad_link btn btn-default btn-block pull-left">Ajouter un local</a>');
 
     // Collections holders
     var $collectionHolderMB = $('tbody.membrebureau');
@@ -12455,7 +12455,7 @@ $(function() {
                 if($(this).prop('required')){
                     if(!$(this).val() ) {
                         var label = $('label[for="' + this.id + '"]').html();
-                        if (label === 'undefined') {
+                        if (label === undefined) {
                             alert("Veuillez remplir le champ requis (ou effacer la ligne si possible)");
                         } else {
                             alert("Veuillez remplir le champ \"" + label +"\"");
@@ -12473,7 +12473,7 @@ $(function() {
                 if($(this).prop('required')){
                     if(!$(this).val() ) {
                         var label = $('label[for="' + this.id + '"]').html();
-                        if (label === 'undefined') {
+                        if (label === undefined) {
                             alert("Veuillez remplir le champ requis (ou effacer la ligne si possible)");
                         } else {
                             alert("Veuillez remplir le champ \"" + label +"\"");
@@ -12519,7 +12519,7 @@ $(function() {
     });
 
     $(this).find("input.previous").click(function(){
-        
+
         if(animating) return false;
         animating = true;
 
@@ -12608,6 +12608,24 @@ $(document).ready(function() {
     $(".fieldset-toggle").click(function(){
         $(this).next('div').toggle();
         $(this).find('i').toggleClass('fa fa-plus fa fa-minus');
+    });
+
+    //Show/Hide div utilite
+    var divutilite = $('#divUtilite');
+    if (!$('#chkUtilite').prop('checked')){
+        divutilite.hide();
+        divutilite.find(':text').val('');
+        divutilite.find(':input').val('');
+    }
+    $('#chkUtilite').on('switchChange.bootstrapSwitch', function() {
+        if (this.checked) {
+            divutilite.fadeIn();
+        }
+        else {
+            divutilite.fadeOut();
+            divutilite.find(':text').val('');
+            divutilite.find(':input').val('');
+        }
     });
 
     //Show/Hide div agrement

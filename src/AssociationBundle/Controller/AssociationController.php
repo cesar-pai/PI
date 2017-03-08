@@ -152,16 +152,12 @@ class AssociationController extends Controller
 
                     return $this->redirectToRoute('AssociationBundle_homepage');
 
-                } else {
-                    return $this->render('AssociationBundle:Association:association.html.twig', array('form' => $form->createView(),'accueil' => false));
                 }
-            } else {
-                return $this->redirectToRoute('AssociationBundle_homepage');
+                else return $this->render('AssociationBundle:Association:association.html.twig', array('form' => $form->createView(),'accueil' => false));
             }
+            else return $this->redirectToRoute('AssociationBundle_homepage');
         }
-        else {
-            return $this->redirectToRoute('AssociationBundle_homepage');
-        }
+        else return $this->redirectToRoute('AssociationBundle_homepage');
     }
 
     public function updateAction(Request $request)
@@ -178,11 +174,11 @@ class AssociationController extends Controller
             $em = $this->getDoctrine()->getManager();
             $association = $em->getRepository('AssociationBundle:Associations')->findOneBy(array('users' => $user));
 
-            if (!$association) {
+            if (!$association)
                 return $this->redirectToRoute('AssociationBundle_association');
-            } else {
+            else
+            {
                 // 1) build the form
-
                 $form = $this->get('form.factory')->createBuilder(new UpdateFormType())
                     ->getForm();
 
@@ -209,8 +205,8 @@ class AssociationController extends Controller
                 $form['documents']->setData($this->setDocumentsAssociation());
 
                 // 2) handle the submit (will only happen on POST)
-                if ($form->handleRequest($request)->isValid()) {
-
+                if ($form->handleRequest($request)->isValid())
+                {
                     // Removing the old documents
                     foreach($documents_registered as $doc) {
                         $em->remove($doc);
@@ -318,20 +314,16 @@ class AssociationController extends Controller
 
                     $this->get('session')->getFlashBag()
                         ->add('success','L\'association '.$association->getNom().' a été modifiée avec succès !');
-                } else {
-                    return $this->render('AssociationBundle:Association:update-association.html.twig', array('form' => $form->createView(),'accueil' => false));
                 }
+                else return $this->render('AssociationBundle:Association:update-association.html.twig', array('form' => $form->createView(),'accueil' => false));
             }
-        } else {
-            return $this->redirectToRoute('AssociationBundle_homepage');
         }
-
-        return $this->redirectToRoute('AssociationBundle_homepage');
+        else return $this->redirectToRoute('AssociationBundle_homepage');
     }
 
 
-    public function setDocumentsAssociation(){
-
+    public function setDocumentsAssociation()
+    {
         // Les différents fichiers qui seront uploadés lors de l'enregistrement de l'association
         $statuts = new Documents();
         $statuts->setObjet('statuts');

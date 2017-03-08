@@ -343,6 +343,11 @@ class Documents
         return 'uploads/';
     }
 
+    private function getSubvYear()
+    {
+        return date('m') <= 2 ? date('Y') : date('Y') + 1;
+    }
+
     /**
      * @ORM\PrePersist()
      * @ORM\PreUpdate()
@@ -354,11 +359,11 @@ class Documents
                 $path = $this->getAssociationsNumassoc()->getNumassoc().'/association';
             } else {
                 if($this->getBilansactivite() instanceof Bilansactivite) {
-                    $path = $this->getBilansactivite()->getDemandessubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.date('Y');
+                    $path = $this->getBilansactivite()->getDemandessubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.$this->getSubvYear();
                 } elseif ($this->getTravauxinvestissements() instanceof Travauxinvestissements) {
-                    $path = $this->getTravauxinvestissements()->getDemandessubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.date('Y');
+                    $path = $this->getTravauxinvestissements()->getDemandessubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.$this->getSubvYear();
                 } else {
-                    $path = $this->getDemandesubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.date('Y');
+                    $path = $this->getDemandesubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.$this->getSubvYear();
                 }
             }
             $this->nom = $this->getNom();
@@ -380,11 +385,11 @@ class Documents
             $path = $this->getAssociationsNumassoc()->getNumassoc().'/association';
         } else {
             if($this->getBilansactivite() instanceof Bilansactivite) {
-                $path = $this->getBilansactivite()->getDemandessubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.date('Y');
+                $path = $this->getBilansactivite()->getDemandessubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.$this->getSubvYear();
             } elseif ($this->getTravauxinvestissements() instanceof Travauxinvestissements) {
-                $path = $this->getTravauxinvestissements()->getDemandessubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.date('Y');
+                $path = $this->getTravauxinvestissements()->getDemandessubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.$this->getSubvYear();
             } else {
-                $path = $this->getDemandesubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.date('Y');
+                $path = $this->getDemandesubvention()->getAssociationsNumassoc()->getNumassoc().'/demandessubvention/demandesubvention-'.$this->getSubvYear();
             }
         }
 

@@ -61,7 +61,7 @@
                             <div class="col-md-12 collapse in" id="designation">
                                 {#Nom#}
                                 <div class="form-group">
-                                    {{ form_label(form.association.nom, "Nom de l'association") }}
+                                    {{ form_label(form.association.nom, "Raison sociale") }}
                                     {{ form_errors(form.association.nom) }}
                                     {{ form_widget(form.association.nom, {'attr': {'class': 'form-control'}}) }}
                                     <span>(Désignation complète de l'organisme sollicitant la subvention, qui doit correspondre à la dénomination statutaire)</span>
@@ -84,18 +84,18 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#coordonnees" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Coordonnées :</b>
+                                        <a data-toggle="collapse" data-target="#coordonnees" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Coordonnées :</b>
                                     </small>
                                 </h3>
                             </legend>
 
                             {#Coordonnées#}
-                            <div class="col-md-12 collapse" id="coordonnees">
+                            <div class="col-md-12 collapse in" id="coordonnees">
                                 <div class="form-group">
                                     {{ form_label(form.association.adresse,"Adresse complète du siège social de l'association") }}
                                     {{ form_errors(form.association.adresse) }}
                                     {{ form_widget(form.association.adresse, {'attr': {'class': 'form-control'}}) }}
-                                    <span>(Si siège hors de Villers-Lès-Nancy, préciser l'adresse de l'antenne locale)</span>
+                                    <span>(Si siège hors de Villers-lès-Nancy, précisez l'adresse de l'antenne locale)</span>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
@@ -126,24 +126,24 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#identification" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Identification :</b>
+                                        <a data-toggle="collapse" data-target="#identification" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Identification :</b>
                                     </small>
                                 </h3>
                             </legend>
 
                             {#Identification#}
-                            <div class="col-md-12 collapse" id="identification">
+                            <div class="col-md-12 collapse in" id="identification">
                                 <div class="row">
                                     <div class="form-group">
                                         <div class="col-md-6">
-                                            {{ form_label(form.association.siren,"SIREN") }}
-                                            {{ form_errors(form.association.siren) }}
-                                            {{ form_widget(form.association.siren, {'attr': {'class': 'form-control'}}) }}
-                                        </div>
-                                        <div class="col-md-6">
-                                            {{ form_label(form.association.siret,"SIRET") }}
+                                            {{ form_label(form.association.siret,"SIRET (13 chiffres)") }}
                                             {{ form_errors(form.association.siret) }}
                                             {{ form_widget(form.association.siret, {'attr': {'class': 'form-control'}}) }}
+                                        </div>
+                                        <div class="col-md-6">
+                                            {{ form_label(form.association.siren,"SIREN (9 chiffres)") }}
+                                            {{ form_errors(form.association.siren) }}
+                                            {{ form_widget(form.association.siren, {'attr': {'class': 'form-control'}}) }}
                                         </div>
                                     </div>
                                 </div>
@@ -185,13 +185,13 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#responsable" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Responsable de l'association :</b>
+                                        <a data-toggle="collapse" data-target="#responsable" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Responsable de l'association :</b>
                                     </small>
                                 </h3>
                             </legend>
 
                             {#Responsable de l'association#}
-                            <div class="col-md-12 collapse" id="responsable">
+                            <div class="col-md-12 collapse in" id="responsable">
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         {{ form_label(form.responsable.nom, "Nom du responsable de l'association") }}
@@ -252,7 +252,7 @@
                             {#Information sur la dernière déclaration en préfecture de l'association#}
                             <div class="col-md-12 collapse in" id="declaration">
                                 <div class="form-group">
-                                    {{ form_label(form.association.villedecl, "Déclaration à la préfecture/sous-préfecture de") }}
+                                    {{ form_label(form.association.villedecl, "Nom de la préfecture/sous-préfecture de déclaration") }}
                                     <a data-toggle="popover" title="Besoin d'aide ?" data-placement="right" data-content="Veuillez renseigner les informations de la dernière déclaration en préfecture de l'association (la plus récente)"><span class="glyphicon glyphicon-question-sign" aria-hidden="true"></span></a>
                                     {{ form_errors(form.association.villedecl) }}
                                     {{ form_widget(form.association.villedecl, {'attr': {'class': 'form-control'}}) }}
@@ -313,12 +313,12 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#assembgen" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Dernière assemblée générale :</b>
+                                        <a data-toggle="collapse" data-target="#assembgen" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Dernière assemblée générale :</b>
                                     </small>
                                 </h3>
                             </legend>
                             {#Téléchargement du compte rendu de la dernirèe assemblée générale#}
-                            <div class="col-md-12 collapse" id="assembgen">
+                            <div class="col-md-12 collapse in" id="assembgen">
                                 <div class="form-group">
                                     {{ form_label(form.documents[2].nom, "Compte rendu de la dernière assemblée générale") }}
                                     {#Upload button#}
@@ -363,22 +363,32 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#renseignements" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Renseignements :</b>
+                                        <a data-toggle="collapse" data-target="#renseignements" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Renseignements :</b>
                                     </small>
                                 </h3>
                             </legend>
 
                             {#Renseigenemnts "administratifs" de l'association#}
-                            <div class="col-md-12 collapse" id="renseignements">
+                            <div class="col-md-12 collapse in" id="renseignements">
                                 <div class="form-group">
                                     {{ form_label(form.association.objet, "Décrivez les objectifs de votre association") }}
                                     {{ form_errors(form.association.objet) }}
                                     {{ form_widget(form.association.objet, {'attr': {'class': 'form-control', 'row': '5'}}) }}
                                 </div>
                                 <div class="form-group">
-                                    {{ form_label(form.association.dateUtilitepub, "Si reconnue d'utilité public, depuis le (laisser vide sinon)") }}
-                                    {{ form_errors(form.association.dateUtilitepub) }}
-                                    {{ form_widget(form.association.dateUtilitepub, {'attr':{'class':'form-control'}}) }}
+                                    <div class="col-md-8">
+                                        <label for="utilite">Votre association est-elle reconnue d'utilité publique ?</label>
+                                    </div>
+                                    <div class="col-md-2">
+                                        <input type="checkbox" class="bs" name="chkUtilite" id="chkUtilite" data-on-text="Oui" data-off-text="Non" checked />
+                                    </div>
+                                    <div class="col-md-10" id="divUtilite">
+                                        <div class="form-group">
+                                            {{ form_label(form.association.dateUtilitepub, "Depuis le") }}
+                                            {{ form_errors(form.association.dateUtilitepub) }}
+                                            {{ form_widget(form.association.dateUtilitepub, {'attr':{'class':'form-control'}}) }}
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="form-group">
                                     <div class="col-md-8">
@@ -472,13 +482,13 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#ribrip" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>RIB / RIP :</b>
+                                        <a data-toggle="collapse" data-target="#ribrip" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>RIB / RIP :</b>
                                     </small>
                                 </h3>
                             </legend>
 
                             {#Téléchargement du RIB/RIP#}
-                            <div class="col-md-12 collapse" id="ribrip">
+                            <div class="col-md-12 collapse in" id="ribrip">
                                 <div class="form-group">
                                     {{ form_label(form.documents[3].nom, "RIB/RIP") }}
                                     {#Upload button#}
@@ -537,6 +547,9 @@
                             <div class="col-md-12 collapse in" id="membresbureau">
 
                                 <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
+                                <span class="help-block">
+                                   Veuillez indiquer dans le tableau au moins un président, un trésorier et un secrétaire.
+                                </span>
                                 <div class="table-responsive">
                                     <div class="row clearfix col-md-12">
                                         <div class="column">
@@ -593,12 +606,12 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#membresconseiladministration" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Membres du conseil d'administration :</b>
+                                        <a data-toggle="collapse" data-target="#membresconseiladministration" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Membres du conseil d'administration :</b>
                                     </small>
                                 </h3>
                             </legend>
 
-                            <div class="col-md-12 collapse" id="membresconseiladministration">
+                            <div class="col-md-12 collapse in" id="membresconseiladministration">
 
                                 <label><h4 style="color: red;"><i class="fa fa-exclamation-triangle"></i> Complétez consciencieusement cette rubrique</h4></label>
                                 <div class="table-responsive">
@@ -648,15 +661,15 @@
                             <legend>
                                 <h3>
                                     <small>
-                                        <a data-toggle="collapse" data-target="#infosadherents" class="fieldset-toggle"><i class="fa fa-plus"></i></a> <b>Informations sur les adhérents :</b>
+                                        <a data-toggle="collapse" data-target="#infosadherents" class="fieldset-toggle"><i class="fa fa-minus"></i></a> <b>Informations sur les adhérents :</b>
                                     </small>
                                 </h3>
                             </legend>
-                            <div class="col-md-12 collapse" id="infosadherents">
+                            <div class="col-md-12 collapse in" id="infosadherents">
                                 <div class="form-group">
                                     <div class="row col-md-8">
                                         {{ form_label(form.association.isSportive, "Votre association est-elle une association sportive ?") }}
-                                        <small>Cliquer pour modifier</small>
+                                        <small>Cliquez pour modifier</small>
                                     </div>
                                     {{ form_errors(form.association.isSportive) }}
                                     <div class="col-md-2">
@@ -810,11 +823,11 @@
                         <span>
                             Vous devez remplir toutes les pages de ce dossier et joindre (ou renseigner) les informations ci-dessous :<br>
                             <ul class="fa-ul">
-                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Les statuts en vigueur datés et signés de votre association ;</li>
-                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Le récépissé de déclaration à la Préfecture ;</li>
-                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Un RIB ou RIP récent comportant un intitulé identique à celui de votre organisme ;</li>
-                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Le compte rendu de la dernière assemblée générale;</li>
-                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i>Un état des licenciés (nombre, âges, niveau, etc.) pour les associations sportives</li>
+                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i> Les statuts en vigueur datés et signés de votre association ;</li>
+                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i> Le récépissé de déclaration à la préfecture ;</li>
+                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i> Un RIB ou RIP récent comportant un intitulé identique à celui de votre organisme ;</li>
+                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i> Le compte rendu de la dernière assemblée générale ;</li>
+                                <li style="list-style-type: none;"><i class="fa fa-arrow-right"></i> Un état des licenciés (nombre, âges, niveau, etc.) pour les associations sportives.</li>
                             </ul>
                         </span>
                         </h4>
