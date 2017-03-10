@@ -157,7 +157,8 @@ class AssociationController extends Controller
             }
             else return $this->redirectToRoute('AssociationBundle_homepage');
         }
-        else return $this->redirectToRoute('AssociationBundle_homepage');
+
+        return $this->redirectToRoute('AssociationBundle_homepage');
     }
 
     public function updateAction(Request $request)
@@ -318,7 +319,8 @@ class AssociationController extends Controller
                 else return $this->render('AssociationBundle:Association:update-association.html.twig', array('form' => $form->createView(),'accueil' => false));
             }
         }
-        else return $this->redirectToRoute('AssociationBundle_homepage');
+
+        return $this->redirectToRoute('AssociationBundle_homepage');
     }
 
 
