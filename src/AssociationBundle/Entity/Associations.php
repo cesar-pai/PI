@@ -116,7 +116,7 @@ class Associations
     /**
      * @var string
      *
-     * @ORM\Column(name="SIRET", type="string", length=13)
+     * @ORM\Column(name="SIRET", type="string", length=14)
      */
     private $siret;
 
