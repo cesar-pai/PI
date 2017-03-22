@@ -19,12 +19,9 @@ class DefaultController extends Controller
 
             $demandessubvention = array(); //Array of Demande de Subvention
 
-            foreach($associations as $assoc) {
-//            Get Demande Subvention
-                $demandessubvention = $this->getDoctrine()
+            $demandessubvention = $this->getDoctrine()
                     ->getRepository('DemandeSubventionBundle:Demandessubvention')
-                    ->findBy(array('associationsNumassoc' => $assoc));
-            };
+                    ->findAll();
 
             // redirect authenticated users to homepage
             return $this->render('AdminBundle:Default:index.html.twig',array('associations' => $associations, 'demandessubvention' => $demandessubvention));
